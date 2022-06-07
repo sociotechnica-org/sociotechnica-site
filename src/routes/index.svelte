@@ -20,7 +20,7 @@
 		<i class="text-neutral-500">
 			Read more about our analysis of the problem <a
 				class="border-b-2 hover:border-b-2 hover:border-yellow-700 font-semibold text-neutral-500 hover:text-yellow-700"
-				href="#">here</a
+				href="/problem">here</a
 			>.
 		</i>
 	</p>
