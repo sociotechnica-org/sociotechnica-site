@@ -61,7 +61,7 @@
 
 	<p>
 		<i class="text-neutral-500">
-			Read more about our approach to solving the problem <a
+			Read more about our approach <a
 				class="border-b-2 hover:border-b-2 hover:border-yellow-700 font-semibold text-neutral-500 hover:text-yellow-700"
 				href="#">here</a
 			> (coming soon).
