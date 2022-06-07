@@ -2,10 +2,10 @@
 	import '../app.css';
 </script>
 
-<header>
+<header class="mb-5 mt-5 text-left">
 	<nav>
 		<ul>
-			<li><a href="/">Home</a></li>
+			<li><a href="/">SocioTechnica</a></li>
 		</ul>
 	</nav>
 </header>
@@ -14,4 +14,6 @@
 	<slot />
 </main>
 
-<footer>A Danvers Fleury and Jess Martin project.</footer>
+<footer>
+	<p class="text-center text-sm pt-5">A Danvers Fleury and Jess Martin project.</p>
+</footer>
