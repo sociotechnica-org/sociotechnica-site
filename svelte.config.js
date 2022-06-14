@@ -11,7 +11,10 @@ const config = {
 			postcss: true,
 		}),
 		mdsvex({
-			extensions: ['md']
+			extensions: ['md'],
+			layout: {
+				resources: 'src/routes/resources/_resource.svelte'
+			}
 		}),
 	],
 
