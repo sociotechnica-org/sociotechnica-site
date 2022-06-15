@@ -10,11 +10,18 @@
       },
     };
   };
+
+  function resourceColor(resourceType: String) {
+    switch (resourceType) {
+      case 'book':
+        return 'bg-slate-500';
+      default:
+        return 'bg-gray-500';
+    }
+  }
 </script>
 
 <script lang="ts">
-  import Resource from './_resource.svelte';
-
   export let resources: any;
 </script>
 
@@ -26,6 +33,11 @@
 
 <ul>
   {#each resources as resource}
-    <li><a href={resource.path}>{resource.meta.title}</a></li>
+    <li>
+      <span class="{resourceColor(resource.meta.resourceType)} text-white p-1 rounded-sm pl-2 pr-2"
+        >{resource.meta.resourceType}</span
+      >
+      <a href={resource.path}>{resource.meta.title}</a>
+    </li>
   {/each}
 </ul>

@@ -4,8 +4,12 @@
 
 <header class="mb-5 mt-5 text-left">
   <nav>
-    <ul>
-      <li><a href="/">SocioTechnica</a></li>
+    <ul class="">
+      <li class="font-semibold inline"><a href="/">SocioTechnica</a></li>
+      <li class="inline ml-5"><a href="/about">About</a></li>
+      <li class="inline ml-5"><a href="/problem">Problem</a></li>
+      <li class="inline ml-5">Process (coming soon)</li>
+      <li class="inline ml-5"><a href="/resources">Resources</a></li>
     </ul>
   </nav>
 </header>
