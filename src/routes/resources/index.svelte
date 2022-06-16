@@ -22,8 +22,6 @@
 </script>
 
 <script lang="ts">
-  import Resource from './_resource.svelte';
-
   export let resources: any;
 </script>
 
