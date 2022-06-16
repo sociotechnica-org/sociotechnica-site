@@ -22,7 +22,7 @@
   href="/resources">&#12296; All Resources</a
 >
 
-<h1 class="text-center text-4xl mb-5">{title}</h1>
+<h1 class="text-center text-4xl mb-5 mt-5">{title}</h1>
 
 <span class="text-xl">By {author}</span>
 
