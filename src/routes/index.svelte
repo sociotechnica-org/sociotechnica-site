@@ -15,10 +15,6 @@
     long-term.
   </p>
 
-  <p class="mb-3">
-    We believe that the solution lies in pioneering new economic systems, with novel processes and
-    incentives that optimize for the <i>limited resource</i> in the system: developer hours.
-  </p>
   <p>
     <i class="text-neutral-500">
       Read more about our analysis of the problem <a
@@ -85,11 +81,31 @@
     primitive, yet amazing machines that we spend hours with every day!
   </p>
   <p class="mb-3">
+    <i class="text-neutral-500">
+      <a
+        class="ml-10 border-b-2 hover:border-b-2 hover:border-yellow-700 text-neutral-500 hover:text-yellow-700"
+        href="https://jessmart.in/notes/AE937E9C-B9EC-436E-B7AF-194938CB6D42-51070-000091B125678D86"
+        >Jess's User's Guide</a
+      >
+    </i>
+  </p>
+
+  <p class="mb-3">
     <a
       class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
       href="https://www.linkedin.com/in/danversfleury/">Danvers Fleury</a
     > - During the first half of my career, I contributed to 4 startup exits and co-founded a successful
     regional digital marketing agency. These days, I am trying my hand at deeper, more transformative
     work.
+  </p>
+
+  <p class="mb-3">
+    <i class="text-neutral-500">
+      <a
+        class="ml-10 border-b-2 hover:border-b-2 hover:border-yellow-700 text-neutral-500 hover:text-yellow-700"
+        href="https://docs.google.com/document/d/1kSPZf21__PSyvI_UxK-kCEnHI23VOOhw9MBPb7wB-Lg/edit"
+        >Danvers' User's Guide</a
+      >
+    </i>
   </p>
 </article>
