@@ -2,7 +2,7 @@
   <title>SocioTechnica</title>
 </svelte:head>
 
-<h1 class="text-center text-4xl mb-4">Resourcing Open Source</h1>
+<h1 class="font-serif text-4xl mb-4">Resourcing Open Source</h1>
 <article class="leading-relaxed text-lg">
   <p class="mb-3">
     Open source software projects have become akin to public utilities, utilized by more than 90% of
