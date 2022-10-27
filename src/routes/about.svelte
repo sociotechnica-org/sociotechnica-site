@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>About Us | SocioTechnica</title>
+</svelte:head>
+
 <h1 class="font-serif text-4xl mb-4">About Us</h1>
 
 <article>
