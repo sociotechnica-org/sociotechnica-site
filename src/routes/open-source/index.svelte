@@ -3,6 +3,9 @@
 </svelte:head>
 
 <h1 class="font-serif text-4xl mb-4">Resourcing Open Source</h1>
+
+<div class="italic mb-4 text-sm text-gray-600">Updated July 2022</div>
+
 <article class="prose">
   <p>
     Open source software projects have become akin to public utilities, utilized by more than 90% of

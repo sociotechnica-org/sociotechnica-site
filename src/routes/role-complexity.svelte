@@ -55,6 +55,8 @@ That said, some individuals find they have two preferred levels with a large gap
 
 <h1 class="font-serif text-4xl mb-4">Role Complexity</h1>
 
+<div class="italic mb-4 text-sm text-gray-600">Updated October 27, 2022</div>
+
 <article class="prose">
   <SvelteMarkdown {source} />
 </article>
