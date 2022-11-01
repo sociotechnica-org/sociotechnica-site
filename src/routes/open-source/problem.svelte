@@ -1,4 +1,4 @@
-<h1 class="text-center text-4xl mb-5">Open Source's Resourcing Problem</h1>
+<h1 class="font-serif text-4xl mb-5">Open Source's Resourcing Problem</h1>
 
 <div class="p-5 border-2 bg-slate-100">
   <p class="italic text-neutral-600">

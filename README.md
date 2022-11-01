@@ -1,6 +1,6 @@
 # Sociotechnica.org Site
 
-This is the main website for [sociotechnica.org](sociotechnica.org), a joint project of Jess Martin and Danvers Fleury, trying to solve the problem of how to reliably resource open source software.
+This is the main website for [sociotechnica.org](https://sociotechnica.org), a joint project of [Jess Martin and Danvers Fleury](https://sociotechnica.org/about), trying to solve the problem of how to reliably resource open source software.
 
 ## Developing
 
