@@ -62,7 +62,7 @@ Thanks so much for asking. We would love feedback, comments and questions, inclu
 </script>
 
 <svelte:head>
-  <title>About Us | SocioTechnica</title>
+  <title>Role Complexity | SocioTechnica</title>
 </svelte:head>
 
 <h1 class="font-serif text-4xl mb-4">Role Complexity</h1>
