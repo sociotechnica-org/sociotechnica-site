@@ -34,6 +34,13 @@
       <span class="ml-1 text-sm italic text-gray-500">Updated July 2022</span>
     </li>
     <li class="mb-1">
+      <a
+        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+        href="protocols">Driving Protocol Adoption</a
+      >
+      <span class="ml-1 text-sm italic text-gray-500">Drafting</span>
+    </li>
+    <li class="mb-1">
       Decompiling The Crypto Economy
       <span class="ml-1 text-sm italic text-gray-500">In progress</span>
     </li>
@@ -41,9 +48,11 @@
       Building Integrated Vocational Development Systems
       <span class="ml-1 text-sm italic text-gray-500">In progress</span>
     </li>
+    <!--
     <li class="mb-1">
       Harnessing Acceptance & Expectation
       <span class="ml-1 text-sm italic text-gray-500">In progress</span>
     </li>
+    -->
   </ul>
 </article>
