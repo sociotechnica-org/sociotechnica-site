@@ -5,9 +5,13 @@ module.exports = {
     container: {
       padding: '2rem',
     },
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+    extend: {
+      fontFamily: {
+        'typewriter': ['Urania Czech', 'monospace'],
+      },
+    },
+    plugins: [
+      require('@tailwindcss/typography'),
+    ],
+  }
 }

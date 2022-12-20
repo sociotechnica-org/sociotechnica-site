@@ -9,7 +9,7 @@
     Danvers and Jess have been working together on projects at the intersection of people, systems,
     and technology since 2008. Our time together is governed by our <a
       class="border-b-2 hover:border-b-2 hover:border-yellow-700 font-semibold text-neutral-500 hover:text-yellow-700"
-      href="/agmnt">Most Excellent Agreement</a
+      href="/agrmt">Most Excellent Agreement</a
     >.
   </p>
 
