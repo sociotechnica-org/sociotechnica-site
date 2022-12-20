@@ -20,11 +20,11 @@
     >
   </h2>
   <p class="mb-3">
-    As a builder and a theorist whose work doesn't fit neatly into the corporate mold, I'm building
-    the change that I want to see in the world. I believe that computation represents a fundamental
-    shift in human capacity, similar in scope to the creation of spoken language or writing. There
-    are innumerable opportunities to improve upon the primitive, yet amazing machines that we spend
-    hours with every day!
+    I believe that computation represents a fundamental shift in human capacity, similar in scope to
+    the creation of spoken language or writing. There are innumerable opportunities to improve upon
+    the primitive, yet amazing machines that we spend hours with every day! I'm currently an
+    engineer at <a href="https://fission.codes">Fission</a> where I'm exploring applications enabled
+    by Fission technology and driving adoption of those technologies.
   </p>
   <ul class="ml-4 mb-5">
     <li class="text-neutral-500 mb-1">
