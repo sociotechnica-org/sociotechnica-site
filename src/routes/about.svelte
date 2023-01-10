@@ -20,11 +20,13 @@
     >
   </h2>
   <p class="mb-3">
-    I believe that computation represents a fundamental shift in human capacity, similar in scope to
-    the creation of spoken language or writing. There are innumerable opportunities to improve upon
-    the primitive, yet amazing machines that we spend hours with every day! I'm currently an
-    engineer at <a href="https://fission.codes">Fission</a> where I'm exploring applications enabled
-    by Fission technology and driving adoption of those technologies.
+    I believe that computation represents <a
+      class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+      href="https://jessmart.in/articles/500-years">a fundamental shift in human capacity</a
+    >, similar in scope to the creation of spoken language or writing. There are innumerable
+    opportunities to improve upon the primitive, yet amazing machines that we spend hours with every
+    day! I'm currently an independent researcher investigating novel interfaces to make the computer
+    a more expressive medium to help humans and computers think better, together.
   </p>
   <ul class="ml-4 mb-5">
     <li class="text-neutral-500 mb-1">
@@ -73,7 +75,7 @@
     <li class="text-neutral-500 mb-1">
       <a
         class="border-b-2 hover:border-b-2 hover:border-yellow-700 text-neutral-500 hover:text-yellow-700"
-        href="https://docs.google.com/document/d/1kSPZf21__PSyvI_UxK-kCEnHI23VOOhw9MBPb7wB-Lg/edit"
+        href="https://docs.google.com/document/d/13UaJa5ueX8_LGj9nD7W-aKg8itTHO6a4QASDtOvdf4U/edit#"
         >User's Guide</a
       >
     </li>
