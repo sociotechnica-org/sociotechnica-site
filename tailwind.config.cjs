@@ -10,8 +10,8 @@ module.exports = {
         'typewriter': ['Urania Czech', 'monospace'],
       },
     },
-    plugins: [
-      require('@tailwindcss/typography'),
-    ],
-  }
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
