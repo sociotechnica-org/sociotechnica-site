@@ -2,7 +2,7 @@
   <title>Sustaining Open Source Software | SocioTechnica</title>
 </svelte:head>
 
-<h1 class="font-serif text-4xl mb-4">Resourcing Open Source Software</h1>
+<h1 class="font-serif text-4xl mb-4">Sustaining Open Source Software</h1>
 
 <div class="italic mb-4 text-sm text-gray-600">Updated July 2022</div>
 
@@ -13,11 +13,11 @@
   </p>
 </div>
 
-<article class="prose lg:prose-lg">
+<article class="prose lg:prose-md">
   <p>
     Open source software projects have become akin to public utilities, utilized by more than 90% of
-    software applications<sup><a href="#1">1</a></sup>. But these projects are often fragile,
-    passing along security vulnerabilities, suffering “bit rot,” and abandonment by maintainers.
+    software applications. But these projects are often fragile, passing along security
+    vulnerabilities, suffering “bit rot,” and abandonment by maintainers.
   </p>
   <p>
     We believe that the root cause is a lack of project <i>sustainability</i>&mdash;stakeholders
@@ -26,8 +26,8 @@
   </p>
 
   <h3>Problem Statement: An Outline</h3>
-  <ul class="leading-snug">
-    <li>
+  <ul class="">
+    <li class="mb-0">
       Software is eating the world, which is to say, software is becoming an ever-increasing part of
       everyday life.
       <ul>
@@ -61,12 +61,7 @@
       There is no strong economic model for sustainably resourcing the development of Libraries and
       Protocols.
       <ul>
-        <li>
-          <a
-            href="bear://x-callback-url/open-note?title=Sustainability%20and%20Maintaining%20Systems&x-error=bear%3A%2F%2Fx%2Dcallback%2Durl%2Fcreate%3Ftitle%3DSustainability%2520and%2520Maintaining%2520Systems"
-            >Sustainability and Maintaining Systems</a
-          >
-        </li>
+        <li>Sustainability and Maintaining Systems</li>
       </ul>
     </li>
     <li>
@@ -150,11 +145,9 @@
           </ul>
         </li>
         <li>
-          An emerging model worth exploring is the <a
-            href="bear://x-callback-url/open-note?title=Networked%20Organization&x-error=bear%3A%2F%2Fx%2Dcallback%2Durl%2Fcreate%3Ftitle%3DNetworked%2520Organization"
-            >Networked Organization</a
-          >, which can be thought of as applying some of the principles of decentralization a la
-          software to the corporation itself.
+          An emerging model worth exploring is the Networked Organization, which can be thought of
+          as applying some of the principles of decentralization a la software to the corporation
+          itself.
         </li>
       </ul>
     </li>
@@ -174,7 +167,7 @@
   <p class="">
     At a high level, we are interested in solutions that explore one of four strategies:
   </p>
-  <ol>
+  <ol class="leading-none">
     <li>
       <p>Increase the total number of available hours.</p>
     </li>

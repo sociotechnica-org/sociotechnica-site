@@ -67,7 +67,7 @@ Thanks so much for asking. We would love feedback, comments and questions, inclu
 
 <h1 class="font-serif text-4xl mb-4">Role Complexity</h1>
 
-<div class="italic mb-4 text-sm text-gray-600">Updated November 1, 2022</div>
+<div class="italic mb-4 text-sm text-gray-600">Updated November 2022</div>
 
 <article class="prose">
   <SvelteMarkdown {source} />
