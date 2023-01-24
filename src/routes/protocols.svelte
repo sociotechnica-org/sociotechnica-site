@@ -31,7 +31,14 @@
 
 <h1 class="font-serif text-4xl mb-4">Driving Protocol Adoption</h1>
 
-<div class="italic mb-4 text-sm text-gray-600">Drafting - December 2022</div>
+<div class="italic mb-4 text-sm text-gray-600">Drafting December 2022</div>
+
+<div class="p-5 mb-5 border-2 bg-slate-100">
+  <p class="italic text-neutral-600">
+    <b class="font-semibold">Work in Progress:</b> These are a set of working notes about how to drive
+    adoption of new protocols.
+  </p>
+</div>
 
 <article class="prose">
   <SvelteMarkdown {source} />
