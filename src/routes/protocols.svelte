@@ -1,5 +1,6 @@
 <script>
   import SvelteMarkdown from 'svelte-markdown';
+  import SocialMeta from '../lib/components/SocialMeta.svelte';
   const source = `
 
 - A protocol wins if it gets adopted, where adoption is a large number of people using the protocol on a daily basis (DAUs).
@@ -28,6 +29,13 @@
 <svelte:head>
   <title>Protocol Adoption | SocioTechnica</title>
 </svelte:head>
+
+<SocialMeta
+  title="Driving Protocol Adoption"
+  description="How to get a new protocol adopted."
+  url="https://sociotechnica.com/protocols"
+  image="https://sociotechnica.com/sociotechnica-social.png"
+/>
 
 <h1 class="font-serif text-4xl mb-4">Driving Protocol Adoption</h1>
 

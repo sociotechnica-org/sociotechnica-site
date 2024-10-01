@@ -1,7 +1,18 @@
+<script>
+  import SocialMeta from '../lib/components/SocialMeta.svelte';
+</script>
+
 <svelte:head>
   <title>Most Excellent Agreement | SocioTechnica</title>
   <meta name="description" content="Danvers and Jess' Most Excellent Agreement" />
 </svelte:head>
+
+<SocialMeta
+  title="Most Excellent Agreement"
+  description="Danvers and Jess' Most Excellent Agreement"
+  url="https://sociotechnica.com/agrmt"
+  image="https://sociotechnica.com/sociotechnica-social.png"
+/>
 
 <article class="font-typewriter text-gray-600 text-lg leading-none md:p-16 p-4 paper">
   <h1 class="text-center mb-4">Danvers' and Jess' Most Excellent Agreement</h1>

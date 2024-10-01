@@ -1,5 +1,7 @@
 <script>
   import SvelteMarkdown from 'svelte-markdown';
+  import SocialMeta from '../lib/components/SocialMeta.svelte';
+
   const source = `
 At [Next LX](https://nextlx.com), we're building a simulation-based training program that prepares candidates in an AI-powered workplace. We call it a "flight simulator for office work."
 
@@ -45,11 +47,14 @@ Simulation-based training represents a paradigm shift in job preparation and ski
 `;
 </script>
 
-<svelte:head>
-  <title>Simulation-Based Training | SocioTechnica</title>
-</svelte:head>
+<SocialMeta
+  title="Simulation-Based Training for Office Work"
+  description="At Next LX, we're building a simulation-based training program that prepares candidates in an AI-powered workplace."
+  url="https://nextlx.com/simulation"
+  image="https://nextlx.com/sociotechnica-social.png"
+/>
 
-<h1 class="font-serif text-4xl mb-4">The Power of Simulation-Based Training for Office Work</h1>
+<h1 class="font-serif text-4xl mb-4">Simulation-Based Training for Office Work</h1>
 
 <div class="italic mb-4 text-sm text-gray-600">Updated October 2024</div>
 

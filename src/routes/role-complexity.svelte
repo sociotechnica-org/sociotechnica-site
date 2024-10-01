@@ -1,5 +1,7 @@
 <script>
   import SvelteMarkdown from 'svelte-markdown';
+  import SocialMeta from '../lib/components/SocialMeta.svelte';
+
   const source = `
 
 We believe that all work takes place within nested levels of complexity. We believe that many people gravitate towards particular levels of complexity that maximize their enjoyment of the experience. This comfort and familiarity can also lead to effectiveness, and vice versa.
@@ -60,6 +62,13 @@ Thanks so much for asking. We would love feedback, comments and questions, inclu
 
 `;
 </script>
+
+<SocialMeta
+  title="Role Complexity"
+  description="How to understand the complexity of roles within organizations."
+  url="https://sociotechnica.com/role-complexity"
+  image="https://sociotechnica.com/sociotechnica-social.png"
+/>
 
 <svelte:head>
   <title>Role Complexity | SocioTechnica</title>
