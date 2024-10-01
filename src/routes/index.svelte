@@ -22,6 +22,13 @@
     <li class="mb-1">
       <a
         class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+        href="simulation">The Power of Simulation-Based Training for Office Work</a
+      >
+      <span class="ml-1 text-sm italic text-gray-500">Updated October 2024</span>
+    </li>
+    <li class="mb-1">
+      <a
+        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
         href="role-complexity">Roles & Organizational Complexity</a
       >
       <span class="ml-1 text-sm italic text-gray-500">Updated November 2022</span>
