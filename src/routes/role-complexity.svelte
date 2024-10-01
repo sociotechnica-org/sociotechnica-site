@@ -66,8 +66,8 @@ Thanks so much for asking. We would love feedback, comments and questions, inclu
 <SocialMeta
   title="Role Complexity"
   description="How to understand the complexity of roles within organizations."
-  url="https://sociotechnica.com/role-complexity"
-  image="https://sociotechnica.com/sociotechnica-social.png"
+  url="https://sociotechnica.org/role-complexity"
+  image="https://sociotechnica.org/sociotechnica-social.png"
 />
 
 <svelte:head>

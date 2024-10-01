@@ -33,8 +33,8 @@
 <SocialMeta
   title="Driving Protocol Adoption"
   description="How to get a new protocol adopted."
-  url="https://sociotechnica.com/protocols"
-  image="https://sociotechnica.com/sociotechnica-social.png"
+  url="https://sociotechnica.org/protocols"
+  image="https://sociotechnica.org/sociotechnica-social.png"
 />
 
 <h1 class="font-serif text-4xl mb-4">Driving Protocol Adoption</h1>

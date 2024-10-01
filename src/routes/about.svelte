@@ -9,8 +9,8 @@
 <SocialMeta
   title="About Us"
   description="Danvers and Jess have been working together on projects at the intersection of people, systems, and technology since 2008."
-  url="https://sociotechnica.com/about"
-  image="https://sociotechnica.com/sociotechnica-social.png"
+  url="https://sociotechnica.org/about"
+  image="https://sociotechnica.org/sociotechnica-social.png"
 />
 
 <h1 class="font-serif text-4xl mb-4">About Us</h1>

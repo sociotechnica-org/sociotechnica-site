@@ -50,8 +50,8 @@ Simulation-based training represents a paradigm shift in job preparation and ski
 <SocialMeta
   title="Simulation-Based Training for Office Work"
   description="At Next LX, we're building a simulation-based training program that prepares candidates in an AI-powered workplace."
-  url="https://nextlx.com/simulation"
-  image="https://nextlx.com/sociotechnica-social.png"
+  url="https://sociotechnica.org/simulation"
+  image="https://sociotechnica.org/sociotechnica-social.png"
 />
 
 <h1 class="font-serif text-4xl mb-4">Simulation-Based Training for Office Work</h1>

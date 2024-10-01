@@ -10,8 +10,8 @@
 <SocialMeta
   title="Most Excellent Agreement"
   description="Danvers and Jess' Most Excellent Agreement"
-  url="https://sociotechnica.com/agrmt"
-  image="https://sociotechnica.com/sociotechnica-social.png"
+  url="https://sociotechnica.org/agrmt"
+  image="https://sociotechnica.org/sociotechnica-social.png"
 />
 
 <article class="font-typewriter text-gray-600 text-lg leading-none md:p-16 p-4 paper">
