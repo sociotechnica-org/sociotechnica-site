@@ -1,6 +1,17 @@
+<script>
+  import SocialMeta from '../lib/components/SocialMeta.svelte';
+</script>
+
 <svelte:head>
   <title>SocioTechnica</title>
 </svelte:head>
+
+<SocialMeta
+  title="SocioTechnica"
+  description="SocioTechnica is a collaboration between Danvers Fleury and Jess Martin."
+  url="https://sociotechnica.org"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+/>
 
 <h1 class="text-4xl mb-5 font-serif">SocioTechnica</h1>
 

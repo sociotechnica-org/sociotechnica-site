@@ -57,6 +57,27 @@ Simulation-based training represents a paradigm shift in job preparation and ski
 <h1 class="font-serif text-4xl mb-4">Simulation-Based Training for Office Work</h1>
 
 <div class="italic mb-4 text-sm text-gray-600">Updated October 2024</div>
+<div class="mb-8 w-full border-2 border-gray-300 rounded-lg p-4 bg-gray-100">
+  <p class="mb-4 text-sm">
+    <b class="font-semibold">Video Version:</b>
+    If you would prefer to listen to this content, I recorded
+    <a
+      class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+      href="https://www.youtube.com/watch?v=RhNqRO1p24g">this rant</a
+    >
+    on the topic in a single take, no editing.
+  </p>
+  <div class="relative" style="padding-top: 56.25%;">
+    <iframe
+      class="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/RhNqRO1p24g"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </div>
+</div>
 
 <article class="prose">
   <SvelteMarkdown {source} />
