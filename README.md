@@ -25,4 +25,6 @@ You can preview the production build with `npm run preview`.
 
 ## Deployment
 
-TBD
+The site is deployed automatically to Netlify when changes are merged into the `main` branch.
+
+[Netlify project](https://app.netlify.com/sites/sociotechnica/overview)
