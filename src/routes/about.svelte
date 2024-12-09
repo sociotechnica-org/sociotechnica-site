@@ -56,7 +56,7 @@
     <li class="text-neutral-500 mb-1">
       <a
         class="border-b-2 hover:border-b-2 hover:border-yellow-700 text-neutral-500 hover:text-yellow-700"
-        href="https://twitter.com/jessmartin">Twitter</a
+        href="https://bsky.app/profile/jessmart.in">BlueSky</a
       >
     </li>
     <li class="text-neutral-500">
