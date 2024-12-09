@@ -30,11 +30,11 @@
 
 <footer class="mb-5 pt-5">
   <p class="text-center text-lg mb-3">
-    <img src="/twitter-logo.png" alt="twitter-logo" class="w-5 h-5 inline-block" />
+    <img src="/bluesky-logo.png" alt="bluesky-logo" class="w-5 h-5 inline-block" />
     Follow along at
     <a
       class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
-      href="https://twitter.com/sociotechnica"
+      href="https://bsky.app/profile/sociotechnica.bsky.social"
     >
       @sociotechnica</a
     >.
