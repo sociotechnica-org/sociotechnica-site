@@ -3,7 +3,7 @@
   import SocialMeta from '../lib/components/SocialMeta.svelte';
 
   const source = `
-At [Next LX](https://nextlx.com), we're building a simulation-based training program that prepares candidates in an AI-powered workplace. We call it a "flight simulator for office work."
+At [Next LX](https://sociotechnica.org/projects/#next-lx), we're building a simulation-based training program that prepares candidates in an AI-powered workplace. We call it a "flight simulator for office work."
 
 But we sometimes get asked "Why build a simulator? Seems like a lot of work."
 
