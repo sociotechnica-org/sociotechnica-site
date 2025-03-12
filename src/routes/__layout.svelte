@@ -34,7 +34,7 @@
     Follow along at
     <a
       class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
-      href="https://bsky.app/profile/sociotechnica.bsky.social"
+      href="https://bsky.app/profile/sociotechnica.org"
     >
       @sociotechnica</a
     >.
