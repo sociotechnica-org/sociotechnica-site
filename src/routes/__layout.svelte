@@ -20,6 +20,11 @@
           >Projects</a
         >
       </li>
+      <li class="inline ml-5">
+        <a class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700" href="/hire-us"
+          >Hire Us</a
+        >
+      </li>
     </ul>
   </nav>
 </header>
