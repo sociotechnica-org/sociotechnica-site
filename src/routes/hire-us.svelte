@@ -9,61 +9,50 @@
 <h1 class="font-serif text-4xl mb-4">Hire Us</h1>
 
 <p class="mb-5 text-neutral-700">
-  We partner with people and organizations to transform emerging technologies into viable businesses
-  and integrate new technologies into established operations.
+  We partner with people and organizations to integrate new technologies into established operations
+  (<a
+    class=" hover:text-yellow-700 text-gray-600 underline underline-offset-2"
+    href="#for-established-organizations">Established Organizations ↓</a
+  >) and to transform emerging technologies into viable businesses (<a
+    class="hover:text-yellow-700 text-gray-600 underline underline-offset-2"
+    href="#for-start-ups">Start-Ups ↓</a
+  >).
 </p>
 
-<p class="mb-5 text-neutral-700">
+<p class="mb-5 text-neutral-700 italic">
   Advisory from $500, projects from $5K, annual partnerships from $50K
 </p>
-<p class="mb-8 text-neutral-700">30-minute chat: always free</p>
+<p class="mb-8 text-neutral-700">
+  <a
+    href="https://calendly.com/jessmartin/sociotechnica"
+    class="hover:text-yellow-700 text-gray-600 underline underline-offset-2"
+    >Schedule a 30-minute chat ↗</a
+  ><br />
+  <span class="text-gray-600 italic">Always free.</span>
+</p>
 
 <hr class="my-10 border-t border-gray-300" />
 
-<h2 class="mb-1 font-medium text-2xl">For Start-Ups</h2>
-
-<p class="mb-5 text-neutral-700">
-  We help technical founders connect their innovations with real-world needs and build engaged
-  communities around their work.
-</p>
-
-<p class="mb-6 text-neutral-700">
-  Each service can stand alone or work together as part of a holistic approach.
-</p>
-
-<div class="space-y-8 mb-10">
-  <div>
-    <h3 class="text-xl font-medium mb-3">1. Understand Your Users</h3>
-    <p class="text-neutral-700">
-      We talk directly with potential and current customers to learn their actual needs, then shape
-      your message using their own words to describe the value you provide.
-    </p>
-  </div>
-  <div>
-    <h3 class="text-xl font-medium mb-3">2. Build Just What's Needed</h3>
-    <p class="text-neutral-700">
-      We rapidly prototype the essential features that demonstrate value, gather meaningful
-      feedback, and test core assumptions before committing resources to full development.
-    </p>
-  </div>
-  <div>
-    <h3 class="text-xl font-medium mb-3">3. Grow Your Community</h3>
-    <p class="text-neutral-700">
-      We develop strategies to attract technically-minded early adopters who genuinely value your
-      innovation and provide quality feedback. This typically involves targeted content, developer
-      relationships, and specific outreach activities.
-    </p>
-  </div>
-</div>
-
-<hr class="my-10 border-t border-gray-300" />
-
-<h2 class="mb-1 font-medium text-2xl">For Established Organizations</h2>
+<h2 id="for-established-organizations" class="mb-1 font-medium text-2xl">
+  For Established Organizations
+</h2>
 
 <p class="mb-5 text-neutral-700">We specialize in two areas of technological transformation:</p>
 <ol class="list-decimal list-inside mb-6 space-y-2 pl-4 text-neutral-700">
-  <li>Enhancing human work with AI</li>
-  <li>Creating secure, local-first software systems</li>
+  <li>
+    <a
+      href="#ai-enhancement-of-human-work"
+      class="hover:text-yellow-700 text-gray-600 underline underline-offset-2"
+      >Enhancing human work with AI ↓</a
+    >
+  </li>
+  <li>
+    <a
+      href="#local-first-development"
+      class="hover:text-yellow-700 text-gray-600 underline underline-offset-2"
+      >Creating secure, local-first software systems ↓</a
+    >
+  </li>
 </ol>
 
 <p class="mb-10 text-neutral-700">
@@ -71,7 +60,9 @@
 </p>
 
 <section class="mb-12">
-  <h3 class="text-xl font-medium mb-3">AI Enhancement of Human Work</h3>
+  <h3 id="ai-enhancement-of-human-work" class="text-xl font-medium mb-3">
+    AI Enhancement of Human Work
+  </h3>
   <p class="mb-8 text-neutral-700">
     We help organizations transform their operations into modern, AI-augmented collaboration systems
     where humans and technology work together effectively.
@@ -120,10 +111,8 @@
   </div>
 </section>
 
-<hr class="my-10 border-t border-gray-300" />
-
 <section class="mb-12">
-  <h3 class="text-xl font-medium mb-3">Local-First Development</h3>
+  <h3 id="local-first-development" class="text-xl font-medium mb-3">Local-First Development</h3>
   <p class="mb-8 text-neutral-700">
     We help organizations create more secure, cost-effective software solutions by bringing data
     processing closer to where it's used.
@@ -166,3 +155,41 @@
     </div>
   </div>
 </section>
+
+<hr class="my-10 border-t border-gray-300" />
+
+<h2 id="for-start-ups" class="mb-1 font-medium text-2xl">For Start-Ups</h2>
+
+<p class="mb-5 text-neutral-700">
+  We help technical founders connect their innovations with real-world needs and build engaged
+  communities around their work.
+</p>
+
+<p class="mb-6 text-neutral-700">
+  Each service can stand alone or work together as part of a holistic approach.
+</p>
+
+<div class="space-y-8 mb-10">
+  <div>
+    <h3 class="text-xl font-medium mb-3">1. Understand Your Users</h3>
+    <p class="text-neutral-700">
+      We talk directly with potential and current customers to learn their actual needs, then shape
+      your message using their own words to describe the value you provide.
+    </p>
+  </div>
+  <div>
+    <h3 class="text-xl font-medium mb-3">2. Build Just What's Needed</h3>
+    <p class="text-neutral-700">
+      We rapidly prototype the essential features that demonstrate value, gather meaningful
+      feedback, and test core assumptions before committing resources to full development.
+    </p>
+  </div>
+  <div>
+    <h3 class="text-xl font-medium mb-3">3. Grow Your Community</h3>
+    <p class="text-neutral-700">
+      We develop strategies to attract technically-minded early adopters who genuinely value your
+      innovation and provide quality feedback. This typically involves targeted content, developer
+      relationships, and specific outreach activities.
+    </p>
+  </div>
+</div>
