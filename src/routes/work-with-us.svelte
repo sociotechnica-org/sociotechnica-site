@@ -1,12 +1,12 @@
 <svelte:head>
-  <title>Hire Us - Sociotechnica</title>
+  <title>Work With Us - Sociotechnica</title>
   <meta
     name="description"
     content="Partner with Sociotechnica to transform emerging technologies into viable businesses or integrate new technologies into established operations."
   />
 </svelte:head>
 
-<h1 class="font-serif text-4xl mb-4">Hire Us</h1>
+<h1 class="font-serif text-4xl mb-4">Work With Us</h1>
 
 <p class="mb-5 text-neutral-700">
   We partner with people and organizations to integrate new technologies into established operations
