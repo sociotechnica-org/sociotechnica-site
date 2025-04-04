@@ -1,17 +1,26 @@
+<script>
+  import SocialMeta from '$lib/components/SocialMeta.svelte';
+</script>
+
+<SocialMeta
+  title="Next LX: A Flight Simulator for Office Work"
+  description="Next LX was an experimental employment agency that represented high potential workers who have been skilled to spec in an AI-powered workplace simulator."
+  url="https://sociotechnica.org/next-lx"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+/>
+
 <svelte:head>
-  <title>Projects | SocioTechnica</title>
-  <meta name="description" content="Past projects and experiments" />
+  <title>Next LX | SocioTechnica</title>
+  <meta
+    name="description"
+    content="Next LX was an experimental employment agency that represented high potential workers who have been skilled to spec in an AI-powered workplace simulator."
+  />
 </svelte:head>
 
-<h1 class="font-serif text-4xl mb-4">Projects</h1>
+<h1 class="font-serif text-4xl mb-4">Next LX</h1>
+<p class="text-neutral-500 mb-1">July-December 2024</p>
 
 <article>
-  <p class="mb-5">
-    We've worked on a lot of projects over the years. Here are some of the highlights.
-  </p>
-
-  <h2 id="next-lx" class="mb-1 font-medium text-2xl">Next LX</h2>
-  <p class="text-neutral-500 mb-1">July-December 2024</p>
   <p class="mb-3">
     Next LX was an experimental employment agency that represented high potential workers who have
     been skilled to spec in an AI-powered workplace simulator.
