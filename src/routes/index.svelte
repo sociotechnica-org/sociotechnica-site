@@ -31,6 +31,13 @@
     <li class="mb-1">
       <a
         class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+        href="q1-2025-update">SocioTechnica Q1 2025 Update</a
+      >
+      <span class="ml-1 text-sm italic text-gray-500">April 2025</span>
+    </li>
+    <li class="mb-1">
+      <a
+        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
         href="next-lx">Next LX: A Flight Simulator for Office Work</a
       >
       <span class="ml-1 text-sm italic text-gray-500">December 2024</span>

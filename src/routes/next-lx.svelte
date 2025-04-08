@@ -31,21 +31,21 @@
       <a
         class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
         href="https://docs.google.com/document/d/10fGzcgXkPtau3RtUCHwpsOfTWf89YGyxFX9b02FcJs8/edit?tab=t.0"
-        >Update #3: 10/23 - 12/20 (Final Update)</a
+        >Update #3: 10/23/24 - 12/20/24 (Final Update)</a
       >
     </li>
     <li>
       <a
         class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
         href="https://docs.google.com/document/d/1r00gehxK9PVlbr2_YRidAHOkGdtoVTSIhZWkAF6fjV4/edit?tab=t.0"
-        >Update #2: 9/15 - 10/23</a
+        >Update #2: 9/15/24 - 10/23/24</a
       >
     </li>
     <li>
       <a
         class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
         href="https://docs.google.com/document/d/18yqbsj2d3wTAr2T_16KJu-L-UlvMOGAl5AN6rgkkPQw/edit?tab=t.0"
-        >Update #1: 7/1 - 9/15</a
+        >Update #1: 7/1/24 - 9/15/24</a
       >
     </li>
   </ul>
