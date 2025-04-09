@@ -16,11 +16,6 @@
         >
       </li>
       <li class="inline ml-5">
-        <a class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700" href="/projects"
-          >Projects</a
-        >
-      </li>
-      <li class="inline ml-5">
         <a
           class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
           href="/work-with-us">Work With Us</a

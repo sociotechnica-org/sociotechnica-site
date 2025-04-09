@@ -1,5 +1,5 @@
 <script>
-  import SocialMeta from '../lib/components/SocialMeta.svelte';
+  import SocialMeta from '$lib/components/SocialMeta.svelte';
 </script>
 
 <svelte:head>

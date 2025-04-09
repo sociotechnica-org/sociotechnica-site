@@ -26,51 +26,49 @@
     We believe <span class="font-semibold">partnership between human and machine</span> is the best foundation
     to build systems that will drive humanity forward.
   </p>
-  <p class="mb-3">
-    These days we're adopting problem domains and exploring solutions in the following areas:
-  </p>
+  <h2 class="mb-3 font-serif text-2xl">Our Work</h2>
   <ul class="list-disc pl-10">
+    <li class="mb-1">
+      <a
+        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+        href="q1-2025-update">SocioTechnica Q1 2025 Update</a
+      >
+      <span class="ml-1 text-sm italic text-gray-500">April 2025</span>
+    </li>
+    <li class="mb-1">
+      <a
+        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+        href="next-lx">Next LX: A Flight Simulator for Office Work</a
+      >
+      <span class="ml-1 text-sm italic text-gray-500">December 2024</span>
+    </li>
     <li class="mb-1">
       <a
         class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
         href="simulation">The Power of Simulation-Based Training for Office Work</a
       >
-      <span class="ml-1 text-sm italic text-gray-500">Updated October 2024</span>
-    </li>
-    <li class="mb-1">
-      <a
-        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
-        href="role-complexity">Roles & Organizational Complexity</a
-      >
-      <span class="ml-1 text-sm italic text-gray-500">Updated November 2022</span>
-    </li>
-    <li class="mb-1">
-      <a
-        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
-        href="open-source">Sustaining Open Source Software</a
-      >
-      <span class="ml-1 text-sm italic text-gray-500">Updated July 2022</span>
+      <span class="ml-1 text-sm italic text-gray-500">October 2024</span>
     </li>
     <li class="mb-1">
       <a
         class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
         href="protocols">Driving Protocol Adoption</a
       >
-      <span class="ml-1 text-sm italic text-gray-500">Drafting</span>
+      <span class="ml-1 text-sm italic text-gray-500">December 2022</span>
     </li>
     <li class="mb-1">
-      Decompiling The Crypto Economy
-      <span class="ml-1 text-sm italic text-gray-500">In progress</span>
+      <a
+        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+        href="role-complexity">Roles & Organizational Complexity</a
+      >
+      <span class="ml-1 text-sm italic text-gray-500">November 2022</span>
     </li>
     <li class="mb-1">
-      Building Integrated Vocational Development Systems
-      <span class="ml-1 text-sm italic text-gray-500">In progress</span>
+      <a
+        class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+        href="open-source">Sustaining Open Source Software</a
+      >
+      <span class="ml-1 text-sm italic text-gray-500">July 2022</span>
     </li>
-    <!--
-    <li class="mb-1">
-      Harnessing Acceptance & Expectation
-      <span class="ml-1 text-sm italic text-gray-500">In progress</span>
-    </li>
-    -->
   </ul>
 </article>
