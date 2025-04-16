@@ -31,9 +31,9 @@
     <li class="mb-1">
       <a
         class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
-        href="q1-2025-update">SocioTechnica Q1 2025 Update</a
+        href="q1-2025-update">Sorry HAL, it's not me, it's you: firing our AI intern</a
       >
-      <span class="ml-1 text-sm italic text-gray-500">April 2025</span>
+      <span class="ml-1 text-sm italic text-gray-500">Q1 2025 Update</span>
     </li>
     <li class="mb-1">
       <a

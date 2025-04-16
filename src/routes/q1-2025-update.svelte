@@ -114,7 +114,8 @@ Danvers & Jess
   <meta name="description" content="SocioTechnica Q1 2025 Update" />
 </svelte:head>
 
-<h1 class="font-serif text-4xl mb-4">SocioTechnica Q1 2025 Update</h1>
+<h1 class="font-serif text-4xl mb-2">Sorry HAL, it's not me, it's you</h1>
+<h2 class="text-2xl mb-4">Firing our AI intern (Q1 2025 Update)</h2>
 <p class="text-neutral-500 mb-1">April 2025</p>
 
 <article class="prose">
