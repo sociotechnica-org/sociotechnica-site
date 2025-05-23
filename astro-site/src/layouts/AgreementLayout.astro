@@ -47,6 +47,30 @@ const { title } = Astro.props;
         <slot />
       </main>
     </div>
+
+    <footer class="container mx-auto px-4 max-w-4xl mb-5 pt-5">
+      <div class="text-center">
+        <p class="text-center text-lg mb-3">
+          <img src="/bluesky-logo.png" alt="bluesky-logo" class="w-5 h-5 inline-block" />
+          Follow along at
+          <a
+            class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+            href="https://bsky.app/profile/sociotechnica.org"
+          >
+            @sociotechnica</a
+          >.
+        </p>
+
+        <p class="text-center text-sm">
+          A <a
+            class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+            href="/about"
+          >
+            Danvers Fleury and Jess Martin</a
+          > project.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
 
