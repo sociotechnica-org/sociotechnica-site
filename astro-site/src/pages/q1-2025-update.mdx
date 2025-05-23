@@ -1,0 +1,115 @@
+---
+title: 'SocioTechnica Q1 2025 Update'
+description: 'SocioTechnica Q1 2025 Update'
+---
+import Layout from '../layouts/Layout.astro';
+import VideoRenderer from '../components/VideoRenderer.tsx';
+
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+  url="https://sociotechnica.org/q1-2025-update"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
+
+<h1 class="font-serif text-4xl mb-2">Sorry HAL, it's not me, it's you</h1>
+<h2 class="text-2xl mb-4">Firing our AI intern (Q1 2025 Update)</h2>
+<p class="text-neutral-500 mb-1">April 2025</p>
+
+<article class="prose">
+
+**TL;DR:** We assembled a team of AI agents, gave them our credit card, and put them to work buying and selling NFTs. The friction & exhilaration inspired us to explore a new architectural approach + user interface for AI-human collaboration.
+
+## Picking up Our Pivot Foot
+
+When we last left our [intrepid explorers](https://sociotechnica.org/about), we'd just [used AI to overclock our NFT collection](https://docs.google.com/document/d/10fGzcgXkPtau3RtUCHwpsOfTWf89YGyxFX9b02FcJs8/edit?tab=t.0#heading=h.2au403aegu0p) to almost win a competitive NBA-themed marketplace game. We learned our startup was the wrong concept to pursue, and agreed to continue our partnership in a more bootstrapped fashion.
+
+Having integrated AI into our daily consulting workflows, we set our sights on an AI-powered lifestyle business with a concrete Q1 goal: demonstrate that we could **use agents to make us $5 a day** in a marketplace. If we built a robust system to do this, scaling up to $10, $20, $50, $500 becomes more about bankroll and market size than our solution's design.
+
+Our learnings made it clear that a simple rules-based trading system using AI agents would force us to test everything we wanted: keeping things stable, comparing various LLMs for cost and efficacy, and prompt engineering strategies.
+
+## Our First Trading Activity
+
+Our testing grounds remained NBA Top Shot - [a popped balloon of a marketplace](https://www.theringer.com/2025/02/26/features/nba-top-shot-crypto-moments-bust-nfl-all-day-dapper-labs). Why test in a dying market? Because we're so familiar with it. Handing AI your credit card is weird; we wanted to run reality checks in near real-time.
+
+The architecture of our initial build was straightforward:
+
+1. A core, rules-based trading system encouraging agents to buy low and sell high-ish.  
+2. A 'green list' of NFTs of uninjured star players not involved in upcoming supply increases and on likely playoff teams.  
+3. Make offers on attractive NFTs.  
+4. Post purchased NFTs for sale.  
+5. Prune bids and listings that no longer made sense given changing market conditions.  
+6. A key communication rule: talk to us like a pirate.
+
+## Introducing Pat Sharpe, our inept AI intern!
+[![Introducing Pat Sharpe, our inept AI intern!](/pat-sharpe.png)](/pat-sharpe.png)
+
+Our bias is always to work with AI agents as if they were human collaborators. Ideally, we'd just give them a doc outlining the task + some tools and they'd be off to the races. But from past experience creating LLM-enabled co-workers, we knew we'd need distinct prompts - LLMs can't just ingest an entire project doc and know what to do. So we first created an agent to assess market conditions and make offers and gave it access to a browser as a tool. Can we just point it at the proper websites and expect it to do the right thing?
+
+Back in November, the most cutting-edge option was [Claude Computer Use](https://www.anthropic.com/news/3-5-models-and-computer-use) - Anthropic's private beta allowing Claude to drive a browser in a Docker container. Perfect! Until we discovered why it remains in beta: **Claude has a vision problem.**
+
+Claude confused browser UI elements with website content, even misreading digits, and struggled with basic page navigation. An LLM with your credit card that can't read numbers is dangerous! 
+
+<VideoRenderer href="/claude-confusion.mp4" text="Watch Claude get totally confused trying to browse a webpage (prepare to cringe)." />
+
+This led us to browser automation scripts. Jess has written Selenium scripts for 20 years, and Puppeteer remains annoying. The advantage now? LLMs can help write that code. We built browser automation for every necessary interaction, packaging each as a tool for our AI.
+
+A new problem emerged: when these tools returned HTML, LLMs often drew incorrect conclusions, overlooked details, hallucinated information, or misunderstood what they were seeing. We had to transform HTML into reduced, structured data - translating everything to CSV with filtered columns. **Just because LLMs have large context windows doesn't mean they use that information well!**
+
+Another inconvenient, if expected, lesson: **LLMs are bad at math.** Calculating profit margins is crucial, but the LLM consistently made basic errors. We tried giving it a calculator, but calculators require knowing how to use them properly. We ended up writing code to calculate profit percentages for specific market conditions.
+
+We hoped an LLM could function as a junior employee: provide written guidance, a browser, calculator, and note-taking tools. Unfortunately, humans still must break tasks into tiny pieces with extensive hand-holding. This represents the current state of the art with Claude 3.5/3.7. **Browser usage and bundled micro-tasks remain a significant challenge for real-world agents.**
+
+The bright spot? Communication. Our LLMs kept us updated through Discord surprisingly well, delivering helpful and fun pirate-themed messages without requiring exact text specifications.
+
+![Market analysis is the core of the motion - find NFTs that have an expected profit margin if our offer is accepted.](/alperen-sengun-moments.png)
+_Market analysis is the core of the motion - find NFTs that have an expected profit margin if our offer is accepted._
+
+![Offer placement is one of the core website tools.](/offer-placed-successfully.png)  
+_Offer placement is one of the core website tools._
+
+![This one was **so close**. But it's below the threshold, so no offer is placed.](/steph-curry-moments.png)
+_This one was **so close**. But it's below the threshold, so no offer is placed._
+
+During our testing window, we hit our goal of a mostly automated system making $5/day with limited inputs. 
+
+![In case **you're** bad at math, the average is $4.33/day.](/daily-transaction-totals.png)
+_In case **you're** bad at math, the average is $4.33/day._
+
+But what we built was still fairly dumb - effectively a series of scripts that don't truly leverage the reasoning capabilities of agents.
+
+## Building Pat's Replacement - An Accidental Invention
+
+![These **weren't** the droids we were looking for.](/not-the-droids.png)
+_These **weren't** the droids we were looking for._
+
+How would Pat's 3-month performance review have gone if they were an actual person?
+
+What would you do with an intern that:
+
+* Does great work, but only with microscopic task breakdowns and exact instructions  
+* Needs specific tools for every task, unaware other tools exist, doesn't ask for them  
+* Forgets everything upon task completion, starting from scratch each time  
+* Works in an empty, windowless room with no awareness of a broader world  
+* Never learns from mistakes without explicit adjustment to task descriptions  
+* Is articulate when reporting back, but can't do basic math   
+* Needs everything translated into simplified formats
+
+Our plan is to fire them.
+
+So who's the replacement? That's a story for our next update and technical whitepaper.
+
+Here's a preview of what we're building:
+
+* **Environmental Awareness:** An event-driven architecture where the agent exists within a shared data environment, seeing your context and maintaining memory of past actions.  
+* **Tool Autonomy:** Agents can discover, request, and create their own tools through a grammatical UI separating objects (nouns) from actions (verbs).  
+* **True Partnership**: A user interface where humans and AI genuinely collaborate—sharing workspace, data, and tools. Humans maintain control while AI handles what it's good at, creating a natural division of labor like working with a colleague rather than programming a robot.
+
+We plan to build a new AI intern in this environment, hold a bakeoff against Pat, and compare results. Looking forward to sharing more! Thanks for reading and drop us a line with any thoughts.
+
+Sincerely,  
+Danvers & Jess
+
+</article>
+
+</Layout>
