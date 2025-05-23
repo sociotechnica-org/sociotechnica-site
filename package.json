@@ -1,41 +1,26 @@
 {
-  "name": "sociotechnica-site",
+  "name": "astro-site",
+  "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "prepare": "svelte-kit sync",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check && tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/react": "^4.3.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "astro": "^5.8.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-netlify": "^1.0.0-next.64",
-    "@sveltejs/kit": "next",
-    "@tailwindcss/typography": "^0.5.2",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
-    "autoprefixer": "^10.4.7",
-    "eslint": "^8.12.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "mdsvex": "^0.10.6",
-    "postcss": "^8.4.14",
-    "prettier": "^2.5.1",
-    "prettier-plugin-svelte": "^2.5.0",
-    "svelte": "^3.44.0",
-    "svelte-check": "^2.2.6",
-    "svelte-preprocess": "^4.10.7",
-    "tailwindcss": "^3.0.24",
-    "tslib": "^2.3.1",
-    "typescript": "~4.6.2"
-  },
-  "type": "module",
-  "dependencies": {
-    "svelte-markdown": "^0.2.3"
+    "@astrojs/tailwind": "^6.0.2",
+    "tailwindcss": "^3.4.17"
   }
 }

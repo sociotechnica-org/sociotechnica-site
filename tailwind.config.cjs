@@ -1,17 +1,13 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
-
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    container: {
-      padding: '2rem',
-    },
     extend: {
       fontFamily: {
+        'urania': ['Urania Czech', 'monospace'],
         'typewriter': ['Urania Czech', 'monospace'],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('@tailwindcss/typography')],
 }
