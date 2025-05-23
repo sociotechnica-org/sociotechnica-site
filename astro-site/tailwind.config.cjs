@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        urania: ['Urania Czech', 'monospace'],
+        'urania': ['Urania Czech', 'monospace'],
       },
     },
   },
