@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Urania Czech', monospace;
+}
+
 /* Style to look like old paper */
 .paper {
   box-shadow: 2px 3px 10px #999, 0 0 125px #d4b698d0 inset;

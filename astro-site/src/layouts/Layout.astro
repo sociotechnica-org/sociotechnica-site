@@ -47,8 +47,8 @@ const siteName = 'SocioTechnica';
       </>
     )}
   </head>
-  <body>
-    <div class="container mx-auto px-4 max-w-5xl">
+  <body class="min-h-screen flex flex-col">
+    <div class="flex-grow container mx-auto px-8 max-w-4xl paper rounded-lg my-8 py-8">
       <header class="mb-5 mt-5 text-left">
         <nav>
           <ul class="">
@@ -75,29 +75,29 @@ const siteName = 'SocioTechnica';
       <main>
         <slot />
       </main>
-
-      <footer class="mb-5 pt-5">
-        <p class="text-center text-lg mb-3">
-          <img src="/bluesky-logo.png" alt="bluesky-logo" class="w-5 h-5 inline-block" />
-          Follow along at
-          <a
-            class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
-            href="https://bsky.app/profile/sociotechnica.org"
-          >
-            @sociotechnica</a
-          >.
-        </p>
-
-        <p class="text-center text-sm">
-          A <a
-            class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
-            href="/about"
-          >
-            Danvers Fleury and Jess Martin</a
-          > project.
-        </p>
-      </footer>
     </div>
+
+    <footer class="container mx-auto px-8 max-w-4xl mb-5 pt-5">
+      <p class="text-center text-lg mb-3">
+        <img src="/bluesky-logo.png" alt="bluesky-logo" class="w-5 h-5 inline-block" />
+        Follow along at
+        <a
+          class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+          href="https://bsky.app/profile/sociotechnica.org"
+        >
+          @sociotechnica</a
+        >.
+      </p>
+
+      <p class="text-center text-sm">
+        A <a
+          class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+          href="/about"
+        >
+          Danvers Fleury and Jess Martin</a
+        > project.
+      </p>
+    </footer>
   </body>
 </html>
 
