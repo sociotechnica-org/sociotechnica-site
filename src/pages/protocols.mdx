@@ -1,7 +1,28 @@
-<script>
-  import SvelteMarkdown from 'svelte-markdown';
-  import SocialMeta from '../lib/components/SocialMeta.svelte';
-  const source = `
+---
+title: 'Protocol Adoption | SocioTechnica'
+description: 'How to get a new protocol adopted.'
+---
+import Layout from '../layouts/Layout.astro';
+
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+  url="https://sociotechnica.org/protocols"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
+
+<h1 class="font-serif text-4xl mb-4">Driving Protocol Adoption</h1>
+
+<div class="italic mb-4 text-sm text-gray-600">Drafting December 2022</div>
+
+<div class="p-5 mb-5 border-2 bg-slate-100">
+  <p class="italic text-neutral-600">
+    <b class="font-semibold">Work in Progress:</b> These are a set of working notes about how to drive
+    adoption of new protocols.
+  </p>
+</div>
+
+<article class="prose">
 
 - A protocol wins if it gets adopted, where adoption is a large number of people using the protocol on a daily basis (DAUs).
 - In order to gain widespread adoption, the protocol needs to be in use in a few popular applications.
@@ -23,31 +44,7 @@
 	- Documentation needs to be top-notch.
 	- "Getting started" experience needs to be optimized to speed up first-time usage.
 	- Where to ask questions needs to be obvious and someone's dedicated responsibility.
-`;
-</script>
 
-<svelte:head>
-  <title>Protocol Adoption | SocioTechnica</title>
-</svelte:head>
-
-<SocialMeta
-  title="Driving Protocol Adoption"
-  description="How to get a new protocol adopted."
-  url="https://sociotechnica.org/protocols"
-  image="https://sociotechnica.org/sociotechnica-social.png"
-/>
-
-<h1 class="font-serif text-4xl mb-4">Driving Protocol Adoption</h1>
-
-<div class="italic mb-4 text-sm text-gray-600">Drafting December 2022</div>
-
-<div class="p-5 mb-5 border-2 bg-slate-100">
-  <p class="italic text-neutral-600">
-    <b class="font-semibold">Work in Progress:</b> These are a set of working notes about how to drive
-    adoption of new protocols.
-  </p>
-</div>
-
-<article class="prose">
-  <SvelteMarkdown {source} />
 </article>
+
+</Layout>

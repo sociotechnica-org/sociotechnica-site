@@ -1,8 +1,42 @@
-<script>
-  import SvelteMarkdown from 'svelte-markdown';
-  import SocialMeta from '$lib/components/SocialMeta.svelte';
+---
+title: 'Simulation-Based Training for Office Work'
+description: 'At Next LX, we are building a simulation-based training program that prepares candidates in an AI-powered workplace.'
+---
+import Layout from '../layouts/Layout.astro';
 
-  const source = `
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+  url="https://sociotechnica.org/simulation"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
+
+<h1 class="font-serif text-4xl mb-4">Simulation-Based Training for Office Work</h1>
+
+<div class="italic mb-4 text-sm text-gray-600">Updated October 2024</div>
+<div class="mb-8 w-full border-2 border-gray-300 rounded-lg p-4 bg-gray-100">
+  <p class="mb-4 text-sm">
+    <b class="font-semibold">Video Version:</b>
+    If you would prefer to listen to this content, I recorded
+    <a
+      class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+      href="https://www.youtube.com/watch?v=RhNqRO1p24g">this rant</a>
+    on the topic in a single take, no editing.
+  </p>
+  <div class="relative" style="padding-top: 56.25%;">
+    <iframe
+      class="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/RhNqRO1p24g"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </div>
+</div>
+
+<article class="prose">
+
 At [Next LX](https://sociotechnica.org/projects/#next-lx), we're building a simulation-based training program that prepares candidates in an AI-powered workplace. We call it a "flight simulator for office work."
 
 But we sometimes get asked "Why build a simulator? Seems like a lot of work."
@@ -44,41 +78,7 @@ What makes our approach uniquely powerful is the integration of AI throughout th
 
 ## Sim-based training + AI = training transformation
 Simulation-based training represents a paradigm shift in job preparation and skill acquisition. By leveraging AI and creating immersive, realistic work environments, we can offer more effective, efficient, and scalable training solutions. This approach not only revolutionizes job training but also has the potential to transform hiring practices, opening up new possibilities in the world of work and education.
-`;
-</script>
 
-<SocialMeta
-  title="Simulation-Based Training for Office Work"
-  description="At Next LX, we're building a simulation-based training program that prepares candidates in an AI-powered workplace."
-  url="https://sociotechnica.org/simulation"
-  image="https://sociotechnica.org/sociotechnica-social.png"
-/>
-
-<h1 class="font-serif text-4xl mb-4">Simulation-Based Training for Office Work</h1>
-
-<div class="italic mb-4 text-sm text-gray-600">Updated October 2024</div>
-<div class="mb-8 w-full border-2 border-gray-300 rounded-lg p-4 bg-gray-100">
-  <p class="mb-4 text-sm">
-    <b class="font-semibold">Video Version:</b>
-    If you would prefer to listen to this content, I recorded
-    <a
-      class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
-      href="https://www.youtube.com/watch?v=RhNqRO1p24g">this rant</a
-    >
-    on the topic in a single take, no editing.
-  </p>
-  <div class="relative" style="padding-top: 56.25%;">
-    <iframe
-      class="absolute top-0 left-0 w-full h-full"
-      src="https://www.youtube.com/embed/RhNqRO1p24g"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    />
-  </div>
-</div>
-
-<article class="prose">
-  <SvelteMarkdown {source} />
 </article>
+
+</Layout>

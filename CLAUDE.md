@@ -19,12 +19,6 @@ npm run build
 npm run check
 ```
 
-**Linting and formatting:**
-```bash
-npm run lint      # Check formatting and linting
-npm run format    # Auto-format code
-```
-
 **Preview production build:**
 ```bash
 npm run preview
@@ -32,24 +26,25 @@ npm run preview
 
 ## Architecture
 
-This is a **SvelteKit** site with TypeScript that serves as the main website for sociotechnica.org. The site is optimized for content delivery with integrated Markdown support.
+This is an **Astro** site with React components that serves as the main website for sociotechnica.org. The site is optimized for static generation with MDX support for content-heavy pages.
 
 **Key directories:**
-- `src/routes/` - File-based routing with SvelteKit conventions
-- `src/lib/components/` - Reusable Svelte components
-- `static/` - Static assets (images, fonts, favicons)
+- `src/pages/` - File-based routing with Astro conventions
+- `src/components/` - React components
+- `src/layouts/` - Astro layout components
+- `public/` - Static assets (images, fonts, favicons)
 
 **Content system:**
-- Uses **MDsveX** to process `.md` files as Svelte components
-- Resources section has special layout handling via `_resource.svelte`
+- Uses **MDX** for markdown pages with React component support
+- Special agreement page (`/agrmt`) uses custom layout with paper texture effect
 - Custom typography with Urania Czech typewriter font
 
 **Styling:**
-- **TailwindCSS** with typography plugin
+- **TailwindCSS** v3 with typography plugin
 - Custom font integration for brand identity
-- Responsive design patterns
+- Paper texture effect for agreement page
 
 **Deployment:**
 - Automatically deploys to **Netlify** on main branch merges
-- Uses `@sveltejs/adapter-netlify` for optimized builds
-- Static generation with SSG approach
+- Static generation with Astro's build system
+- Redirects handled via `public/_redirects`

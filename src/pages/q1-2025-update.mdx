@@ -1,14 +1,24 @@
-<script>
-  import SocialMeta from '$lib/components/SocialMeta.svelte';
-  import SvelteMarkdown from 'svelte-markdown';
-  import VideoRenderer from '$lib/components/VideoRenderer.svelte';
+---
+title: 'SocioTechnica Q1 2025 Update'
+description: 'SocioTechnica Q1 2025 Update'
+---
+import Layout from '../layouts/Layout.astro';
+import VideoRenderer from '../components/VideoRenderer.tsx';
 
-  const renderers = {
-    image: VideoRenderer,
-  };
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+  url="https://sociotechnica.org/q1-2025-update"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
 
-  const source = `
-**TL;DR:** We assembled a team of AI agents, gave them our credit card, and put them to work buying and selling NFTs. The friction & exhilaration inspired us to explore a new architectural approach \+ user interface for AI-human collaboration.
+<h1 class="font-serif text-4xl mb-2">Sorry HAL, it's not me, it's you</h1>
+<h2 class="text-2xl mb-4">Firing our AI intern (Q1 2025 Update)</h2>
+<p class="text-neutral-500 mb-1">April 2025</p>
+
+<article class="prose">
+
+**TL;DR:** We assembled a team of AI agents, gave them our credit card, and put them to work buying and selling NFTs. The friction & exhilaration inspired us to explore a new architectural approach + user interface for AI-human collaboration.
 
 ## Picking up Our Pivot Foot
 
@@ -20,7 +30,7 @@ Our learnings made it clear that a simple rules-based trading system using AI ag
 
 ## Our First Trading Activity
 
-Our testing grounds remained NBA Top Shot \- [a popped balloon of a marketplace](https://www.theringer.com/2025/02/26/features/nba-top-shot-crypto-moments-bust-nfl-all-day-dapper-labs). Why test in a dying market? Because we're so familiar with it. Handing AI your credit card is weird; we wanted to run reality checks in near real-time.
+Our testing grounds remained NBA Top Shot - [a popped balloon of a marketplace](https://www.theringer.com/2025/02/26/features/nba-top-shot-crypto-moments-bust-nfl-all-day-dapper-labs). Why test in a dying market? Because we're so familiar with it. Handing AI your credit card is weird; we wanted to run reality checks in near real-time.
 
 The architecture of our initial build was straightforward:
 
@@ -34,17 +44,17 @@ The architecture of our initial build was straightforward:
 ## Introducing Pat Sharpe, our inept AI intern!
 [![Introducing Pat Sharpe, our inept AI intern!](/pat-sharpe.png)](/pat-sharpe.png)
 
-Our bias is always to work with AI agents as if they were human collaborators. Ideally, we'd just give them a doc outlining the task \+ some tools and they'd be off to the races. But from past experience creating LLM-enabled co-workers, we knew we'd need distinct prompts \- LLMs can't just ingest an entire project doc and know what to do. So we first created an agent to assess market conditions and make offers and gave it access to a browser as a tool. Can we just point it at the proper websites and expect it to do the right thing?
+Our bias is always to work with AI agents as if they were human collaborators. Ideally, we'd just give them a doc outlining the task + some tools and they'd be off to the races. But from past experience creating LLM-enabled co-workers, we knew we'd need distinct prompts - LLMs can't just ingest an entire project doc and know what to do. So we first created an agent to assess market conditions and make offers and gave it access to a browser as a tool. Can we just point it at the proper websites and expect it to do the right thing?
 
-Back in November, the most cutting-edge option was [Claude Computer Use](https://www.anthropic.com/news/3-5-models-and-computer-use) \- Anthropic's private beta allowing Claude to drive a browser in a Docker container. Perfect\! Until we discovered why it remains in beta: **Claude has a vision problem.**
+Back in November, the most cutting-edge option was [Claude Computer Use](https://www.anthropic.com/news/3-5-models-and-computer-use) - Anthropic's private beta allowing Claude to drive a browser in a Docker container. Perfect! Until we discovered why it remains in beta: **Claude has a vision problem.**
 
-Claude confused browser UI elements with website content, even misreading digits, and struggled with basic page navigation. An LLM with your credit card that can't read numbers is dangerous\! 
+Claude confused browser UI elements with website content, even misreading digits, and struggled with basic page navigation. An LLM with your credit card that can't read numbers is dangerous! 
 
-[![Watch Claude get totally confused trying to browse a webpage (prepare to cringe).](/claude-confusion.mp4)](/claude-confusion.mp4)
+<VideoRenderer href="/claude-confusion.mp4" text="Watch Claude get totally confused trying to browse a webpage (prepare to cringe)." />
 
 This led us to browser automation scripts. Jess has written Selenium scripts for 20 years, and Puppeteer remains annoying. The advantage now? LLMs can help write that code. We built browser automation for every necessary interaction, packaging each as a tool for our AI.
 
-A new problem emerged: when these tools returned HTML, LLMs often drew incorrect conclusions, overlooked details, hallucinated information, or misunderstood what they were seeing. We had to transform HTML into reduced, structured data \- translating everything to CSV with filtered columns. **Just because LLMs have large context windows doesn't mean they use that information well\!**
+A new problem emerged: when these tools returned HTML, LLMs often drew incorrect conclusions, overlooked details, hallucinated information, or misunderstood what they were seeing. We had to transform HTML into reduced, structured data - translating everything to CSV with filtered columns. **Just because LLMs have large context windows doesn't mean they use that information well!**
 
 Another inconvenient, if expected, lesson: **LLMs are bad at math.** Calculating profit margins is crucial, but the LLM consistently made basic errors. We tried giving it a calculator, but calculators require knowing how to use them properly. We ended up writing code to calculate profit percentages for specific market conditions.
 
@@ -52,8 +62,8 @@ We hoped an LLM could function as a junior employee: provide written guidance, a
 
 The bright spot? Communication. Our LLMs kept us updated through Discord surprisingly well, delivering helpful and fun pirate-themed messages without requiring exact text specifications.
 
-![Market analysis is the core of the motion \- find NFTs that have an expected profit margin if our offer is accepted.](/alperen-sengun-moments.png)
-_Market analysis is the core of the motion \- find NFTs that have an expected profit margin if our offer is accepted._
+![Market analysis is the core of the motion - find NFTs that have an expected profit margin if our offer is accepted.](/alperen-sengun-moments.png)
+_Market analysis is the core of the motion - find NFTs that have an expected profit margin if our offer is accepted._
 
 ![Offer placement is one of the core website tools.](/offer-placed-successfully.png)  
 _Offer placement is one of the core website tools._
@@ -66,9 +76,9 @@ During our testing window, we hit our goal of a mostly automated system making $
 ![In case **you're** bad at math, the average is $4.33/day.](/daily-transaction-totals.png)
 _In case **you're** bad at math, the average is $4.33/day._
 
-But what we built was still fairly dumb \- effectively a series of scripts that don't truly leverage the reasoning capabilities of agents.
+But what we built was still fairly dumb - effectively a series of scripts that don't truly leverage the reasoning capabilities of agents.
 
-## Building Pat's Replacement \- An Accidental Invention
+## Building Pat's Replacement - An Accidental Invention
 
 ![These **weren't** the droids we were looking for.](/not-the-droids.png)
 _These **weren't** the droids we were looking for._
@@ -95,29 +105,11 @@ Here's a preview of what we're building:
 * **Tool Autonomy:** Agents can discover, request, and create their own tools through a grammatical UI separating objects (nouns) from actions (verbs).  
 * **True Partnership**: A user interface where humans and AI genuinely collaborate—sharing workspace, data, and tools. Humans maintain control while AI handles what it's good at, creating a natural division of labor like working with a colleague rather than programming a robot.
 
-We plan to build a new AI intern in this environment, hold a bakeoff against Pat, and compare results. Looking forward to sharing more\! Thanks for reading and drop us a line with any thoughts.
+We plan to build a new AI intern in this environment, hold a bakeoff against Pat, and compare results. Looking forward to sharing more! Thanks for reading and drop us a line with any thoughts.
 
 Sincerely,  
 Danvers & Jess
-  `;
-</script>
 
-<SocialMeta
-  title="SocioTechnica Q1 2025 Update"
-  description="SocioTechnica Q1 2025 Update"
-  url="https://sociotechnica.org/q1-2025-update"
-  image="https://sociotechnica.org/sociotechnica-social.png"
-/>
-
-<svelte:head>
-  <title>SocioTechnica Q1 2025 Update | SocioTechnica</title>
-  <meta name="description" content="SocioTechnica Q1 2025 Update" />
-</svelte:head>
-
-<h1 class="font-serif text-4xl mb-2">Sorry HAL, it's not me, it's you</h1>
-<h2 class="text-2xl mb-4">Firing our AI intern (Q1 2025 Update)</h2>
-<p class="text-neutral-500 mb-1">April 2025</p>
-
-<article class="prose">
-  <SvelteMarkdown {source} {renderers} />
 </article>
+
+</Layout>
