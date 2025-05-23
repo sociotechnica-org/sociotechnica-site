@@ -1,47 +1,75 @@
-# Astro Starter Kit: Minimal
+# SocioTechnica - Astro Site
 
-```sh
-npm create astro@latest -- --template minimal
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This is the Astro + React version of the SocioTechnica website, migrated from SvelteKit.
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
 ```text
 /
-├── public/
+├── public/             # Static assets (images, fonts, favicons)
+│   ├── fonts/         # Urania Czech typewriter font
+│   └── _redirects     # Netlify redirects
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/    # React components
+│   │   └── VideoRenderer.tsx
+│   ├── layouts/       # Astro layouts
+│   │   ├── Layout.astro          # Main layout
+│   │   └── AgreementLayout.astro # Special layout for agreement page
+│   ├── pages/         # All site pages
+│   │   ├── index.astro           # Home page
+│   │   ├── about.astro           # About page
+│   │   ├── work-with-us.astro    # Work With Us page
+│   │   ├── agrmt.astro           # Agreement page (with paper texture)
+│   │   ├── q1-2025-update.mdx    # Q1 2025 Update (MDX)
+│   │   ├── next-lx.astro         # Next LX project
+│   │   ├── simulation.mdx        # Simulation training (MDX)
+│   │   ├── protocols.mdx         # Protocol adoption (MDX)
+│   │   ├── role-complexity.mdx   # Role complexity (MDX)
+│   │   └── open-source/          # Open source pages
+│   └── styles/        # Global styles
+│       └── global.css # Tailwind imports + custom styles
+├── astro.config.mjs   # Astro configuration
+├── tailwind.config.cjs # Tailwind configuration
+├── netlify.toml       # Netlify deployment config
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the astro-site directory:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command           | Action                                           |
+| :---------------- | :----------------------------------------------- |
+| `npm install`     | Installs dependencies                            |
+| `npm run dev`     | Starts local dev server at `localhost:4321`      |
+| `npm run build`   | Build your production site to `./dist/`          |
+| `npm run preview` | Preview your build locally, before deploying     |
+| `npm run check`   | Type check and verify the project builds         |
 
-## 👀 Want to learn more?
+## 🎨 Features
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Astro** with static site generation
+- **React** for interactive components
+- **Tailwind CSS** for styling
+- **MDX** support for content-heavy pages
+- **Custom typography** with Urania Czech font for the agreement page
+- **Paper texture effect** for special pages
+- **Netlify-ready** deployment configuration
+
+## 🚀 Deployment
+
+This site is configured for Netlify deployment:
+
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy!
+
+The `netlify.toml` file is already configured with the correct settings.
+
+## 📝 Notes
+
+- The agreement page (`/agrmt`) uses a special layout with paper texture and typewriter font
+- MDX pages support React components for enhanced content
+- All redirects are handled via the `public/_redirects` file
+- The site maintains the exact same design and functionality as the original SvelteKit version
