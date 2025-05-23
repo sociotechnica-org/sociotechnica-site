@@ -1,10 +1,15 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
+import Layout from '../../layouts/Layout.astro';
 
 const title = 'Sustaining Open Source Software | SocioTechnica';
 ---
 
-<MainLayout title={title}>
+<Layout 
+  title="Sustaining Open Source Software"
+  description="Open source software projects have become akin to public utilities, utilized by more than 90% of software applications."
+  url="https://sociotechnica.org/open-source"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
   <h1 class="font-serif text-4xl mb-4">Sustaining Open Source Software</h1>
 
   <div class="italic mb-4 text-sm text-gray-600">Updated July 2022</div>
@@ -185,4 +190,4 @@ const title = 'Sustaining Open Source Software | SocioTechnica';
       </li>
     </ol>
   </article>
-</MainLayout>
+</Layout>

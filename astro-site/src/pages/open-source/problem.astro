@@ -1,10 +1,15 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
+import Layout from '../../layouts/Layout.astro';
 
 const title = 'Open Source\'s Resourcing Problem | SocioTechnica';
 ---
 
-<MainLayout title={title}>
+<Layout 
+  title="Open Source's Resourcing Problem"
+  description="These are a set of working notes about the problem of creating sustainable ecosystems for resourcing the creation and maintenance of software systems."
+  url="https://sociotechnica.org/open-source/problem"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
   <h1 class="font-serif text-4xl mb-5">Open Source's Resourcing Problem</h1>
 
   <div class="p-5 border-2 bg-slate-100">
@@ -142,4 +147,4 @@ const title = 'Open Source\'s Resourcing Problem | SocioTechnica';
       </li>
     </ul>
   </article>
-</MainLayout>
+</Layout>

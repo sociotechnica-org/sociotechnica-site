@@ -1,12 +1,15 @@
 ---
-layout: '../layouts/MainLayout.astro'
 title: 'Protocol Adoption | SocioTechnica'
-socialMeta:
-  title: 'Driving Protocol Adoption'
-  description: 'How to get a new protocol adopted.'
-  url: 'https://sociotechnica.org/protocols'
-  image: 'https://sociotechnica.org/sociotechnica-social.png'
+description: 'How to get a new protocol adopted.'
 ---
+import Layout from '../layouts/Layout.astro';
+
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+  url="https://sociotechnica.org/protocols"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
 
 # Driving Protocol Adoption
 
@@ -43,3 +46,5 @@ socialMeta:
 	- Where to ask questions needs to be obvious and someone's dedicated responsibility.
 
 </article>
+
+</Layout>

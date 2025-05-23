@@ -1,12 +1,15 @@
 ---
-layout: '../layouts/MainLayout.astro'
 title: 'Role Complexity | SocioTechnica'
-socialMeta:
-  title: 'Role Complexity'
-  description: 'How to understand the complexity of roles within organizations.'
-  url: 'https://sociotechnica.org/role-complexity'
-  image: 'https://sociotechnica.org/sociotechnica-social.png'
+description: 'How to understand the complexity of roles within organizations.'
 ---
+import Layout from '../layouts/Layout.astro';
+
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+  url="https://sociotechnica.org/role-complexity"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
 
 # Role Complexity
 
@@ -71,3 +74,5 @@ Thanks so much for asking. We would love feedback, comments and questions, inclu
 4. Personal anecdotes around using similar or different approaches to understanding how people relate to complexity while producing valuable results
 
 </article>
+
+</Layout>
