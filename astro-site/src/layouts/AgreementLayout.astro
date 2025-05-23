@@ -19,7 +19,7 @@ const { title } = Astro.props;
     <title>{title} | SocioTechnica</title>
   </head>
   <body class="min-h-screen flex flex-col">
-    <div class="container mx-auto px-4 max-w-5xl">
+    <div class="container mx-auto px-4 max-w-4xl">
       <header class="mb-5 mt-5 text-left">
         <nav>
           <ul class="">
@@ -44,9 +44,7 @@ const { title } = Astro.props;
       </header>
 
       <main>
-        <div class="paper rounded-lg p-8 mx-auto max-w-3xl" style="font-family: 'Urania Czech', monospace;">
-          <slot />
-        </div>
+        <slot />
       </main>
     </div>
   </body>

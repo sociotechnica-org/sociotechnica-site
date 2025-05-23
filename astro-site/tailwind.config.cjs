@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'urania': ['Urania Czech', 'monospace'],
+        'typewriter': ['Urania Czech', 'monospace'],
       },
     },
   },
