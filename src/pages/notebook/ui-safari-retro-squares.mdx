@@ -6,26 +6,13 @@ author: "Jess Martin"
 layout: ../../layouts/Layout.astro
 ---
 
-<p class="mb-4 text-sm text-neutral-500">
-  <a
-    href="/notebook"
-    class="hover:text-yellow-700 hover:border-b-2 hover:border-yellow-700"
-  >
-    &larr; Back to Lab Notes
-  </a>
-</p>
+import ArticleHeader from "../../components/ArticleHeader.astro";
 
-<h1 class="text-4xl mb-2 font-serif !mt-0">{frontmatter.title}</h1>
-
-<div class="text-neutral-500 mb-4 text-sm">
-  By {frontmatter.author} on{" "}
-  {new Date(frontmatter.publishedDate).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC",
-  })}
-</div>
+<ArticleHeader
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+/>
 
 <article class="prose">
 

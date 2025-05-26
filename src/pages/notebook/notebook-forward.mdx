@@ -6,29 +6,19 @@ author: "Danvers Fleury"
 layout: ../../layouts/Layout.astro
 ---
 
-<p class="mb-4 text-sm text-neutral-500">
-  <a
-    href="/notebook"
-    class="hover:text-yellow-700 hover:border-b-2 hover:border-yellow-700"
-  >
-    &larr; Back to Lab Notes
-  </a>
-</p>
+import ArticleHeader from "../../components/ArticleHeader.astro";
 
-<h1 class="text-4xl mb-2 font-serif !mt-0">{frontmatter.title}</h1>
-
-<div class="text-neutral-500 mb-4 text-sm">
-  By {frontmatter.author} on{" "}
-  {new Date(frontmatter.publishedDate).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC",
-  })}
-</div>
+<ArticleHeader
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+/>
 
 <article class="prose">
-![A brick wall with a forehead imprint and a bright light shining from behind it.](/assets/images/notebook-forward-brick-wall.png)
+<blockquote>
+<p>Brick walls are there for a reason. The brick walls aren't there to keep us out. The brick walls are there to show us how badly we want things.</p>
+<span class="block text-right">- Randy Pausch</span>
+</blockquote>
 
 In the early spring of 2025, my business partner Jess and I found ourselves deeply dug into solving other people's problems - client problems - after having run into a brick wall trying to get AI agents to independently operate in a marketplace on our behalf.
 
@@ -42,7 +32,6 @@ It is with this backdrop that, separated by workflows and geographies, I receive
 
 Reading it, I felt a surprising emotion: **jealousy.** This little scribble felt like a window into the _near_ future. It was a technological roadmap that could unlock some of the greatest sociotechnological barriers to human+computer collaboration. It took our learnings, went backwards, wiped the slate clean, and began a new, extremely hopeful chapter.
 
-That was _my_ reading experience. I wouldn't expect it to be _yours_. As Jess often says, our lab notes can read like the scribbles of madmen. But to me, this felt like truth. I called him up and told him exactly what was in my heart, "Dude, I'm jealous of you!" And then I felt better. Giddy really. Because Jess had shown me a bright light on a future that I felt desperate to build, right behind the brick wall with an imprint of my forehead on it. This notebook is the story of what happens next.  
--Danvers
+That was _my_ reading experience. I wouldn't expect it to be _yours_. As Jess often says, our lab notes can read like the scribbles of madmen. But to me, this felt like truth. I called him up and told him exactly what was in my heart, "Dude, I'm jealous of you!" And then I felt better. Giddy really. Because Jess had shown me a bright light on a future that I felt desperate to build, right behind the brick wall with an imprint of my forehead on it. This notebook is the story of what happens next.
 
 </article>
