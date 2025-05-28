@@ -16,18 +16,146 @@ import ArticleHeader from "../../components/ArticleHeader.astro";
 
 <article class="prose">
 
-This is a placeholder for the "Planning a Collab with Jess using AI" article.
+It's 9am and Jess and I are scheduled to have a **collaboration session on developing WorkSquared' UI at 3pm.**
 
-## The Idea
+This is going to be a quick and dirty-fest!
 
-Brainstorming our collaboration.
+### Goal: process for discussing UI inspired by at least Civilization I, ideally that plus SimCity.
 
-## AI Tools Used
+**I Know I Need To Make**
 
-Details about the AI tools.
+- UI Safaris / analysis on Civ & Sim. Like a magazine article. Then…
+- Functional UI breakdowns. More like a scholarly article on IRL architecture \- like looking at a house and breaking down the design process / strategy.
 
-## Outcome
+**Jess Reminded Me We Need To Make**
 
-What we learned.
+- User stories for a target user.
+
+Put simply: we need a pretend organization with pretend people in it doing stuff.
+
+OK \- so let's say it's a small consultancy that helps law firms improve their tech stack. There's a head of sales and a head of delivery \- would be fun to imagine neither of those roles having human employees. Good enough\!
+
+**Known Background Materials & Helpful Context**
+
+- Work Squared Technical White paper.
+- Jess' articles on:
+  - knowledge representation.
+  - A pattern language for a new computing environment
+
+Ready, Get Set, GAAAAAAAAAAHOOOOOOOO\!
+
+### Tranche 1: Minimum Viable Grist for the Mill
+
+The biggest risk here is not having good stuff to work with on inspirational material for the UI. Also, there's an interesting blend here of creating useful artifacts for Jess \*and\* me getting the analysis into my head and generating my own opinions so that I can be a good editor of said artifacts.
+
+![](/images/articles/planning-collab/image1.png)
+
+Output 1 looks excellent.  
+![](/images/articles/planning-collab/image2.png)
+
+![](/images/articles/planning-collab/image3.png)
+
+Boom goes the dynamite, that's a one-shot and good enough for now: [Work Squared Civilization (1991) UI Retrospective.](https://docs.google.com/document/d/1mXmUkhxJlTyKoyBCs3MazorgoUd4UJvGty79idyEiAY/edit?tab=t.0) What's awesome is that having this excellent example, I can say ‘do it again but for Sim City.  
+![](/images/articles/planning-collab/image4.png)  
+And it does, again, one shot: [Work Squared Sim City (1989) UI Retrospective.](https://docs.google.com/document/d/1DS13bMw81Q2eQlFBPCG2hQ9cXQfaiXVvd7GkPROHoTQ/edit?tab=t.0#heading=h.8u6mqr69aesk)
+
+Not bad. If this is all we have as a starting off point, it's good. I can tie this up for now, and move on to creating the context of use. Prompting, reviewing, editing and learning, I've only burned about an hour.
+
+### Tranche 2: The Workplace using Our Solution, Specifically Imagined
+
+The main reason I picked a small consultancy as our target user wasn't because of market demand. It was because it's an obvious user group that I'm \*intimately familiar with\*. I've had both roles described. The reason we're doing this is to keep a focus on usefulness, but we're still swimming around. This is play time – structured play time – not wearing my business guy hat here, just playing.
+
+![](/images/articles/planning-collab/image5.png)
+
+The first half of the output works for me:  
+![](/images/articles/planning-collab/image6.png)
+
+This one is on the right track, but gives me pause:  
+![](/images/articles/planning-collab/image7.png)  
+Let's try to tune this.
+
+![](/images/articles/planning-collab/image8.png)
+
+It re-explains, and it feels closer, but still feels off. I ask it to draw a visual so I can better understand how it's thinking about things:
+
+![](/images/articles/planning-collab/image9.png)  
+Oh man, it feels like one step forward and one step back with this new logic\! That said, the trap I've fallen into in the past is saying, “AI just did bad work”. I'm retraining myself to say: AI just did unexpected work differently from how I would have. This allows room for curiosity. I want to be careful not to let my bias and potential ignorance block what could be a logic innovation that I'm misrepresenting as a flaw, while not losing sight of my inclination that this isn't right.
+
+![](/images/articles/planning-collab/image10.png)
+
+It dukes it out with itself in longform and after arguing both sides provides a recommendation that is close to what I would have prompted had I had 100% conviction in my concern:
+
+![](/images/articles/planning-collab/image11.png)
+
+The good news is that all of this back and forth has me much closer to the quasi-simulation we're building here. I'll be a better card critic. The bad news is we're losing time \- this is taking more than I budgeted for. Also, at this point we're getting to that dangerous space where I could have max context and perhaps trot into hallucination-ville. I think we're on the right track with ops, but I know we're on the right (enough) track with sales. Let's hit print.
+
+![](/images/articles/planning-collab/image12.png)
+
+It does absolute garbage work:
+
+![](/images/articles/planning-collab/image13.png)
+
+We need to fix this pronto\! I can own that part of this is that it worked off of an unclear prompt, that partially happened due to my desire for velocity. That's on me.
+
+![](/images/articles/planning-collab/image14.png)
+
+The new sales coach is seeing what I'm not seeing in these bullshit user stories:
+
+![](/images/articles/planning-collab/image15.png)
+
+Let's try again\!  
+![](/images/articles/planning-collab/image16.png)
+
+And it CRUSHES IT. Okay, even if it's reactive, we have a winning process here for getting to good enough. Now we just need it for both sides of the business.
+
+![](/images/articles/planning-collab/image17.png)
+
+And it CRUSHES IT.
+
+We now have [close enough for government work user stories to work with](https://docs.google.com/document/d/1NTJnrjFXzc620PMPAoRGL5GaatRt2Q9wWzPkbxAlQPw/edit?tab=t.0#heading=h.b49nrppdskkc). This took an hour too, but if push comes to shove, I have the minimum acceptable materials to create a UI exploration. And I still have 2 more hours before giving Jess pre-reads.
+
+### Tranche 2b: More Useful User Stories
+
+So it's lunchtime. I'd like Jess to be able to review stuff at 2pm leading into our 3pm. What I have for inputs is fine, but it could be so much better.
+
+Part of it is that these user stories are written in a process vacuum. How is the company run? This greatly flavors user stories.
+
+I figure simpler is better for game testing, so I start with the good ol' OODA loop.  
+![](/images/articles/planning-collab/image18.png)
+
+It one shots it \- okay, this is good content for the project on OODA loops. But this reminds me that I can do one better. My whole thinking on crafting this comes out of an article that Jess and I each love: [Ben Kuhn's how I've run major projects](https://www.benkuhn.net/pjm/). I slam the text here into a google doc and create a little micro-project in Claude that includes those as well as the original user stories.
+
+![](/images/articles/planning-collab/image19.png)
+
+The analysis is superb, not only representing workflows better, but applying some of the wisdom to the _card designs:_![](/images/articles/planning-collab/image20.png)
+
+I spent close to 30 minutes puzzling out the missing pieces and eventually finding a great foundational one. 20 Minutes of reading and editing later, I've got [ready for show-time user stories.](https://docs.google.com/document/d/1YeP83jW3BstW2FyNRXtAKIMBxfBG4OIuR8NH0o0fTu8/edit?tab=t.0#heading=h.o1etjmmw1w0m)
+
+### Tranche 1b: Deeper Thinking on Our Worker Placement Sims
+
+The magazine articles are awesome. They're helpful to get my head into this and I find them to be insightful. But they're not architectural breakdowns, and I know we'd benefit even more from those types of abstractions after landing the plane (our brains) into the world of these games.
+
+But I'm running out of time and perhaps more importantly, brain power. AI works so dang fast and jumping from one part of this to another is breaking me a little. I need to take a break…and to table this. Most importantly, I can't be sure that the connections in my imagination playout for my AI helper, so, it's time to start building out the process for UI innovation.
+
+### Wiring Up Our Artifacts
+
+The thing I spend the longest, most concentrated amount of time on today is drafting my master prompt. I need to get clear on what I'm doing, why I'm doing it, how I want it done, and the kind of assistance I require to get it done. And in doing so much \*making\* I need to switch gears to get there.
+
+Eventually I come up with:![](/images/articles/planning-collab/image21.png)
+
+HOLY SMOKES\! The first thing it says we need to do is what I ran out of time to do:
+
+![](/images/articles/planning-collab/image22.png)
+
+[The overall plan'](https://docs.google.com/document/d/1w3mTpe1aS_HjeFSBVWJUBjv1z2_QNr6UHdqOGmWtW6U/edit?tab=t.0)s dates and assumptions of group size are way off, but the ideas of the directions we can take to explore this stuff feel relevant.
+
+I can't help myself and before fully internalizing the plan, I ask it to throw together a Civilization UI Decomposition as the same character that did the original UI articles. [It does it\!](https://docs.google.com/document/d/1lQcJ8hbn7Q7xI-OdE48V1yV8VJwWrT8rtYz-MKZshcw/edit?tab=t.0)
+
+![](/images/articles/planning-collab/image23.png)  
+It strikes me as good rather than great \- something to dig in and fight with it on to get to great. However, my brain is on overload right now so I don't dig too deeply, but I love having this new, helpful artifact for our innovation time.
+
+I have it bang out work for the next 3 activities, and continues to give perfectly fine artifacts to react to. This project has such great context in it and I'm getting stimulating outputs.
+
+That said, it's 1:45 and I need to get Jess review materials at 2pm – and right now this whole mess is floating around in my head and a bunch of google docs. Time to organize the information, prioritize what he looks at, and manage the cognitive load of diving into this little madhouse cold – I choose to encourage him to read the first two articles, and then if he has the energy, the decomposition. I give him an overview of the little simulated world we'll be pulling user stories from to run through UI concepts to pressure test / play. I write up a quick and dirty agenda. Time to take a walk and clear my poor head\!
 
 </article>
