@@ -3,10 +3,14 @@ title: "Planning a Collab with Jess using AI"
 description: "How we used AI to plan a collaboration."
 publishedDate: "2025-05-10"
 author: "Danvers Fleury"
-layout: ../../layouts/Layout.astro
 ---
-
+import Layout from "../../layouts/Layout.astro";
 import ArticleHeader from "../../components/ArticleHeader.astro";
+
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
 
 <ArticleHeader
   title={frontmatter.title}
@@ -281,3 +285,5 @@ I have it bang out work for the next 3 activities, and continues to give perfect
 That said, it's 1:45 and I need to get Jess review materials at 2pm – and right now this whole mess is floating around in my head and a bunch of google docs. Time to organize the information, prioritize what he looks at, and manage the cognitive load of diving into this little madhouse cold – I choose to encourage him to read the first two articles, and then if he has the energy, the decomposition. I give him an overview of the little simulated world we'll be pulling user stories from to run through UI concepts to pressure test / play. I write up a quick and dirty agenda. Time to take a walk and clear my poor head\!
 
 </article>
+
+</Layout>

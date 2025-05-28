@@ -3,10 +3,14 @@ title: "Lab Notes Forward"
 description: "An introduction to our lab notes."
 publishedDate: "2025-05-01"
 author: "Danvers Fleury"
-layout: ../../layouts/Layout.astro
 ---
-
+import Layout from "../../layouts/Layout.astro";
 import ArticleHeader from "../../components/ArticleHeader.astro";
+
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
 
 <ArticleHeader
   title={frontmatter.title}
@@ -35,3 +39,5 @@ Reading it, I felt a surprising emotion: **jealousy.** This little scribble felt
 That was _my_ reading experience. I wouldn't expect it to be _yours_. As Jess often says, our lab notes can read like the scribbles of madmen. But to me, this felt like truth. I called him up and told him exactly what was in my heart, "Dude, I'm jealous of you!" And then I felt better. Giddy really. Because Jess had shown me a bright light on a future that I felt desperate to build, right behind the brick wall with an imprint of my forehead on it. This notebook is the story of what happens next.
 
 </article>
+
+</Layout>
