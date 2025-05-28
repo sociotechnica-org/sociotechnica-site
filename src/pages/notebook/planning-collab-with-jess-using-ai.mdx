@@ -4,6 +4,7 @@ description: "How we used AI to plan a collaboration."
 publishedDate: "2025-05-10"
 author: "Danvers Fleury"
 ---
+
 import Layout from "../../layouts/Layout.astro";
 import ArticleHeader from "../../components/ArticleHeader.astro";
 
@@ -37,7 +38,7 @@ This is going to be a quick and dirty-fest!
 
 Put simply: we need a pretend organization with pretend people in it doing stuff.
 
-OK \- so let's say it's a small consultancy that helps law firms improve their tech stack. There's a head of sales and a head of delivery \- would be fun to imagine neither of those roles having human employees. Good enough\!
+OK \- so let's say it's a small consultancy that helps law firms improve their tech stack. There's a head of sales and a head of delivery \- would be fun to imagine neither of those roles having human employees. Good enough!
 
 **Known Background Materials & Helpful Context**
 
@@ -46,19 +47,20 @@ OK \- so let's say it's a small consultancy that helps law firms improve their t
   - knowledge representation.
   - A pattern language for a new computing environment
 
-Ready, Get Set, GAAAAAAAAAAHOOOOOOOO\!
+Ready, Get Set, GAAAAAAAAAAHOOOOOOOO!
 
 ### Tranche 1: Minimum Viable Grist for the Mill
 
-The biggest risk here is not having good stuff to work with on inspirational material for the UI. Also, there's an interesting blend here of creating useful artifacts for Jess \*and\* me getting the analysis into my head and generating my own opinions so that I can be a good editor of said artifacts.
+The biggest risk here is not having good stuff to work with on inspirational material for the UI. Also, there's an interesting blend here of creating useful artifacts for Jess _and_ me getting the analysis into my head and generating my own opinions so that I can be a good editor of said artifacts.
 
 ![](/images/articles/planning-collab/image1.png)
 
-Output 1 looks excellent.  
-**User prompt to AI:**
+Output 1 looks excellent.
+
 > I am trying to build out user stories that would apply to the core workflow of any consultancy. I am thinking of two "halves" to the narrative - Sales Process & Service Delivery. An example breakdown of Sales Process: Targeting, Prospecting, Selling, Contracting. An example breakdown of Service Delivery: Planning+staffing, kickoff, [phase work, review, phase finalization, bill] repeat that cycle per phase. Step 1 is architecting out the two halves to the narrative. What would you recommend for an architecture to improve upon or fix the ones that I shared?
 
-**AI response - User stories for Market Analysis & Positioning:**
+Here's the response:
+
 > **1. Market Analysis & Positioning**
 >
 > **US-101:** As a sales director, I want to identify the top technology pain points across different sizes of accounting firms so that I can tailor our messaging to address specific challenges they face.
@@ -67,25 +69,25 @@ Output 1 looks excellent.
 >
 > **US-103:** As a sales director, I want to understand the technology adoption timeline of accounting firms (tax season restrictions, fiscal year planning) so that I can time our outreach during their decision-making windows.
 
-Boom goes the dynamite, that's a one-shot and good enough for now: [Work Squared Civilization (1991) UI Retrospective.](https://docs.google.com/document/d/1mXmUkhxJlTyKoyBCs3MazorgoUd4UJvGty79idyEiAY/edit?tab=t.0) What's awesome is that having this excellent example, I can say ‘do it again but for Sim City.  
-**User prompt to AI:**
+Boom goes the dynamite, that's a one-shot and good enough for now: [Work Squared Civilization (1991) UI Retrospective.](https://docs.google.com/document/d/1mXmUkhxJlTyKoyBCs3MazorgoUd4UJvGty79idyEiAY/edit?tab=t.0) What's awesome is that having this excellent example, I can say "do it again but for Sim City."
+
 > Excellent work. As the same character, please repeat the process of creating an outline and then drafting an article, but now for the original Sim City.  
-And it does, again, one shot: [Work Squared Sim City (1989) UI Retrospective.](https://docs.google.com/document/d/1DS13bMw81Q2eQlFBPCG2hQ9cXQfaiXVvd7GkPROHoTQ/edit?tab=t.0#heading=h.8u6mqr69aesk)
+> And it does, again, one shot: [Work Squared Sim City (1989) UI Retrospective.](https://docs.google.com/document/d/1DS13bMw81Q2eQlFBPCG2hQ9cXQfaiXVvd7GkPROHoTQ/edit?tab=t.0#heading=h.8u6mqr69aesk)
 
 Not bad. If this is all we have as a starting off point, it's good. I can tie this up for now, and move on to creating the context of use. Prompting, reviewing, editing and learning, I've only burned about an hour.
 
 ### Tranche 2: The Workplace using Our Solution, Specifically Imagined
 
-The main reason I picked a small consultancy as our target user wasn't because of market demand. It was because it's an obvious user group that I'm \*intimately familiar with\*. I've had both roles described. The reason we're doing this is to keep a focus on usefulness, but we're still swimming around. This is play time – structured play time – not wearing my business guy hat here, just playing.
+The main reason I picked a small consultancy as our target user wasn't because of market demand. It was because it's an obvious user group that I'm _intimately familiar with_. I've had both roles described. The reason we're doing this is to keep a focus on usefulness, but we're still swimming around. This is play time&emdash;structured play time&emdash;not wearing my business guy hat here, just playing.
 
-**User prompt to AI:**
 > I'm creating software that allows for humans and AI to collaborate together. It's described in the Work Squared Technical Whitepaper, and the design is guided by thinking shared in the articles: A pattern language for a new computing environment and Computers should represent knowledge using models and simulation. It's time to prototype a UI. I've created example workstreams as user stories in the document Enhanced Work Squared Consultancy User Stories. Work will be carried out in a similar fashion to the workflows described in the article How I've run Major Projects. I'd like to run an innovation exercise: what are some architecture, layout and feature options that I could design if I tried modeling our UI after the video game Civilization from the video game Civilization (as outlined in the article Work Squared Civilization (1991) UI Retrospective). Let's do this step by step. To begin, let's get organized - activities that I am considering include mapping the workflow of a consultancy to the general workflow of a civilization player and applying all of the UI Innovation in the article to specific workflows outlined in the User Stories. Pretend that you are a UI expert with formal training in both design and a residency at an innovation consultancy like IDEO. What process would you recommend we undertake?
 
-The first half of the output works for me:  
-**AI response - UI Innovation Process Phase 1:**
-> **UI Innovation Process Phase 1: Excavation and Analysis**
+The first half of the output works for me:
+
+> ### UI Innovation Process Phase 1: Excavation and Analysis
 >
 > 1. **Game UI Audit & Analysis**
+>
 >    - Comprehensive breakdown of Civilization's interface systems
 >    - Document interaction patterns, information hierarchy, and visual design principles
 >    - Identify innovative UI patterns that could translate to business software
@@ -95,12 +97,13 @@ The first half of the output works for me:
 >    - Identify parallels between resource management in Civ and project/client management
 >    - Document how turn-based strategy elements could inform business process design
 
-This one is on the right track, but gives me pause:  
-**User prompt to AI:**
-> Let's focus on creating the consultant user stories. Can you help me think through how to structure these properly for our UI innovation work?  
-Let's try to tune this.
+This one is on the right track, but gives me pause:
 
-**AI response - Civilization UI information architecture layers:**
+> Let's focus on creating the consultant user stories. Can you help me think through how to structure these properly for our UI innovation work?  
+> Let's try to tune this.
+
+And the response:
+
 > I think we should approach this by looking at Civilization's layered information architecture:
 >
 > **Layer 1: World View** - The main map showing all territories, units, and immediate tactical information
@@ -112,11 +115,11 @@ Let's try to tune this.
 
 It re-explains, and it feels closer, but still feels off. I ask it to draw a visual so I can better understand how it's thinking about things:
 
-**User prompt to AI:**
 > Can you "print" the new user stories we've been developing? I want to see the concrete output.  
-Oh man, it feels like one step forward and one step back with this new logic\! That said, the trap I've fallen into in the past is saying, “AI just did bad work”. I'm retraining myself to say: AI just did unexpected work differently from how I would have. This allows room for curiosity. I want to be careful not to let my bias and potential ignorance block what could be a logic innovation that I'm misrepresenting as a flaw, while not losing sight of my inclination that this isn't right.
+> Oh man, it feels like one step forward and one step back with this new logic! That said, the trap I've fallen into in the past is saying, “AI just did bad work”. I'm retraining myself to say: AI just did unexpected work differently from how I would have. This allows room for curiosity. I want to be careful not to let my bias and potential ignorance block what could be a logic innovation that I'm misrepresenting as a flaw, while not losing sight of my inclination that this isn't right.
 
-**AI response - Final recommendation about Value Assurance:**
+And the response:
+
 > After weighing both approaches, I recommend we focus on **Value Assurance** as our primary framework. Here's why:
 >
 > 1. **Immediate Applicability** - Value Assurance directly maps to how consultancies actually operate
@@ -127,15 +130,14 @@ Oh man, it feels like one step forward and one step back with this new logic\! T
 
 It dukes it out with itself in longform and after arguing both sides provides a recommendation that is close to what I would have prompted had I had 100% conviction in my concern:
 
-**User prompt to AI:**
 > Excellent analysis. Now let's repeat this entire process but for Sim City instead of Civilization. I want to see how the city-building paradigm might offer different UI inspiration.
 
 The good news is that all of this back and forth has me much closer to the quasi-simulation we're building here. I'll be a better card critic. The bad news is we're losing time \- this is taking more than I budgeted for. Also, at this point we're getting to that dangerous space where I could have max context and perhaps trot into hallucination-ville. I think we're on the right track with ops, but I know we're on the right (enough) track with sales. Let's hit print.
 
-**AI response - Market Analysis gaps and missing user stories:**
 > Looking at our current user stories, I notice significant gaps in the Market Analysis & Positioning phase:
 >
 > **Missing Elements:**
+>
 > - Competitive landscape analysis workflows
 > - Target market segmentation processes
 > - Value proposition testing mechanisms
@@ -145,12 +147,10 @@ The good news is that all of this back and forth has me much closer to the quasi
 
 It does absolute garbage work:
 
-**User prompt to AI:**
 > I have a question about the value assurance sub-phase. How should we think about breaking this down further for our UI work?
 
-We need to fix this pronto\! I can own that part of this is that it worked off of an unclear prompt, that partially happened due to my desire for velocity. That's on me.
+We need to fix this pronto! I can own that part of this is that it worked off of an unclear prompt, that partially happened due to my desire for velocity. That's on me.
 
-**AI response - Process improvements and major subtractions:**
 > **Process Improvements Needed:**
 >
 > 1. **Major Subtractions** - Remove overly complex workflow steps that don't add value
@@ -159,63 +159,68 @@ We need to fix this pronto\! I can own that part of this is that it worked off o
 > 4. **Quality Gates** - Establish clear criteria for advancing through each phase
 >
 > **Recommended Changes:**
+>
 > - Simplify the contracting phase by removing redundant approval steps
 > - Combine similar review activities to reduce context switching
 > - Add automated status updates to reduce manual coordination overhead
 
 The new sales coach is seeing what I'm not seeing in these bullshit user stories:
 
-**AI response - Civilization UI article outline:**
-> **Proposed Article Structure: "Work Squared Civilization (1991) UI Retrospective"**
+> ### Proposed Article Structure: "Work Squared Civilization (1991) UI Retrospective"
 >
 > **I. Introduction & Context**
+>
 > - Why Civilization's UI was revolutionary for its time
 > - Connection to modern business software challenges
 >
 > **II. Core Interface Analysis**
+>
 > - Main map view and information density management
 > - Context-sensitive menus and progressive disclosure
 > - Turn-based interaction paradigms
 >
 > **III. Information Architecture Lessons**
+>
 > - Layered complexity management
 > - Strategic vs tactical information separation
 > - Resource visualization principles
 >
 > **IV. Applications to Work Squared**
+>
 > - Direct UI pattern translations
 > - Adaptation strategies for business contexts
 
-Let's try again\!  
-**User prompt to AI:**
+Let's try again!
+
 > Perfect! Now please write the full Civilization 1989 UI writeup following this outline. I want a complete article I can reference during our UI innovation session.
 
 And it CRUSHES IT. Okay, even if it's reactive, we have a winning process here for getting to good enough. Now we just need it for both sides of the business.
 
-**AI response - Sales process refinements:**
 > **Refined Sales Process Structure:**
 >
 > **Phase 1: Market Intelligence**
+>
 > - Territory analysis and opportunity identification
 > - Competitive landscape mapping
 > - Target account prioritization
 >
 > **Phase 2: Relationship Building**
+>
 > - Initial contact and trust establishment
 > - Pain point discovery and qualification
 > - Stakeholder mapping and influence analysis
 >
 > **Phase 3: Solution Development**
+>
 > - Custom proposal creation
 > - Proof of concept development
 > - Risk assessment and mitigation planning
 >
 > **Phase 4: Negotiation & Closing**
+>
 > - Contract terms finalization
 > - Legal and compliance review
 > - Transition to delivery team
-
-And it CRUSHES IT.
 
 We now have [close enough for government work user stories to work with](https://docs.google.com/document/d/1NTJnrjFXzc620PMPAoRGL5GaatRt2Q9wWzPkbxAlQPw/edit?tab=t.0#heading=h.b49nrppdskkc). This took an hour too, but if push comes to shove, I have the minimum acceptable materials to create a UI exploration. And I still have 2 more hours before giving Jess pre-reads.
 
@@ -225,16 +230,16 @@ So it's lunchtime. I'd like Jess to be able to review stuff at 2pm leading into 
 
 Part of it is that these user stories are written in a process vacuum. How is the company run? This greatly flavors user stories.
 
-I figure simpler is better for game testing, so I start with the good ol' OODA loop.  
-**User prompt to AI:**
+I figure simpler is better for game testing, so I start with the good ol' OODA loop.
+
 > Great work on the sales process. Now let's write out the first two sections of our article so we have concrete material to work with.
 
-It one shots it \- okay, this is good content for the project on OODA loops. But this reminds me that I can do one better. My whole thinking on crafting this comes out of an article that Jess and I each love: [Ben Kuhn's how I've run major projects](https://www.benkuhn.net/pjm/). I slam the text here into a google doc and create a little micro-project in Claude that includes those as well as the original user stories.
+It one shots it &emdash; okay, this is good content for the project on OODA loops. But this reminds me that I can do one better. My whole thinking on crafting this comes out of an article that Jess and I each love: [Ben Kuhn's how I've run major projects](https://www.benkuhn.net/pjm/). I slam the text here into a google doc and create a little micro-project in Claude that includes those as well as the original user stories.
 
-**User prompt to AI:**
 > I want to update our processes using insights from Ben Kuhn's "How I've run Major Projects" article. Can you analyze how his project management approach should inform our user stories?
 
-The analysis is superb, not only representing workflows better, but applying some of the wisdom to the _card designs:_**User prompt to AI:**
+The analysis is superb, not only representing workflows better, but applying some of the wisdom to the \_card designs:
+
 > Now create the complete sales process user stories incorporating the Major Projects methodology. Focus on making these practical and specific to our consultancy scenario.
 
 I spent close to 30 minutes puzzling out the missing pieces and eventually finding a great foundational one. 20 Minutes of reading and editing later, I've got [ready for show-time user stories.](https://docs.google.com/document/d/1YeP83jW3BstW2FyNRXtAKIMBxfBG4OIuR8NH0o0fTu8/edit?tab=t.0#heading=h.o1etjmmw1w0m)
@@ -247,42 +252,44 @@ But I'm running out of time and perhaps more importantly, brain power. AI works 
 
 ### Wiring Up Our Artifacts
 
-The thing I spend the longest, most concentrated amount of time on today is drafting my master prompt. I need to get clear on what I'm doing, why I'm doing it, how I want it done, and the kind of assistance I require to get it done. And in doing so much \*making\* I need to switch gears to get there.
+The thing I spend the longest, most concentrated amount of time on today is drafting my master prompt. I need to get clear on what I'm doing, why I'm doing it, how I want it done, and the kind of assistance I require to get it done. And in doing so much _making_ I need to switch gears to get there.
 
-Eventually I come up with:**User prompt to AI:**
+Eventually I come up with:
+
 > I need expert sales coaching on these user story cards. Review them as if you're an experienced sales consultant and tell me what's missing or could be improved.
 
-HOLY SMOKES\! The first thing it says we need to do is what I ran out of time to do:
+HOLY SMOKES! The first thing it says we need to do is what I ran out of time to do:
 
-**User prompt to AI:**
 > One more question about the relationship between sales cycle logic and service delivery structure. How should these two halves of the business connect in our UI design?
 
-[The overall plan'](https://docs.google.com/document/d/1w3mTpe1aS_HjeFSBVWJUBjv1z2_QNr6UHdqOGmWtW6U/edit?tab=t.0)s dates and assumptions of group size are way off, but the ideas of the directions we can take to explore this stuff feel relevant.
+[The overall plan's](https://docs.google.com/document/d/1w3mTpe1aS_HjeFSBVWJUBjv1z2_QNr6UHdqOGmWtW6U/edit?tab=t.0) dates and assumptions of group size are way off, but the ideas of the directions we can take to explore this stuff feel relevant.
 
-I can't help myself and before fully internalizing the plan, I ask it to throw together a Civilization UI Decomposition as the same character that did the original UI articles. [It does it\!](https://docs.google.com/document/d/1lQcJ8hbn7Q7xI-OdE48V1yV8VJwWrT8rtYz-MKZshcw/edit?tab=t.0)
+I can't help myself and before fully internalizing the plan, I ask it to throw together a Civilization UI Decomposition as the same character that did the original UI articles. [It does it!](https://docs.google.com/document/d/1lQcJ8hbn7Q7xI-OdE48V1yV8VJwWrT8rtYz-MKZshcw/edit?tab=t.0)
 
-**AI response - Service delivery structure:**
-> **Service Delivery Integration Points:**
+> ### Service Delivery Integration Points:
 >
 > **Handoff Management:**
+>
 > - Clean transition from sales promises to delivery realities
 > - Shared project context and client relationship history
 > - Unified communication channels and status reporting
 >
 > **Feedback Loops:**
+>
 > - Delivery insights informing future sales conversations
 > - Client satisfaction data feeding back to sales process refinement
 > - Resource capacity planning affecting sales pipeline management
 >
 > **Shared Infrastructure:**
+>
 > - Common client data model across both halves
 > - Integrated time tracking and resource allocation
 > - Unified reporting for business performance analysis  
-It strikes me as good rather than great \- something to dig in and fight with it on to get to great. However, my brain is on overload right now so I don't dig too deeply, but I love having this new, helpful artifact for our innovation time.
+>   It strikes me as good rather than great \- something to dig in and fight with it on to get to great. However, my brain is on overload right now so I don't dig too deeply, but I love having this new, helpful artifact for our innovation time.
 
 I have it bang out work for the next 3 activities, and continues to give perfectly fine artifacts to react to. This project has such great context in it and I'm getting stimulating outputs.
 
-That said, it's 1:45 and I need to get Jess review materials at 2pm – and right now this whole mess is floating around in my head and a bunch of google docs. Time to organize the information, prioritize what he looks at, and manage the cognitive load of diving into this little madhouse cold – I choose to encourage him to read the first two articles, and then if he has the energy, the decomposition. I give him an overview of the little simulated world we'll be pulling user stories from to run through UI concepts to pressure test / play. I write up a quick and dirty agenda. Time to take a walk and clear my poor head\!
+That said, it's 1:45 and I need to get Jess review materials at 2pm &emdash; and right now this whole mess is floating around in my head and a bunch of google docs. Time to organize the information, prioritize what he looks at, and manage the cognitive load of diving into this little madhouse cold &emdash; I choose to encourage him to read the first two articles, and then if he has the energy, the decomposition. I give him an overview of the little simulated world we'll be pulling user stories from to run through UI concepts to pressure test / play. I write up a quick and dirty agenda. Time to take a walk and clear my poor head!
 
 </article>
 
