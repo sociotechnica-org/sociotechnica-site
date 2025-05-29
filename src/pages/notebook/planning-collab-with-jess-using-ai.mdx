@@ -19,9 +19,9 @@ import ArticleHeader from "../../components/ArticleHeader.astro";
   publishedDate={frontmatter.publishedDate}
 />
 
-<article class="prose">
+<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact">
 
-It's 9am and Jess and I are scheduled to have a **collaboration session on developing WorkSquared' UI at 3pm.**
+It's 9am and Jess and I are scheduled to have a **collaboration session on developing WorkSquared UI at 3pm.**
 
 This is going to be a quick and dirty-fest!
 
@@ -53,26 +53,31 @@ Ready, Get Set, GAAAAAAAAAAHOOOOOOOO!
 
 The biggest risk here is not having good stuff to work with on inspirational material for the UI. Also, there's an interesting blend here of creating useful artifacts for Jess _and_ me getting the analysis into my head and generating my own opinions so that I can be a good editor of said artifacts.
 
-![](/images/articles/planning-collab/image1.png)
+> I need to create a detailed write-up on the original 1989 user interface of the video game Civilization. Pretend that you are a world champion gamer, analyst and author for a retro video gaming magazine and provide write-up that outlines the features and functionality of the user interface, organized by area, and then provides a detailed analysis of the user experience breakthroughs associated with this world changing game. The overarching idea here is that the designers took a game where you manage an entire human civilization throughout roughly all of human history and in some cases beyond...and made it fun and relatively easy to do in spite of the massive scope of the undertaking. Highlighting key architectural choices, simplifications and short-cuts and other such innovations will be important. Let's do this step by step, with the first step being outlining your article.
 
 Output 1 looks excellent.
 
-> I am trying to build out user stories that would apply to the core workflow of any consultancy. I am thinking of two "halves" to the narrative - Sales Process & Service Delivery. An example breakdown of Sales Process: Targeting, Prospecting, Selling, Contracting. An example breakdown of Service Delivery: Planning+staffing, kickoff, [phase work, review, phase finalization, bill] repeat that cycle per phase. Step 1 is architecting out the two halves to the narrative. What would you recommend for an architecture to improve upon or fix the ones that I shared?
+> ## Article Outline
+>
+> 1. Introduction: The revolutionary impact of Civilization
+> 2. Main Screen Analysis: The map view as command center
+> 3. City Management: Balancing simplicity and depth
+> 4. Technology Tree: Visualizing human progress
+> 5. Diplomacy Interface: Personality through minimal design
+> 6. Unit Command Systems: Streamlining military management
+> 7. Reports & Advisors: Making complex data digestible
+> 8. UX Breakthroughs: Design choices that changed strategy gaming
+> 9. Legacy: How Civ's UI influenced decades of game design
 
-Here's the response:
+Let's keep going.
 
-> **1. Market Analysis & Positioning**
->
-> **US-101:** As a sales director, I want to identify the top technology pain points across different sizes of accounting firms so that I can tailor our messaging to address specific challenges they face.
->
-> **US-102:** As a sales director, I want to analyze which accounting-specific software integrations cause the most technical challenges so that I can position our services as experts in those specific technology stacks.
->
-> **US-103:** As a sales director, I want to understand the technology adoption timeline of accounting firms (tax season restrictions, fiscal year planning) so that I can time our outreach during their decision-making windows.
+> This is an excellent outline, maintaining your character, please write the first two sections, we can check in, and then move from there.
 
 Boom goes the dynamite, that's a one-shot and good enough for now: <a href="https://docs.google.com/document/d/1mXmUkhxJlTyKoyBCs3MazorgoUd4UJvGty79idyEiAY/edit?tab=t.0" target="_blank" rel="noopener noreferrer">Work Squared Civilization (1991) UI Retrospective.</a> What's awesome is that having this excellent example, I can say "do it again but for Sim City."
 
-> Excellent work. As the same character, please repeat the process of creating an outline and then drafting an article, but now for the original Sim City.  
-> And it does, again, one shot: <a href="https://docs.google.com/document/d/1DS13bMw81Q2eQlFBPCG2hQ9cXQfaiXVvd7GkPROHoTQ/edit?tab=t.0#heading=h.8u6mqr69aesk" target="_blank" rel="noopener noreferrer">Work Squared Sim City (1989) UI Retrospective.</a>
+> Excellent work. As the same character, please repeat the process of creating an outline and then drafting an article, but now for the original Sim City.
+
+And it does, again, one shot: <a href="https://docs.google.com/document/d/1DS13bMw81Q2eQlFBPCG2hQ9cXQfaiXVvd7GkPROHoTQ/edit?tab=t.0#heading=h.8u6mqr69aesk" target="_blank" rel="noopener noreferrer">Work Squared Sim City (1989) UI Retrospective.</a>
 
 Not bad. If this is all we have as a starting off point, it's good. I can tie this up for now, and move on to creating the context of use. Prompting, reviewing, editing and learning, I've only burned about an hour.
 
@@ -80,147 +85,123 @@ Not bad. If this is all we have as a starting off point, it's good. I can tie th
 
 The main reason I picked a small consultancy as our target user wasn't because of market demand. It was because it's an obvious user group that I'm _intimately familiar with_. I've had both roles described. The reason we're doing this is to keep a focus on usefulness, but we're still swimming around. This is play time&mdash;structured play time&mdash;not wearing my business guy hat here, just playing.
 
-> I'm creating software that allows for humans and AI to collaborate together. It's described in the Work Squared Technical Whitepaper, and the design is guided by thinking shared in the articles: A pattern language for a new computing environment and Computers should represent knowledge using models and simulation. It's time to prototype a UI. I've created example workstreams as user stories in the document Enhanced Work Squared Consultancy User Stories. Work will be carried out in a similar fashion to the workflows described in the article How I've run Major Projects. I'd like to run an innovation exercise: what are some architecture, layout and feature options that I could design if I tried modeling our UI after the video game Civilization from the video game Civilization (as outlined in the article Work Squared Civilization (1991) UI Retrospective). Let's do this step by step. To begin, let's get organized - activities that I am considering include mapping the workflow of a consultancy to the general workflow of a civilization player and applying all of the UI Innovation in the article to specific workflows outlined in the User Stories. Pretend that you are a UI expert with formal training in both design and a residency at an innovation consultancy like IDEO. What process would you recommend we undertake?
+> I am trying to build out user stories that would apply to the core workflow of any consultancy. I am thinking of two "halves" to the narrative - Sales Process & Service Delivery. An example breakdown of Sales Process: Targeting, Prospecting, Selling, Contracting. An example breakdown of Service Delivery: Planning+staffing, kickoff, [phase work, review, phase finalization, bill] repeat that cycle per phase. Step 1 is architecting out the two halves to the narrative. What would you recommend for an architecture to improve upon or fix the ones that I shared?RetryClaude can make mistakes. Please double-check responses.
 
 The first half of the output works for me:
 
-> ### UI Innovation Process Phase 1: Excavation and Analysis
+> I like your initial breakdown of the consultancy workflow. Let me suggest some refinements to make this architecture more comprehensive and better aligned with industry practices.
 >
-> 1. **Game UI Audit & Analysis**
+> ## Sales Process
 >
->    - Comprehensive breakdown of Civilization's interface systems
->    - Document interaction patterns, information hierarchy, and visual design principles
->    - Identify innovative UI patterns that could translate to business software
+> Your current breakdown (Targeting, Prospecting, Selling, Contracting) covers the essentials, but I'd suggest:
 >
-> 2. **Workflow Mapping Exercise**
->    - Map consultancy workflows (sales process & service delivery) to Civilization gameplay patterns
->    - Identify parallels between resource management in Civ and project/client management
->    - Document how turn-based strategy elements could inform business process design
+> 1. **Market Analysis & Positioning** - Understanding market needs and positioning your services
+> 2. **Lead Generation & Qualification** - Identifying and qualifying potential clients (combines aspects of your targeting/prospecting)
+> 3. **Solution Development & Proposal** - Creating tailored solutions and proposals
+> 4. **Negotiation & Contracting** - Finalizing scope, terms, and pricing
+> 5. **Transition to Delivery** - Critical handoff from sales to delivery team
 
 This one is on the right track, but gives me pause:
 
-> Let's focus on creating the consultant user stories. Can you help me think through how to structure these properly for our UI innovation work?  
-> Let's try to tune this.
-
-And the response:
-
-> I think we should approach this by looking at Civilization's layered information architecture:
+> ## Service Delivery
 >
-> **Layer 1: World View** - The main map showing all territories, units, and immediate tactical information
-> **Layer 2: City Management** - Detailed resource allocation and production management screens
-> **Layer 3: Technology Tree** - Long-term strategic planning and research pathways
-> **Layer 4: Diplomacy** - Relationship management and negotiation interfaces
+> For service delivery, I'd structure it as:
 >
-> Each layer serves different temporal and strategic needs, much like how a consultancy needs different views for daily operations vs strategic planning.
+> 1. **Project Initiation**
+>
+>    - Scope confirmation & detailed planning
+>    - Team assembly & resource allocation
+>    - Client onboarding & expectation setting
+>
+> 2. **Execution Cycle** (per phase/sprint)
+>
+>    - Discovery & requirements refinement
+>    - Work execution & milestone delivery
+>    - Client review & feedback integration
+>    - Phase documentation & knowledge capture
+>
+> 3. **Value Realization**
+>
+>    - Deliverable finalization & handover
+>    - Success measurement & ROI validation
+>    - Client enablement & adoption support
+>    - Billing & financial reconciliation
+>
+> 4. **Relationship Development**
+>    - Account management & growth planning
+>    - Testimonial/reference cultivation
+>    - Opportunity identification for additional work
+
+Let's try to tune this.
+
+> The sales 'cycle' you've provided its great. It's linear and I can see how it maps out. The details you have added into service delivery are valuable, and I experience them as true, but I think the logic of that one is different. For instance, relationship development is something that happens at all stages from my perspective but is listed as the final stage here. Could you try rewriting this to be more like the sales logic? It is okay if it involves "loops" or times where you have to go back in the process, and it's okay if there is, for example, a core 3 step process where the work inside is divided into categories, like say relationship development as one and deliverable development as another.
 
 It re-explains, and it feels closer, but still feels off. I ask it to draw a visual so I can better understand how it's thinking about things:
 
-> Can you "print" the new user stories we've been developing? I want to see the concrete output.  
-> Oh man, it feels like one step forward and one step back with this new logic! That said, the trap I've fallen into in the past is saying, “AI just did bad work”. I'm retraining myself to say: AI just did unexpected work differently from how I would have. This allows room for curiosity. I want to be careful not to let my bias and potential ignorance block what could be a logic innovation that I'm misrepresenting as a flaw, while not losing sight of my inclination that this isn't right.
+![](/images/articles/planning-collab/image1.png)
 
-And the response:
+Oh man, it feels like one step forward and one step back with this new logic! That said, the trap I've fallen into in the past is saying, “AI just did bad work”. I'm retraining myself to say: AI just did unexpected work differently from how I would have. This allows room for curiosity. I want to be careful not to let my bias and potential ignorance block what could be a logic innovation that I'm misrepresenting as a flaw, while not losing sight of my inclination that this isn't right.
 
-> After weighing both approaches, I recommend we focus on **Value Assurance** as our primary framework. Here's why:
->
-> 1. **Immediate Applicability** - Value Assurance directly maps to how consultancies actually operate
-> 2. **Clear User Journey** - Each phase has obvious UI requirements and user interactions
-> 3. **Measurable Outcomes** - Success metrics are built into the workflow structure
->
-> This gives us a solid foundation to build UI concepts that feel both innovative (inspired by Civilization) and practical (grounded in real business needs).
+> Question: I'm looking at your value assurance sub-phase and then thinking about 'phase review' as part of the core repeating cycle of delivery execution. Should value assurance be a core part of the service delivery 'big boxes' (Initiation, Execution & Closure) while relationship management and account growth act as separate but related cycles, or do you think that value assurance should stay in its own bucket? Please share step by step reasoning for arguments for and against along with a final recommendation.
 
 It dukes it out with itself in longform and after arguing both sides provides a recommendation that is close to what I would have prompted had I had 100% conviction in my concern:
 
-> Excellent analysis. Now let's repeat this entire process but for Sim City instead of Civilization. I want to see how the city-building paradigm might offer different UI inspiration.
+> ## Final Recommendation:
+>
+> I recommend integrating Value Assurance into the core Service Delivery flow while keeping Relationship Management and Growth Development as parallel workstreams. Here's why:
+>
+> 1. Value assurance has clearer timing connections to project phases than the other workstreams.
+>
+> 2. The current separation creates confusion between Phase Review activities and Value Assurance responsibilities.
+>
+> 3. Core value delivery is fundamental to the delivery mission, while relationship management and growth development are important but supporting activities.
 
 The good news is that all of this back and forth has me much closer to the quasi-simulation we're building here. I'll be a better card critic. The bad news is we're losing time \- this is taking more than I budgeted for. Also, at this point we're getting to that dangerous space where I could have max context and perhaps trot into hallucination-ville. I think we're on the right track with ops, but I know we're on the right (enough) track with sales. Let's hit print.
 
-> Looking at our current user stories, I notice significant gaps in the Market Analysis & Positioning phase:
->
-> **Missing Elements:**
->
-> - Competitive landscape analysis workflows
-> - Target market segmentation processes
-> - Value proposition testing mechanisms
-> - Pricing strategy development tools
->
-> These gaps mean our UI concepts won't adequately serve the full sales process. We need additional user stories to cover these strategic planning activities.
+> Great work. Please create a series of user stories for each step of the sales process - Let's make it for the sales director at a small company selling $100k consulting services bundles to accounting firms to help them with their technology infrastructure.
 
 It does absolute garbage work:
 
-> I have a question about the value assurance sub-phase. How should we think about breaking this down further for our UI work?
+> ## 1. Market Analysis & Positioning
+>
+> **US-101:** As a sales director, I want to identify the top technology pain points across different sizes of accounting firms so that I can tailor our messaging to address specific challenges they face.
+>
+> **US-102:** As a sales director, I want to analyze which accounting-specific software integrations cause the most technical challenges so that I can position our services as experts in those specific technology stacks.
+>
+> **US-103:** As a sales director, I want to understand the technology adoption timeline of accounting firms (tax season restrictions, fiscal year planning) so that I can time our outreach during their decision-making windows.
 
 We need to fix this pronto! I can own that part of this is that it worked off of an unclear prompt, that partially happened due to my desire for velocity. That's on me.
 
-> **Process Improvements Needed:**
->
-> 1. **Major Subtractions** - Remove overly complex workflow steps that don't add value
-> 2. **Clearer Phase Boundaries** - Define exactly when one phase ends and another begins
-> 3. **Feedback Loops** - Add mechanism for learning from completed projects to inform future sales
-> 4. **Quality Gates** - Establish clear criteria for advancing through each phase
->
-> **Recommended Changes:**
->
-> - Simplify the contracting phase by removing redundant approval steps
-> - Combine similar review activities to reduce context switching
-> - Add automated status updates to reduce manual coordination overhead
+> Pretend that you are an expert sales coach and provide some consulting around these cards. Assume that many cards are missing - for instance this sales director appears to be skipping any work around understanding the competitive marketplace. There are also only 3 cards per area, which seems nearly impossible. Take a detail oriented approach, recognizing up to 20 cards may apply to each section.
 
 The new sales coach is seeing what I'm not seeing in these bullshit user stories:
 
-> ### Proposed Article Structure: "Work Squared Civilization (1991) UI Retrospective"
+> ## 1. Market Analysis & Positioning
 >
-> **I. Introduction & Context**
+> **Major Gaps:**
 >
-> - Why Civilization's UI was revolutionary for its time
-> - Connection to modern business software challenges
+> - No competitive intelligence gathering
+> - Missing market segmentation strategy
+> - No pricing analysis or positioning
+> - Absence of trend monitoring mechanism
 >
-> **II. Core Interface Analysis**
+> **Key Missing User Stories:**
 >
-> - Main map view and information density management
-> - Context-sensitive menus and progressive disclosure
-> - Turn-based interaction paradigms
->
-> **III. Information Architecture Lessons**
->
-> - Layered complexity management
-> - Strategic vs tactical information separation
-> - Resource visualization principles
->
-> **IV. Applications to Work Squared**
->
-> - Direct UI pattern translations
-> - Adaptation strategies for business contexts
+> - "I want to create detailed competitor profiles for each major IT consultancy serving accounting firms"
+> - "I want to segment accounting firms by size, service specialization, and technological maturity"
+> - "I want to conduct quarterly pricing surveys to maintain optimal price positioning"
+> - "I want to analyze failed sales to identify positioning weaknesses"
+> - "I want to define our unique service differentiators compared to both IT generalists and accounting specialists"
 
 Let's try again!
 
-> Perfect! Now please write the full Civilization 1989 UI writeup following this outline. I want a complete article I can reference during our UI innovation session.
+> Great analysis, please "print" a new set of user stories.
 
 And it CRUSHES IT. Okay, even if it's reactive, we have a winning process here for getting to good enough. Now we just need it for both sides of the business.
 
-> **Refined Sales Process Structure:**
->
-> **Phase 1: Market Intelligence**
->
-> - Territory analysis and opportunity identification
-> - Competitive landscape mapping
-> - Target account prioritization
->
-> **Phase 2: Relationship Building**
->
-> - Initial contact and trust establishment
-> - Pain point discovery and qualification
-> - Stakeholder mapping and influence analysis
->
-> **Phase 3: Solution Development**
->
-> - Custom proposal creation
-> - Proof of concept development
-> - Risk assessment and mitigation planning
->
-> **Phase 4: Negotiation & Closing**
->
-> - Contract terms finalization
-> - Legal and compliance review
-> - Transition to delivery team
+> Pretend you are a professional consultant with an MBA and 15 years experience. Please create a similar set of detailed user stories for the Director of Consulting at the same firm, following the consulting process we have developed. It's okay to include cards that might be owned by someone else, say an account manager for upselling. Let's make all of the cards and the director of consulting can decide what to delegate.
+
+Again, it CRUSHES IT.
 
 We now have <a href="https://docs.google.com/document/d/1NTJnrjFXzc620PMPAoRGL5GaatRt2Q9wWzPkbxAlQPw/edit?tab=t.0#heading=h.b49nrppdskkc" target="_blank" rel="noopener noreferrer">close enough for government work user stories to work with</a>. This took an hour too, but if push comes to shove, I have the minimum acceptable materials to create a UI exploration. And I still have 2 more hours before giving Jess pre-reads.
 
@@ -232,15 +213,20 @@ Part of it is that these user stories are written in a process vacuum. How is th
 
 I figure simpler is better for game testing, so I start with the good ol' OODA loop.
 
-> Great work on the sales process. Now let's write out the first two sections of our article so we have concrete material to work with.
+> Can you please write a short article on applying the OODA loop as a core tactical approach to work in the office. Use an example of a consulting project.
 
 It one shots it &mdash; okay, this is good content for the project on OODA loops. But this reminds me that I can do one better. My whole thinking on crafting this comes out of an article that Jess and I each love: <a href="https://www.benkuhn.net/pjm/" target="_blank" rel="noopener noreferrer">Ben Kuhn's how I've run major projects</a>. I slam the text here into a google doc and create a little micro-project in Claude that includes those as well as the original user stories.
 
-> I want to update our processes using insights from Ben Kuhn's "How I've run Major Projects" article. Can you analyze how his project management approach should inform our user stories?
+> I have written user stories for sales and service delivery inside of a consultancy. I'd like to update the processes I'm using to reflect the strategic and tactical thinking in the article How I've run Major Projects. I've also included a document on OODA loops and their application, since that is such an important tactical piece. Please take this step by step first by highlighting major additions and subtractions that would occur if we rewrote user stories to follow the new suggested workflows of the How I've run Major Projects article.
 
-The analysis is superb, not only representing workflows better, but applying some of the wisdom to the \_card designs:
+The analysis is superb, not only representing workflows better, but applying some of the wisdom to the _card designs:_
 
-> Now create the complete sales process user stories incorporating the Major Projects methodology. Focus on making these practical and specific to our consultancy scenario.
+> ## Major Subtractions/Modifications
+>
+> 1. **Reduce Process Granularity:** Consolidate the highly detailed user stories into fewer, more outcome-focused stories that allow for flexible execution paths.
+> 2. **Eliminate Documentation-Heavy Stories:** Replace documentation-focused user stories with simpler stories about maintaining central, living documents.
+> 3. **Reduce Linear Process Dependencies:** Modify user stories to support more parallel pathways and faster iterations.
+> 4. **Simplify Approval Processes:** Remove multi-stage approval processes in favor of clearer delegation and decision authority.
 
 I spent close to 30 minutes puzzling out the missing pieces and eventually finding a great foundational one. 20 Minutes of reading and editing later, I've got <a href="https://docs.google.com/document/d/1YeP83jW3BstW2FyNRXtAKIMBxfBG4OIuR8NH0o0fTu8/edit?tab=t.0#heading=h.o1etjmmw1w0m" target="_blank" rel="noopener noreferrer">ready for show-time user stories.</a>
 
@@ -256,38 +242,54 @@ The thing I spend the longest, most concentrated amount of time on today is draf
 
 Eventually I come up with:
 
-> I need expert sales coaching on these user story cards. Review them as if you're an experienced sales consultant and tell me what's missing or could be improved.
+> I'm creating software that allows for humans and AI to collaborate together. It's described in the Work Squared Technical Whitepaper, and the design is guided by thinking shared in the articles: A pattern language for a new computing environment and Computers should represent knowledge using models and simulation. It's time to prototype a UI. I've created example workstreams as user stories in the document Enhanced Work Squared Consultancy User Stories. Work will be carried out in a similar fashion to the workflows described in the article How I've run Major Projects. I'd like to run an innovation exercise: what are some architecture, layout and feature options that I could design if I tried modeling our UI after the video game Civilization from the video game Civilization (as outlined in the article Work Squared Civilization (1991) UI Retrospective). Let's do this step by step. To begin, let's get organized - activities that I am considering include mapping the workflow of a consultancy to the general workflow of a civilization player and applying all of the UI Innovation in the article to specific workflows outlined in the User Stories. Pretend that you are a UI expert with formal training in both design and a residency at an innovation consultancy like IDEO. What process would you recommend we undertake?
 
 HOLY SMOKES! The first thing it says we need to do is what I ran out of time to do:
 
-> One more question about the relationship between sales cycle logic and service delivery structure. How should these two halves of the business connect in our UI design?
+> ## Phase 1: Excavation & Analysis (1-2 weeks)
+>
+> ### 1. Deep Archeological Dive
+>
+> - **Civilization UI Decomposition:** Create a comprehensive catalog of Civilization's UI patterns, breaking down:
+> - Information hierarchy and progressive disclosure
+> - Visual metaphors used for complex systems
+> - Decision flow architecture
+> - Balance between overview and detail views
+>
+> ### 2. Pattern Mapping Exercise
+>
+> - Construct a visual matrix that maps each Civilization UI pattern to corresponding Work Squared concepts:
+> - Map view → Project overview dashboard
+> - Tech tree → Knowledge development pathways
+> - City management → Resource allocation interfaces
+> - Diplomacy → Stakeholder management
+> - Advisors → AI assistance modes
+>
+> ### 3. User Story Flow Analysis
+>
+> - Take each consultancy user story and trace the information/decision journey:
+> - What decisions must users make at each step?
 
-<a href="https://docs.google.com/document/d/1w3mTpe1aS_HjeFSBVWJUBjv1z2_QNr6UHdqOGmWtW6U/edit?tab=t.0" target="_blank" rel="noopener noreferrer">The overall plan's</a> dates and assumptions of group size are way off, but the ideas of the directions we can take to explore this stuff feel relevant.
+The overall plan's dates and assumptions of group size are way off, but the ideas of the directions we can take to explore this stuff feel relevant.
 
 I can't help myself and before fully internalizing the plan, I ask it to throw together a Civilization UI Decomposition as the same character that did the original UI articles. <a href="https://docs.google.com/document/d/1lQcJ8hbn7Q7xI-OdE48V1yV8VJwWrT8rtYz-MKZshcw/edit?tab=t.0" target="_blank" rel="noopener noreferrer">It does it!</a>
 
-> ### Service Delivery Integration Points:
+> ### Secondary Information Layer (Context-Triggered)
 >
-> **Handoff Management:**
+> - **Command Palette:** Unit selection revealed contextual commands at bottom of screen—only appearing when needed and relevant to selection
+> - **Hover Information:** Territory information appearing on mouse hover, providing details without permanent screen elements
+> - **End-Turn Trigger:** The end-turn button functioning as both control element and psychological trigger, promising new discoveries with minimal investment
 >
-> - Clean transition from sales promises to delivery realities
-> - Shared project context and client relationship history
-> - Unified communication channels and status reporting
+> ### Tertiary Information Layer (User-Requested)
 >
-> **Feedback Loops:**
->
-> - Delivery insights informing future sales conversations
-> - Client satisfaction data feeding back to sales process refinement
-> - Resource capacity planning affecting sales pipeline management
->
-> **Shared Infrastructure:**
->
-> - Common client data model across both halves
-> - Integrated time tracking and resource allocation
-> - Unified reporting for business performance analysis  
->   It strikes me as good rather than great \- something to dig in and fight with it on to get to great. However, my brain is on overload right now so I don't dig too deeply, but I love having this new, helpful artifact for our innovation time.
+> - **Advisor System:** Character-based interfaces for detailed domain information, accessed only when needed
+> - **City Management Screen:** Detailed resource management interface accessed only when diving into specific city decisions
+> - **Reports System:** Detailed metrics presented in dedicated screens, deliberately separated from main gameplay
+> - **Technology Tree:** Visual representation of research options and pathways, accessed only when making research decisions
 
-I have it bang out work for the next 3 activities, and continues to give perfectly fine artifacts to react to. This project has such great context in it and I'm getting stimulating outputs.
+It strikes me as good rather than great &mdash; something to dig in and fight with it on to get to great. However, my brain is on overload right now so I don't dig too deeply, but I love having this new, helpful artifact for our innovation time.
+
+I have it bang out work for the next 3 activities, and it continues to give perfectly fine artifacts to react to. This project has such great context in it and I'm getting stimulating outputs.
 
 That said, it's 1:45 and I need to get Jess review materials at 2pm &mdash; and right now this whole mess is floating around in my head and a bunch of google docs. Time to organize the information, prioritize what he looks at, and manage the cognitive load of diving into this little madhouse cold &mdash; I choose to encourage him to read the first two articles, and then if he has the energy, the decomposition. I give him an overview of the little simulated world we'll be pulling user stories from to run through UI concepts to pressure test / play. I write up a quick and dirty agenda. Time to take a walk and clear my poor head!
 
