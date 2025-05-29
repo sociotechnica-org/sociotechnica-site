@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import type { MDXInstance } from 'astro';
+
+interface LabNoteFrontmatter {
+  title: string;
+  publishedDate: string;
+  author: string;
+  description?: string;
+}
+
+const labNotes: MDXInstance<LabNoteFrontmatter>[] = 
+  (await Astro.glob<LabNoteFrontmatter>('./notebook/*.mdx')).sort(
+  (a, b) => new Date(b.frontmatter.publishedDate).valueOf() - new Date(a.frontmatter.publishedDate).valueOf()
+);
+---
+
+<Layout 
+  title="Lab Notes"
+  description="SocioTechnica Lab Notes - thoughts, experiments, and works in progress."
+  url="https://sociotechnica.org/notebook"
+  image="https://sociotechnica.org/sociotechnica-social.png"
+>
+  <h1 class="text-4xl mb-5 font-serif">Lab Notes</h1>
+
+  <article class="leading-relaxed text-lg">
+    <p class="mb-5 italic">
+      Ongoing thoughts, experiments, and works in progress.
+    </p>
+    
+    <h2 class="mb-3 font-serif text-2xl">Notes</h2>
+    <ul class="list-disc pl-10">
+      {labNotes.map((note) => (
+        <li class="mb-1">
+          <a
+            class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+            href={note.url}
+            >{note.frontmatter.title}</a
+          >
+          <span class="ml-1 text-sm italic text-gray-500">
+            {new Date(note.frontmatter.publishedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </article>
+</Layout> 

@@ -1,5 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import type { MDXInstance } from 'astro';
+
+// Define a more specific type for the frontmatter if possible, otherwise Record<string, any> is fine.
+interface LabNoteFrontmatter {
+  title: string;
+  publishedDate: string;
+  author: string;
+  description?: string;
+  // Add other frontmatter properties here if they exist
+}
+
+const labNotes: MDXInstance<LabNoteFrontmatter>[] = 
+  (await Astro.glob<LabNoteFrontmatter>('./notebook/*.mdx')).sort(
+  (a, b) => new Date(b.frontmatter.publishedDate).valueOf() - new Date(a.frontmatter.publishedDate).valueOf()
+);
 ---
 
 <Layout 
@@ -21,7 +36,22 @@ import Layout from '../layouts/Layout.astro';
         We believe <span class="font-semibold">partnership between human and machine</span> is the best foundation
         to build systems that will drive humanity forward.
     </p>
-    <h2 class="mb-3 font-serif text-2xl">Our Work</h2>
+    <h2 class="mb-3 font-serif text-2xl"><a href="/notebook" class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700">Lab Notes</a></h2>
+    <ul class="list-disc pl-10 mb-5">
+      {labNotes.slice(0, 3).map((note) => (
+        <li class="mb-1">
+          <a
+            class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+            href={note.url}
+            >{note.frontmatter.title}</a
+          >
+          <span class="ml-1 text-sm italic text-gray-500">
+            {new Date(note.frontmatter.publishedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
+          </span>
+        </li>
+      ))}
+    </ul>
+    <h2 class="mb-3 font-serif text-2xl">Past Explorations</h2>
     <ul class="list-disc pl-10">
       <li class="mb-1">
         <a

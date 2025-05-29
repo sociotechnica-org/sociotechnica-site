@@ -8,6 +8,7 @@ export interface Props {
 
 const { title, description, image, url } = Astro.props;
 const siteName = 'SocioTechnica';
+const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -53,18 +54,41 @@ const siteName = 'SocioTechnica';
         <nav>
           <ul class="">
             <li class="font-medium inline">
-              <a class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700" href="/"
+              <a 
+                class:list={[
+                  "hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700",
+                  { 'font-bold': currentPath === '/' }
+                ]}
+                href="/"
                 >SocioTechnica</a
               >
             </li>
             <li class="inline ml-5">
-              <a class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700" href="/about"
+              <a 
+                class:list={[
+                  "hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700",
+                  { 'font-bold': currentPath.startsWith('/notebook') }
+                ]}
+                href="/notebook"
+                >Lab Notes</a
+              >
+            </li>
+            <li class="inline ml-5">
+              <a 
+                class:list={[
+                  "hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700",
+                  { 'font-bold': currentPath === '/about' }
+                ]}
+                href="/about"
                 >About</a
               >
             </li>
             <li class="inline ml-5">
               <a
-                class="hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+                class:list={[
+                  "hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700",
+                  { 'font-bold': currentPath === '/work-with-us' }
+                ]}
                 href="/work-with-us">Work With Us</a
               >
             </li>
