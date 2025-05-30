@@ -19,18 +19,32 @@
 }
 
 /* Chat message styles for collaboration article */
-.danvers-message {
+.chat-message {
   @apply relative bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 not-italic;
   background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
 }
 
-.danvers-message::before {
+.chat-message::before {
   content: "DF";
   @apply absolute -top-2 -left-2 w-8 h-8 bg-blue-600 text-white text-xs font-bold rounded-full flex items-center justify-center;
 }
 
 .llm-output {
-  @apply bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4 not-italic;
+  @apply bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4 mt-4 not-italic;
   background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.llm-output h1,
+.llm-output h2,
+.llm-output h3,
+.llm-output h4,
+.llm-output h5,
+.llm-output h6 {
+  @apply mt-0;
+}
+
+.llm-output p,
+.chat-message p {
+  @apply my-0;
 }
 
