@@ -1,0 +1,78 @@
+---
+title: Work Squared Technical Foundations
+publishedDate: 2025-04-15
+author: Jess Martin
+description: "An introduction to the underlying architectural foundations of Work Squared, an AI-native environment for businesses and organizations."
+---
+
+import Layout from "../../layouts/Layout.astro";
+import ArticleHeader from "../../components/ArticleHeader.astro";
+
+<Layout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+
+<ArticleHeader
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+/>
+
+<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact">
+
+Work Squared is an AI-native environment "operating system" for businesses and organizations in which people and agents can collaborate.
+
+This document introduces some of the underlying architectural foundations. We've found that the underlying [layers of software](https://notes.jessmart.in/Lab+Notebook/Evergreen+Notes/Pace+Layers+for+Software)–data storage, networking, execution runtime–constrain the possibilities of the product experience. In order to facilitate a truly new product experience, we need to think carefully about the technical foundations.
+
+This is a rough sketch that points us in a differentiated direction, not a final answer.
+
+## Why?
+
+Current chat with language models is limited in some key ways:
+
+- Amnesiac Agents - Environment doesn't accrete with artifacts as work is done. Most "work" remains in the context window, or very primitive artifacts.
+- No direct manipulation - not an even playing field for agent and human.
+- Chats are sync and don't support have the naturalness and complexity of collaboration with a colleague.
+- Environments aren't extensible - the domain model and functionality can't be extended at runtime.
+
+## Features
+
+### Data Innovations:
+
+- Event-driven architecture means objects are merely read model projections of the underlying event store
+- Agent tool-use is putting events on the event stream, meaning that agent work is non-blocking: it's all background jobs
+- Tool-use is always available the the human operator as well, through the same event structure and task-relevant UIs (direct manipulation
+- Tools are all MCP-compatible tools
+  - Needs experimentation
+
+### UI Principles:
+
+- Divide the world into nouns and verbs
+  - Nouns: objects or artifacts (read model projections of the event stream)
+  - Verbs: tools or actions (events on the event stream)
+- Center column for direct interaction with and manipulation
+  - Center column is a "stack", supporting interaction with many diverse data types
+    - Stacks open up a lot of UI innovation surface area!
+- Right column for chat, with contextual control (a la Cursor)
+
+### Autopoesis
+
+- LLMs can generate their own tools using a tool-building tool: an MCP tool that can create additional MCP tools
+- LLMs can customize their own read models and regenerate from the event stream
+- LLMs can generate their own UI to dispatch events and views for the read models
+
+### Multiplayer
+
+- Agent + single human is already a multi-player environment, but no reason you couldn't add _another_ human or AI to the chat / environment (multiplayer is hard in today's LLM world)
+
+### Challenges
+
+- Context window management - how to bring the right things into the context window
+- Too general! Can do everything, but can it do anything? The Fermat Trap.
+- Mismatch with current post-training for agent-centric models - most agents are trained around the model of using a tool and waiting until it completes (sync) and this is inherently (async),
+- What's the model of an agent in this world? Is it one or many?
+
+</article>
+
+</Layout>

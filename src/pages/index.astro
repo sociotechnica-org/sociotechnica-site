@@ -12,8 +12,8 @@ interface LabNoteFrontmatter {
 }
 
 const labNotes: MDXInstance<LabNoteFrontmatter>[] = 
-  (await Astro.glob<LabNoteFrontmatter>('./notebook/*.mdx')).sort(
-  (a, b) => new Date(b.frontmatter.publishedDate).valueOf() - new Date(a.frontmatter.publishedDate).valueOf()
+  (await Astro.glob('./notebook/*.mdx') as MDXInstance<LabNoteFrontmatter>[]).sort(
+  (a: MDXInstance<LabNoteFrontmatter>, b: MDXInstance<LabNoteFrontmatter>) => new Date(b.frontmatter.publishedDate).valueOf() - new Date(a.frontmatter.publishedDate).valueOf()
 );
 ---
 
