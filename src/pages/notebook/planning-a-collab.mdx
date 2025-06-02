@@ -5,15 +5,15 @@ publishedDate: "2025-05-17"
 author: "Danvers Fleury"
 ---
 
-import Layout from "../../layouts/Layout.astro";
-import ArticleHeader from "../../components/ArticleHeader.astro";
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
 
-<Layout 
+<NotebookLayout 
   title={frontmatter.title}
   description={frontmatter.description}
 >
 
-<ArticleHeader
+<NotebookArticleHeader
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
@@ -341,4 +341,4 @@ That said, it's 1:45 and I need to get Jess review materials at 2pm &mdash; and 
 
 </article>
 
-</Layout>
+</NotebookLayout>

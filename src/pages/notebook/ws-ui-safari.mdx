@@ -5,15 +5,15 @@ publishedDate: "2025-05-10"
 author: "Danvers Fleury"
 ---
 
-import Layout from "../../layouts/Layout.astro";
-import ArticleHeader from "../../components/ArticleHeader.astro";
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
 
-<Layout 
+<NotebookLayout 
   title={frontmatter.title}
   description={frontmatter.description}
 >
 
-<ArticleHeader
+<NotebookArticleHeader
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
@@ -170,4 +170,4 @@ Coding as building blocks: <a href="https://snap.berkeley.edu/" target="_blank" 
 
 </article>
 
-</Layout>
+</NotebookLayout>

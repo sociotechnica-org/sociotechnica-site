@@ -5,15 +5,15 @@ author: Jess Martin
 description: "An introduction to the underlying architectural foundations of Work Squared, an AI-native environment for businesses and organizations."
 ---
 
-import Layout from "../../layouts/Layout.astro";
-import ArticleHeader from "../../components/ArticleHeader.astro";
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
 
-<Layout 
+<NotebookLayout 
   title={frontmatter.title}
   description={frontmatter.description}
 >
 
-<ArticleHeader
+<NotebookArticleHeader
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
@@ -75,4 +75,4 @@ Current chat with language models is limited in some key ways:
 
 </article>
 
-</Layout>
+</NotebookLayout>

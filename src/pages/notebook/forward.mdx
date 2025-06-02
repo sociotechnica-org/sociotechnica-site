@@ -4,15 +4,15 @@ description: "An introduction to our lab notes."
 publishedDate: "2025-04-10"
 author: "Danvers Fleury"
 ---
-import Layout from "../../layouts/Layout.astro";
-import ArticleHeader from "../../components/ArticleHeader.astro";
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
 
-<Layout 
+<NotebookLayout 
   title={frontmatter.title}
   description={frontmatter.description}
 >
 
-<ArticleHeader
+<NotebookArticleHeader
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
@@ -40,4 +40,4 @@ That was _my_ reading experience. I wouldn't expect it to be _yours_. As Jess of
 
 </article>
 
-</Layout>
+</NotebookLayout>
