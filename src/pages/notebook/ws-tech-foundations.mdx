@@ -1,5 +1,6 @@
 ---
-title: WS001 • Technical Foundations
+id: WS001
+title: Technical Foundations
 publishedDate: 2025-04-15
 author: Jess Martin
 description: "An introduction to the underlying architectural foundations of Work Squared, an AI-native environment for businesses and organizations."
@@ -14,9 +15,12 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
 >
 
 <NotebookArticleHeader
+  id={frontmatter.id}
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
+  prevNote={{ id: "WS000", title: "Work Squared Forward", url: "/notebook/forward" }}
+  nextNote={{ id: "WS002", title: "Retro UI Exploration", url: "/notebook/ws-ui-safari" }}
 />
 
 <article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact">

@@ -1,8 +1,9 @@
 ---
-title: "Forward"
-description: "An introduction to our lab notes."
-publishedDate: "2025-04-10"
-author: "Danvers Fleury"
+id: WS000
+title: Work Squared Forward
+description: The forward to the Work Squared story.
+publishedDate: 2025-04-10
+author: Danvers Fleury
 ---
 
 import NotebookLayout from "../../layouts/NotebookLayout.astro";
@@ -14,9 +15,11 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
 >
 
 <NotebookArticleHeader
+  id={frontmatter.id}
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
+  nextNote={{ id: "WS001", title: "Technical Foundations", url: "/notebook/ws-tech-foundations" }}
 />
 
 <article class="prose">

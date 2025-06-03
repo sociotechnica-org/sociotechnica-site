@@ -4,6 +4,7 @@ import type { MDXInstance } from 'astro';
 
 // Define a more specific type for the frontmatter if possible, otherwise Record<string, any> is fine.
 interface LabNoteFrontmatter {
+  id?: string;
   title: string;
   publishedDate: string;
   author: string;
@@ -38,13 +39,21 @@ const labNotes: MDXInstance<LabNoteFrontmatter>[] =
     </p>
     <h2 class="mb-3 font-serif text-2xl"><a href="/notebook" class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700">Lab Notes</a></h2>
     <ul class="list-disc pl-10 mb-5">
-      {labNotes.slice(0, 3).map((note) => (
+      {labNotes.map((note) => (
         <li class="mb-1">
           <a
-            class="border-b-2 hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700"
+            class="group hover:text-yellow-700"
             href={note.url}
-            >{note.frontmatter.title}</a
           >
+            {note.frontmatter.id && (
+              <span class="inline-block bg-gray-200 group-hover:bg-yellow-700 text-gray-700 group-hover:text-white px-1.5 py-0.5 rounded text-xs font-mono mr-1 transition-colors">
+                {note.frontmatter.id}
+              </span>
+            )}
+            <span class="border-b-2 group-hover:border-yellow-700">
+              {note.frontmatter.title}
+            </span>
+          </a>
           <span class="ml-1 text-sm italic text-gray-500">
             {new Date(note.frontmatter.publishedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
           </span>

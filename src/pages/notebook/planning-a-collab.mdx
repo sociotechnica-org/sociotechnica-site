@@ -1,8 +1,9 @@
 ---
-title: "WS003 • Innovation Session Planning using AI"
-description: "How we used AI to plan an innovation session."
-publishedDate: "2025-05-17"
-author: "Danvers Fleury"
+id: WS003
+title: Innovation Session Planning using AI
+description: How we used AI to plan an innovation session.
+publishedDate: 2025-05-17
+author: Danvers Fleury
 ---
 
 import NotebookLayout from "../../layouts/NotebookLayout.astro";
@@ -14,9 +15,11 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
 >
 
 <NotebookArticleHeader
+  id={frontmatter.id}
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
+  prevNote={{ id: "WS002", title: "Retro UI Exploration", url: "/notebook/ws-ui-safari" }}
 />
 
 <article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact">
