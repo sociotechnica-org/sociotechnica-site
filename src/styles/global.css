@@ -4,9 +4,9 @@
 
 /* Custom font face */
 @font-face {
-  font-family: 'Urania Czech';
-  src: local('Urania Czech'), local('Urania-Czech'), local('urania_czech'), local('urania-czech'),
-    url('/fonts/urania-czech.ttf');
+  font-family: "Urania Czech";
+  src: local("Urania Czech"), local("Urania-Czech"), local("urania_czech"),
+    local("urania-czech"), url("/fonts/urania-czech.ttf");
   font-weight: normal;
   font-display: swap;
 }
@@ -43,8 +43,7 @@
   @apply mt-0;
 }
 
-.llm-output p,
-.chat-message p {
+.llm-output li p,
+.chat-message li p {
   @apply my-0;
 }
-
