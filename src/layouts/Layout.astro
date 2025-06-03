@@ -50,7 +50,7 @@ const currentPath = Astro.url.pathname;
   </head>
   <body class="min-h-screen flex flex-col">
     <div class="flex-grow container mx-auto px-4 max-w-4xl">
-      <header class="mb-5 mt-5 text-left">
+      <header class="mb-5 mt-5 text-left relative">
         <nav>
           <ul class="">
             <li class="font-medium inline">
@@ -94,6 +94,9 @@ const currentPath = Astro.url.pathname;
             </li>
           </ul>
         </nav>
+        {currentPath === '/notebook' && (
+          <img src="/images/labnotes.png" alt="Lab Notes Stamp" class="absolute w-48 h-18 opacity-30 rotate-[8deg] -top-4 -right-8" />
+        )}
       </header>
 
       <main>
