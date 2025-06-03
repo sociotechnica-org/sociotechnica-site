@@ -1,8 +1,9 @@
 ---
-title: "UI Safari: Retro Squares"
-description: "Exploring retro square UI elements and their inspiration for AI-native work environments."
-publishedDate: "2025-05-10"
-author: "Danvers Fleury"
+id: WS002
+title: Retro UI Exploration
+description: Exploring retro square UI elements and their inspiration for AI-native work environments.
+publishedDate: 2025-05-10
+author: Danvers Fleury
 ---
 
 import NotebookLayout from "../../layouts/NotebookLayout.astro";
@@ -14,9 +15,12 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
 >
 
 <NotebookArticleHeader
+  id={frontmatter.id}
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
+  prevNote={{ id: "WS001", title: "Technical Foundations", url: "/notebook/ws-tech-foundations" }}
+  nextNote={{ id: "WS003", title: "Innovation Session Planning using AI", url: "/notebook/planning-a-collab" }}
 />
 
 <article class="prose">

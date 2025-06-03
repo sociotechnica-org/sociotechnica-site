@@ -1,18 +1,63 @@
 ---
 // src/components/ArticleHeader.astro
-const { title, author, publishedDate } = Astro.props;
+const { id, title, author, publishedDate, prevNote, nextNote } = Astro.props;
+const hasNavigation = prevNote !== undefined || nextNote !== undefined;
 ---
 
-<p class="mb-4 text-sm text-neutral-500">
-  <a
-    href="/notebook"
-    class="hover:text-yellow-700 hover:border-b-2 hover:border-yellow-700"
-  >
-    &larr; Back to Lab Notes
-  </a>
-</p>
+{hasNavigation ? (
+  <div class="mb-4 flex items-center justify-between text-sm text-neutral-500">
+    <div class="flex-1">
+      {prevNote && (
+        <a
+          href={prevNote.url}
+          class="hover:text-yellow-700 group"
+        >
+          <span class="inline-block bg-gray-200 group-hover:bg-yellow-700 text-gray-700 group-hover:text-white px-1.5 py-0.5 rounded text-xs font-mono mr-1 transition-colors">
+            &larr; {prevNote.id}
+          </span>
+        </a>
+      )}
+    </div>
+    <div class="flex-1 text-center">
+      <a
+        href="/notebook"
+        class="hover:text-yellow-700 hover:border-b-2 hover:border-yellow-700"
+      >
+        ↑ Back to Lab Notes
+      </a>
+    </div>
+    <div class="flex-1 text-right">
+      {nextNote && (
+        <a
+          href={nextNote.url}
+          class="hover:text-yellow-700 group"
+        >
+          <span class="inline-block bg-gray-200 group-hover:bg-yellow-700 text-gray-700 group-hover:text-white px-1.5 py-0.5 rounded text-xs font-mono ml-1 transition-colors">
+            {nextNote.id} &rarr;
+          </span>
+        </a>
+      )}
+    </div>
+  </div>
+) : (
+  <p class="mb-4 text-sm text-neutral-500">
+    <a
+      href="/notebook"
+      class="hover:text-yellow-700 hover:border-b-2 hover:border-yellow-700"
+    >
+      &larr; Back to Lab Notes
+    </a>
+  </p>
+)}
 
-<h1 class="text-4xl mb-2 font-serif !mt-0">{title}</h1>
+<div class="flex items-baseline gap-3 mb-2">
+  {id && (
+    <span class="inline-block bg-gray-200 text-gray-700 px-2 py-1 rounded text-xl font-mono">
+      {id}
+    </span>
+  )}
+  <h1 class="text-4xl font-serif !mt-0">{title}</h1>
+</div>
 
 <div class="text-neutral-500 mb-4 text-sm">
   {author} on{" "}

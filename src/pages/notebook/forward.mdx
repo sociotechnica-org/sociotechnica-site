@@ -1,9 +1,11 @@
 ---
-title: "Lab Notes Forward"
-description: "An introduction to our lab notes."
-publishedDate: "2025-04-10"
-author: "Danvers Fleury"
+id: WS000
+title: Work Squared Forward
+description: The forward to the Work Squared story.
+publishedDate: 2025-04-10
+author: Danvers Fleury
 ---
+
 import NotebookLayout from "../../layouts/NotebookLayout.astro";
 import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
 
@@ -13,9 +15,11 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
 >
 
 <NotebookArticleHeader
+  id={frontmatter.id}
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
+  nextNote={{ id: "WS001", title: "Technical Foundations", url: "/notebook/ws-tech-foundations" }}
 />
 
 <article class="prose">
@@ -36,7 +40,7 @@ It is with this backdrop that, separated by workflows and geographies, I receive
 
 Reading it, I felt a surprising emotion: **jealousy.** This little scribble felt like a window into the _near_ future. It was a technological roadmap that could unlock some of the greatest sociotechnological barriers to human+computer collaboration. It took our learnings, went backwards, wiped the slate clean, and began a new, extremely hopeful chapter.
 
-That was _my_ reading experience. I wouldn't expect it to be _yours_. As Jess often says, our lab notes can read like the scribbles of madmen. But to me, this felt like truth. I called him up and told him exactly what was in my heart, "Dude, I'm jealous of you!" And then I felt better. Giddy really. Because Jess had shown me a bright light on a future that I felt desperate to build, right behind the brick wall with an imprint of my forehead on it. This notebook is the story of what happens next.
+That was _my_ reading experience. I wouldn't expect it to be _yours_. As Jess often says, our [lab notes](/notebook) can read like the scribbles of madmen. But to me, this felt like truth. I called him up and told him exactly what was in my heart, "Dude, I'm jealous of you!" And then I felt better. Giddy really. Because Jess had shown me a bright light on a future that I felt desperate to build, right behind the brick wall with an imprint of my forehead on it. This notebook is the story of what happens next.
 
 </article>
 
