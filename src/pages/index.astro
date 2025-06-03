@@ -54,9 +54,6 @@ const labNotes: MDXInstance<LabNoteFrontmatter>[] =
               {note.frontmatter.title}
             </span>
           </a>
-          <span class="ml-1 text-sm italic text-gray-500">
-            {new Date(note.frontmatter.publishedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
-          </span>
         </li>
       ))}
     </ul>
