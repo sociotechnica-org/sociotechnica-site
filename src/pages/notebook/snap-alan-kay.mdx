@@ -2,7 +2,7 @@
 id: WS004
 title: Snap! Old School Alan Kay FTW!
 description: Exploring Alan Kay's UI design philosophy through the lens of learning environments, from DOS to Snap Circuits to Claude Projects.
-publishedDate: 2025-01-27
+publishedDate: 2025-06-12
 author: Danvers Fleury
 ---
 
@@ -26,17 +26,29 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
   }}
 />
 
-<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact">
+<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact prose-blockquote:font-normal prose-ul:mt-0 prose-[p:has(+_ul)]:text-red-500">
 
 I've been playing around a lot with old school user interfaces to get some inspiration. So it was catnip when Jess said that Alan Kay thinks of user interface design from a system thinker's perspective and that some of his thoughts, and struggles, on the subject are timeless. He provided this [fun little xeroxed piece of Kay flavored brain candy.](https://worrydream.com/refs/Kay_1989_-_User_Interface,_a_Personal_View.pdf)
 
 The whole thing feels like gold to me, but there are a few pieces that hit the absolute hardest, the first being the top down thinking on implementing Piaget's work into UIs:
 
-![Alan Kay on Piaget's work in UIs](/images/articles/snap-alan-kay/image4.png)
+> Bruner identified a separate mentality with each of Piaget's stages: he called them _enactive_, _iconic_, and _symbolic_. While not ignoring the existence of other mentalities, he concentrated on these three to come up with what are still some of the strongest ideas for creating learning-rich environments.
+>
+> - **enactive** - know where you are, manipulate
+> - **iconic** - recognize, compare, configure, concrete
+> - **symbolic** - tie together long chains of reasoning, abstract
+>
+> The visual system's main job is to be interested in everything in a scene, to dart over it as one does with a bulletin board, to change context. The symbolic system's main job is to stay with a context and to make indirect connections. Imagine what it would be like if it were reversed. If the visual system looked at the object it first saw in the morning for five hours straight! Or if the symbolic system couldn't hold a thought for more than a few seconds at a time!
 
 Later on he shares some traits of the ultimately architected learning-creation environment:
 
-![Learning-creation environment traits](/images/articles/snap-alan-kay/image7.png)
+> The current state of things suggests what to do next. Extensive top-down planning is not required—just squish things around until you like the total effect. Of course, in a playpen like that, plans do come to mind and can be useful. But major things have to be accomplished by bottom-up exploration with obvious ingredients or end-user programming will not come to pass.
+
+I'm loving Kay's struggle here. It's inspiring some big ideas.
+
+> A trait is its modeless context-freeness. In most iconic languages, it is much easier to write the patterns than it is to read them. One of the most interesting puzzles in iconic programming (and iconic communication in general) is why there is such a disparity between how understandable images are while they are actively being constructed and how obscure even one's own constructions can appear even the next day. I believe that the major reasons for this can be accounted for as a consequence of semantic focus—analogous to that of foveal vision, but having to do with the amount of meaning and connectivity that can be solved by looking at a diagram. A suggestive explanation is found in Minsky's and Papert's book Perceptrons [[1969](<https://en.wikipedia.org/wiki/Perceptrons_(book)>)], where they show that certain diagrams are beyond the level of complexity that a perceptron of a given aperture can solve.
+
+> It is obvious why constructing a diagram is much less difficult than trying to read one. During construction, one is controlling focus by looking only at the parts that seem relevant at the time. The general strategy of the diagram is already part of the context and doesn't have to be ferreted out. The analogy to writing prose is quite clear, but prose has the advantage that a writer can employ considerable foreshadowing and building up of context before getting to the main point. The scene can be set at will. Except for a few stereotypes, this is extremely difficult to do with an image. What does this imply for iconic communication?
 
 To boil down the points in here that lit me up:
 
@@ -166,7 +178,7 @@ I'll redraft "The Claude of My Imagination" section using our new Innovation Amp
 
 # The Claude of My Imagination
 
-When I sit down to create a Claude project, I am very much imagining a snap-circuit like project. Take for example the prep work needed for [our first UI jam](https://sociotechnica.org/notebook/planning-collab-with-jess-using-ai/).
+When I sit down to create a Claude project, I am very much imagining a snap-circuit like project. Take for example the prep work needed for [our first UI jam](/notebook/planning-a-collab/).
 
 When I approached this Claude project, what's happening in my head is actually much more structured than what ends up getting typed in front of that blinking cursor. I'm not staring at a void - I'm seeing a blank snap circuit board for making a little stereo-box of sorts, with all my components organized neatly beside it and a diagram for filling it in:
 
@@ -176,12 +188,10 @@ When I approached this Claude project, what's happening in my head is actually m
 
 In any amplifier, you need power sources - the raw electrical energy that drives everything else. Without power, even the most sophisticated circuit is just decorative metal. When I started planning our innovation session, I knew I needed creative voltage, and that meant diving deep into the games that revolutionized UI design.
 
-[Imagine the empty circuit board here - two red circles waiting to be filled]
-
 My power sources weren't batteries - they were comprehensive UI analyses:
 
-- SimCity (1989): Raw creative energy from Will Wright's sandbox revolution
-- Civilization (1991): Pure strategic voltage from Sid Meier's complexity-made-simple
+- [SimCity (1989)](https://docs.google.com/document/d/1DS13bMw81Q2eQlFBPCG2hQ9cXQfaiXVvd7GkPROHoTQ/edit?tab=t.0): Raw creative energy from Will Wright's sandbox revolution
+- [Civilization (1991)](https://docs.google.com/document/d/1mXmUkhxJlTyKoyBCs3MazorgoUd4UJvGty79idyEiAY/edit?tab=t.0): Pure strategic voltage from Sid Meier's complexity-made-simple
 
 These aren't just documents; they're generators. Like batteries in a circuit, they provide the initial creative current that will flow through our entire innovation process. I spent hours crafting these retrospectives because I knew: weak power sources mean weak output. You can't amplify what isn't there.
 
@@ -191,8 +201,8 @@ Here's where non-engineers often get confused, so let me explain: transistors ar
 
 In my mental circuit board, the technical foundation documents are my transistors:
 
-- Work Squared Technical Whitepaper: This takes the raw game inspiration and amplifies it through our technical lens
-- Pattern Language for Computing: This boosts the signal by connecting it to broader design principles
+- [Work Squared Technical Whitepaper](/notebook/ws-tech-foundations/): This takes the raw game inspiration and amplifies it through our technical lens
+- [Pattern Language for Computing](https://notes.jessmart.in/Lab+Notebook/Evergreen+Notes/A+pattern+language+for+a+new+computing+environment): This boosts the signal by connecting it to broader design principles
 
 These documents don't generate new energy - they amplify what's already there. They take "SimCity had a cool minimap" and transform it into "spatial information visualization creates ambient awareness in collaborative environments." That's amplification.
 
@@ -202,8 +212,8 @@ Capacitors are components that store electrical energy and release it smoothly. 
 
 My filter capacitors are all about context:
 
-- User Stories: These store up detailed scenarios of how consultants actually work
-- Consulting Context: These filter our innovation through the lens of real organizational needs
+- [User Stories](https://docs.google.com/document/d/1NTJnrjFXzc620PMPAoRGL5GaatRt2Q9wWzPkbxAlQPw/edit?tab=t.0#heading=h.b49nrppdskkc): These store up detailed scenarios of how consultants actually work
+- [Consulting Context](https://docs.google.com/document/d/1YeP83jW3BstW2FyNRXtAKIMBxfBG4OIuR8NH0o0fTu8/edit?tab=t.0#heading=h.o1etjmmw1w0m): These filter our innovation through the lens of real organizational needs
 
 Without these filters, we'd be designing in a vacuum. The user stories and context documents take our amplified creative signal and filter out what won't work for our specific users. They store up domain knowledge and release it precisely when needed, ensuring our innovations are grounded in reality.
 
@@ -256,13 +266,14 @@ When I finally sit down to write the prompt, I'm not composing from scratch. I'm
 
 The prompt I write is really just instructions for Claude to build the same circuit I've already tested in my imagination:
 
-(DF)
+<div class="chat-message">
+I'm creating software that allows for humans and AI to collaborate together. It's described in the Work Squared Technical Whitepaper, and the design is guided by thinking shared in the articles: A pattern language for a new computing environment and Computers should represent knowledge using models and simulation. It's time to prototype a UI. I've created example workstreams as user stories in the document Enhanced Work Squared Consultancy User Stories. Work will be carried out in a similar fashion to the workflows described in the article How I've run Major Projects. I'd like to run an innovation exercise: what are some architecture, layout and feature options that I could design if I tried moedling our UI after the video game Civilization from 1991 (as outlined in the article Work Squared Civilization UI Retrospective).
 
-> I'm creating software that allows for humans and AI to collaborate together. It's described in the Work Squared Technical Whitepaper, and the design is guided by thinking shared in the articles: A pattern language for a new computing environment and Computers should represent knowledge using models and simulation. It's time to prototype a UI. I've created example workstreams as user stories in the document Enhanced Work Squared Consultancy User Stories. Work will be carried out in a similar fashion to the workflows described in the article How I've run Major Projects. I'd like to run an innovation exercise: what are some architecture, layout and feature options that I could design if I tried moedling our UI after the video game Civilization from 1991 (as outlined in the article Work Squared Civilization UI Retrospective).
->
-> Let's do this step by step.
->
-> To begin, let's get organized - activities that I am considering including mapping the workflow of a consultancy to the general workflow of a civilization player and applying all of the UI Innovation in the article to specific workflows outlined in the User Stories. Pretend that you are a UI expert with formal training in both design and a residency at an innovation consultancy like IDEO. What process would you recommend we undertake?
+Let's do this step by step.
+
+To begin, let's get organized - activities that I am considering including mapping the workflow of a consultancy to the general workflow of a civilization player and applying all of the UI Innovation in the article to specific workflows outlined in the User Stories. Pretend that you are a UI expert with formal training in both design and a residency at an innovation consultancy like IDEO. What process would you recommend we undertake?
+
+</div>
 
 ## Why This Matters: The Invisible Circuit Board
 
