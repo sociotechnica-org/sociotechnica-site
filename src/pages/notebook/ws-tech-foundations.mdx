@@ -19,11 +19,19 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
-  prevNote={{ id: "WS000", title: "Work Squared Forward", url: "/notebook/forward" }}
-  nextNote={{ id: "WS002", title: "Retro UI Exploration", url: "/notebook/ws-ui-safari" }}
+  prevNote={{
+    id: "WS000",
+    title: "Work Squared Forward",
+    url: "/notebook/forward",
+  }}
+  nextNote={{
+    id: "WS002",
+    title: "Retro UI Exploration",
+    url: "/notebook/ws-ui-safari",
+  }}
 />
 
-<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact">
+<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact prose-blockquote:font-normal">
 
 Work Squared is an AI-native environment "operating system" for businesses and organizations in which people and agents can collaborate.
 

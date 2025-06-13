@@ -19,10 +19,14 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
-  nextNote={{ id: "WS001", title: "Technical Foundations", url: "/notebook/ws-tech-foundations" }}
+  nextNote={{
+    id: "WS001",
+    title: "Technical Foundations",
+    url: "/notebook/ws-tech-foundations",
+  }}
 />
 
-<article class="prose">
+<article class="prose prose-blockquote:font-normal">
 <blockquote>
 <p>Brick walls are there for a reason. The brick walls aren't there to keep us out. The brick walls are there to show us how badly we want things.</p>
 <span class="block text-right">- Randy Pausch</span>

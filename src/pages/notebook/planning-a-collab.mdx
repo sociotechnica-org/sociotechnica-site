@@ -19,10 +19,19 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
   title={frontmatter.title}
   author={frontmatter.author}
   publishedDate={frontmatter.publishedDate}
-  prevNote={{ id: "WS002", title: "Retro UI Exploration", url: "/notebook/ws-ui-safari" }}
+  prevNote={{
+    id: "WS002",
+    title: "Retro UI Exploration",
+    url: "/notebook/ws-ui-safari",
+  }}
+  nextNote={{
+    id: "WS004",
+    title: "Beyond the Symbolic: Humanizing AI Tools",
+    url: "/notebook/symbolic",
+  }}
 />
 
-<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact">
+<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact prose-blockquote:font-normal">
 
 It's 9am and Jess and I are scheduled to have a **collaboration session on developing WorkSquared UI at 3pm.**
 
