@@ -110,7 +110,6 @@ const currentPath = Astro.url.pathname;
           action="https://buttondown.com/api/emails/embed-subscribe/sociotechnica"
           method="post"
           target="popupwindow"
-          onsubmit="handleFormSubmit(event)"
           class="embeddable-buttondown-form"
         >
           <label for="bd-email">Subscribe to receive updates. <span class="italic text-gray-400">Monthly.</span></label>
@@ -123,9 +122,6 @@ const currentPath = Astro.url.pathname;
             placeholder="Enter your email"
             class="bg-gray-800 border-2 border-gray-800 text-white px-2 py-1 rounded-md transition-colors duration-300 hover:bg-yellow-800 hover:border-yellow-800 cursor-pointer"
           />
-          <div id="success-message" style="display: none;">
-            Thanks! Check your email.
-          </div>
         </form>
       </div>
       <div class="text-center">
