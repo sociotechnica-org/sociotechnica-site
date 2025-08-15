@@ -100,6 +100,24 @@ const socialImage = image || 'https://sociotechnica.org/sociotechnica-labnotes-s
     </div>
 
     <footer class="container mx-auto px-4 max-w-4xl mb-5 pt-5">
+      <div class="text-center text-sm mb-5">
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/sociotechnica"
+          method="post"
+          target="popupwindow"
+          class="embeddable-buttondown-form"
+        >
+          <label for="bd-email">Subscribe to receive updates. <span class="italic text-gray-400">Monthly.</span></label>
+          <input class="border-2 border-gray-300 rounded-md ml-2 mr-2 px-2 py-1" type="email" name="email" id="bd-email" placeholder="Enter your email" required />
+          <input type="hidden" value="sociotechnica" name="tag" />
+          <input
+            type="submit"
+            value="Subscribe"
+            id="subscribe-btn"
+            class="bg-gray-800 border-2 border-gray-800 text-white px-2 py-1 rounded-md transition-colors duration-300 hover:bg-yellow-800 hover:border-yellow-800 cursor-pointer"
+          />
+        </form>
+      </div>
       <div class="text-center">
         <p class="text-center text-lg mb-3">
           <img src="/bluesky-logo.png" alt="bluesky-logo" class="w-5 h-5 inline-block" />
