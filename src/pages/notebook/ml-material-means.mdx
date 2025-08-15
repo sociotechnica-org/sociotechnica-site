@@ -1,0 +1,59 @@
+---
+id: WS006
+title: "ML as Material and Means of Production"
+description: Machine learning models are both a new material and a means of production.
+publishedDate: 2025-08-13
+author: Jess Martin
+---
+
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
+
+<NotebookLayout 
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+
+<NotebookArticleHeader
+  id={frontmatter.id}
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+  prevNote={{
+    id: "WS005",
+    title: "Can AI Cure My Addiction to Overcommitting?",
+    url: "/notebook/overcommitting",
+  }}
+/>
+
+<article class="prose prose-li:my-0 [&_li_ul]:mt-0 prose-compact prose-blockquote:font-normal prose-ul:mt-0">
+
+We stand on the verge of a new Industrial Revolution, akin to the Bronze Age or the Iron Age, with its likely associated upheavals. Machine learning models represent both a new **material** with which to build software and a **means of production** itself. Much like iron, you can use iron to make new things _out of_ iron as well as make things _with_ tools made of iron.
+
+This opens new doors in the adjacent possible. We're in the process of understanding this new landscapes, figuring out what doors are now open, etc.
+
+## ML as new material advantages existing platforms
+
+In this new age is there is a [tremendous advantage to existing Platforms](https://notes.jessmart.in/Lab+Notebook/Evergreen+Notes/AI+advantages+existing+platforms) due to their existing data aggregation and tool integration. Unlike the past few decades of disruptive technologies that dethroned incumbents (Microsoft, Apple, Google, Amazon, Salesforce, etc), I expect incumbents to only gain further reach, entrenchment, and competitive advantage. Why? **Machine learning models are fueled by data**--more generalized training data to initially train the models, but then private data sets to fine-tune and fill the context window. Also, these models can integrate directly into our computing environments. The operating system and the browser are the crossroads of our personal data and our tools. Developing an operating system or a new browser is an enormously complicated endeavor and those that started a few decades ago have a near-unconquerable advantage. Thus, ML models advantage existing platforms.
+
+On the other hand, **ML models as a new material** enable new kinds of previously unthinkable products. It's as if the laws of physics of software have changed. The [grain of software](https://notes.jessmart.in/Lab+Notebook/Evergreen+Notes/Software+has+a+grain+to+it) has changed. The biggest change is the move from determinism to non-determinism. Traditional software is (largely) deterministic in its outputs, which gives software and the things you can build with it a certain predictability. A few truths overturned:
+
+- If you QA some software and it works once, you can reasonably expect it to work again using the same flow. Not so with LLMs.
+- Coupling software together involved rigorously defining the inputs and outputs (REST APIs, RPC, etc) and mapping them to one another. LLMs can do fuzzy matching and can even "translate" between different data models without explicit code to do so.
+- If your software is missing a feature, it needs to be designed, scoped, built, and deployed by human engineers. No longer: LLM code generation is on par with human developers. LLMs can extend the software on the fly.
+
+To take advantage of non-determinism while hitting desired levels of reliability and predictability requires different practices and tools. Witness [the rise of the AI engineer](https://www.latent.space/p/ai-engineer). Like the Database Administrator during the rise of SQL databases, the AI Engineer is a specialized role that manages the machine learning model and how it interfaces with the rest of the stack.
+
+In other words, _the new material of ML models enables new types of software to be built._
+
+## ML as means of production
+
+But also, the **process of _developing_ software have also changed.** ML models are both a materials and a means of production, in other words, a tool. With this tool, certain tasks are dramatically easier, while others remain tantalizingly, frustratingly difficult. Navigating this dynamic gradient between easy and difficult is a new challenge for software engineers who are used to certain things being easy while others remain comically difficult. See the famous ["identify the birds in this photo" XKCD comic](https://arstechnica.com/information-technology/2024/01/famous-xkcd-comic-comes-full-circle-with-ai-bird-identifying-binoculars/). Every engineer can be a 10x engineer, perhaps a 100x engineer. My own early [experiments with working with Cursor at the level of user stories](https://x.com/jessmartin/status/1829539402382729346), just doing QA on the feature implemented by the model, suggest that we're not far from developers coordinating multiple "LMs as junior developers" simultaneously to dramatically increase the rate at which software can be developed.
+
+On the "frustratingly difficult" side of the gradient, coding with a LM still requires a senior developer's level of expertise to do more than simply build demos. The LMs are still _junior_ developers, and surprisingly uneven. A junior developer doesn't (yet) get quite the leverage out of the LM that an experienced developer does. Aggravating this problem, the LMs don't (yet) do anything to help a junior developer _become_ that senior developer.
+
+ML models are both a new material and means of production. Their adoption across industries will require deep industry expertise, creativity, and courage to bring those materials and means to bear. As with the Internet before it, adoption will be uneven, the labor force within each industry will be remade, and the timelines are anyone's guess.
+
+</article>
+
+</NotebookLayout>
