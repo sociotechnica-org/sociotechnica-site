@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import NotebookLayout from '../layouts/NotebookLayout.astro';
 import type { MDXInstance } from 'astro';
 
 interface LabNoteFrontmatter {
@@ -16,7 +16,7 @@ const labNotes: MDXInstance<LabNoteFrontmatter>[] =
 );
 ---
 
-<Layout 
+<NotebookLayout 
   title="Lab Notes"
   description="SocioTechnica Lab Notes - thoughts, experiments, and works in progress."
   url="https://sociotechnica.org/notebook"
@@ -53,4 +53,4 @@ const labNotes: MDXInstance<LabNoteFrontmatter>[] =
       ))}
     </ul>
   </article>
-</Layout> 
+</NotebookLayout> 
