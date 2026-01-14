@@ -1,0 +1,77 @@
+---
+id: WS007
+title: "From WorkSquared to LifeBuild"
+description: How our journey building an AI-native workspace for organizations led us to a personal operating system for life.
+publishedDate: 2026-01-14
+author: Jess Martin
+---
+
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
+
+<NotebookLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+
+<NotebookArticleHeader
+  id={frontmatter.id}
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+  prevNote={{
+    id: "WS006",
+    title: "Working My Life Into Burnout",
+    url: "/notebook/life-burnout",
+  }}
+/>
+
+<article class="prose prose-blockquote:font-normal">
+
+If you've been following our Lab Notes, you may have noticed references to "WorkSquared" throughout earlier entries. This note explains where we started, what we learned, and where we're headed now.
+
+## The WorkSquared Vision
+
+When we started WorkSquared, we set out to build a source-available, AI-native workspace for businesses and organizations. The thesis was ambitious: rethink the [technical foundations](/notebook/ws-tech-foundations) of how humans and computers collaborate, and build something truly novel from the ground up.
+
+We envisioned AI agents that could operate independently within organizational workflows—scheduling meetings, managing projects, coordinating across teams. The potential felt enormous.
+
+## What We Learned
+
+As documented in our [UI Safari](/notebook/ws-ui-safari) and experiments with [planning collaborations](/notebook/planning-a-collab), we dove deep into what it would take to make this vision real. We explored [symbolic approaches](/notebook/symbolic) and wrestled with the fundamental architecture challenges of building AI-first systems.
+
+But as we built and tested, patterns emerged that we didn't expect.
+
+First, the coordination problems that plague organizations—the meetings, the status updates, the alignment overhead—weren't just organizational problems. They were human problems. The same challenges showed up in personal life, often with even less structure to manage them.
+
+Second, as Danvers documented in [Can AI Cure My Addiction to Overcommitting?](/notebook/overcommitting) and [Working My Life Into Burnout](/notebook/life-burnout), we discovered that the hardest coordination problems weren't between team members—they were between the different roles and commitments in a single person's life.
+
+## The Pivot to Personal
+
+The insight that changed everything: if we could build AI agents that helped one person manage the complexity of their own life—their health, relationships, finances, career, household—we'd be solving a more fundamental problem. And we'd be doing it in a context where the user has full authority and fewer coordination constraints.
+
+This led us to [LifeBuild](https://lifebuild.me).
+
+## What is LifeBuild?
+
+LifeBuild is a personal operating system for your life. It's where AI agents help you draft projects, prioritize your commitments, and stay on top of what matters—from health to relationships to finances and beyond.
+
+Instead of trying to coordinate AI agents across organizational boundaries with all the complexity that entails, LifeBuild focuses on the one domain where you have complete control: your own life.
+
+The same technical foundations we explored for WorkSquared—the architecture for AI agents that can truly collaborate rather than just respond—now power a system designed for personal life management.
+
+## Historical Context
+
+You'll still find references to "WorkSquared" throughout our earlier Lab Notes. We've preserved these as-is because they represent the authentic journey of how we got here. Each note captures what we believed and learned at that moment in time.
+
+The path from WorkSquared to LifeBuild wasn't a failure—it was a refinement. We learned that before AI can help teams and organizations work together, it needs to help individuals get their own house in order.
+
+## What's Next
+
+LifeBuild is now live at [lifebuild.me](https://lifebuild.me), and we've written [a book](https://lifebuild.me/book) that dives deep into the philosophy and practice of using AI agents to manage personal complexity.
+
+We'll continue to share our explorations in these Lab Notes as we learn what works, what doesn't, and what surprising insights emerge from building a true AI partner for life.
+
+</article>
+
+</NotebookLayout>
