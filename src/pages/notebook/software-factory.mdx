@@ -1,0 +1,173 @@
+---
+id: WS009
+title: "The Year of the Software Factory"
+description: "2026 will be the year we stop writing code and fully mechanize software engineering. Here's what that means."
+publishedDate: 2026-01-23
+author: Danvers Fleury
+---
+
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
+
+<NotebookLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+
+<NotebookArticleHeader
+  id={frontmatter.id}
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+  prevNote={{
+    id: "WS008",
+    title: "The Context Library of Alexandria (Part 1)",
+    url: "/notebook/context-library",
+  }}
+/>
+
+<article class="prose prose-blockquote:font-normal">
+
+## Introduction
+
+2026 will be the year that we stop writing code and fully mechanize the process of software engineering.
+
+This will lead to profound implications—second and third order effects that we can't yet see. Economic, social, organizational, emotional effects as the job that software engineers have been doing, more or less unchanged for 50 years, changes radically, seemingly overnight.
+
+This might seem far-fetched. If you've been following recent projects in this space, the impression you get might be one of mania and chaos rather than clarity and order. I hope this essay can help you understand where we are, where we're going, and get you to the point where you can think with me about the implications of this change and what role you yourself will play in it.
+
+## What is a Software Factory?
+
+The Software Factory is not merely metaphor. It is a concrete reality for how we will build software.
+
+Writing code professionally has always been treated as a process. The software development lifecycle (SDLC) has been studied and adapted over many decades. We've established best practices for what the different stages are and how those stages can be optimized for quality, throughput, effectiveness, and the general happiness of the people involved.
+
+<img src="/ws009-sdlc.png" alt="The software development lifecycle: Requirements Gathering, Development, Code Review, QA, and Ship, connected by arrows with a feedback loop between Development and Code Review" class="my-6" />
+
+In the last two and a half to three years, we've applied large language models to the process of writing software across all stages—everything from writing technical plans, to writing the code itself, to performing code reviews, to QA and architectural assessments. LLMs have gone from inconsistent assistants, to full-fledged junior developers, to effective engineers that can accomplish long-range tasks.
+
+For those experimenting on the cutting edge, this has led to incredible time compression in performing software tasks. When we know what needs to be built, it can be fully specified and implemented in a matter of hours. These gains can reduce the time to complete features to one-tenth of what it was previously.
+
+With this time compression, we've also observed that we can manage several agents performing tasks in parallel. Many people have demonstrated managing 3, 5, even 10 agents simultaneously, further increasing the gains.
+
+That's where we are today: individual developers driving a set of agents to increase software engineering effectiveness by a factor of 10.
+
+<img src="/ws009-dev-llm.png" alt="Two developers each managing multiple tasks and driving multiple LLMs, with bidirectional arrows showing the developer-LLM interaction" class="my-6" />
+
+Already, this change has brought turmoil and disruption. The number of developers engaged in it is growing daily—but we are far from fully embracing this as an industry.
+
+But the next step in the transformation will be even more disruptive, even more effective, and even more unevenly adopted.
+
+## The Paradigm Shift
+
+You can understand the coming change with one simple mental model.
+
+### The Old Model: Developers Shepherd Tasks
+
+In the current method of software development, we haven't changed the lifecycle at all, but we have brought LLMs into the mix.
+
+Developers still take a single task all the way through the lifecycle, using various LLMs—mostly of their own maintenance and configuration—in the same way they customize their IDE. The LLM is a tool built and customized just for themselves.
+
+They use LLMs at various stages as they escort the task through the traditional software development lifecycle.
+
+### The New Model: Tasks Flow Through the Line
+
+What's coming is different. We're going to take the software development lifecycle and split it into stations, where the same LLM configuration performs that task over and over, with consistency across executions.
+
+In this new world, tasks move through the lifecycle, but developers no longer run custom LLMs on their own machines. Instead, they work on a shared set of LLMs performing the tasks—what we could call the factory line.
+
+<img src="/ws009-factory-line.png" alt="The Software Factory Line: tasks flow through Requirements Gathering, Development, Code Review, QA, and Ship stations, each staffed by LLMs and occasionally humans (Dev, PM, Designer), with developers working on building and maintaining the line itself" class="my-6" />
+
+This does not imply that human developers aren't involved. Some stages in the software development lifecycle still need heavy human involvement or merely a review for quality. There will still be a need for professional software developers—both to build the line itself and to man the line in stages where software agents are not yet able to meet the desired quality or level, or where we need a human review to ensure quality.
+
+## What Software Factories Enable
+
+### Compounding optimization
+
+When you make each stage of the SDLC a consistent station with a fixed LLM, set of prompts, and set of tools, you can optimize that particular station as tasks pass through.
+
+For every task, you get information about throughput and quality. When improvements are made to that stage, all tasks that pass through the software development lifecycle benefit from the improved performance.
+
+Today, developers individually customize their tools on their own machines to improve their perception of quality of the output. In the new world, all developers collaborate to work on a singular line that can steadily improve—and the improvements compound to the whole team. This makes for far more efficient use of improvement effort.
+
+### The SDLC will evolve
+
+The software development lifecycle has been designed and optimized over 50 years, largely for humans and the tools currently at their disposal. Humans have specific strengths and weaknesses that are not the same as LLMs. We should expect the SDLC to evolve as we understand better what strengths and weaknesses LLMs have.
+
+One example we're already seeing: planning. Practitioners have begun to use a technical planning step where an LLM fully fleshes out its plan for development, and a human gives feedback on that plan prior to writing real code. They have found that this detailed discussion of the implementation produces much higher quality output during the code writing stage.
+
+Technical planning review is not often part of the traditional SDLC. It's used sporadically for extremely complex tasks, or more regularly in environments with many junior developers who need more oversight. But with an LLM-inhabited factory line, we probably need a distinct Technical Planning stage in order to ensure quality.
+
+As you operate and optimize the singular factory line, we will split some stations into multiple stations based on the needs of the LLM in order to improve quality and throughput.
+
+### A different developer experience
+
+This will also change the relationship of the individual developer to tasks—and that change will alter the experience of work.
+
+Today, a developer shepherds individual tasks through the lifecycle. With LLMs, those tasks are being completed much more quickly, and the developer spends their time bouncing around different stages, reloading and unloading context from the different tasks that are currently in process. This is not only extraordinarily inefficient, but can be extremely painful if you're managing five to ten agents actively working on different tasks.
+
+In the factory line model, a developer can play a focused role at a specific station. For example, they may spend several hours reviewing technical plans. This allows the human to batch the kind of work they're doing, which should be both more effective and more pleasant.
+
+## Implications
+
+We don't yet know the full implications, but it's hard to see them as anything less than massive. An entire industry will be overturned.
+
+### Efficiency beyond comparison
+
+Individual developers using LLMs are already seeing 5-10x gains. While astounding, it's difficult to imagine how the model of a single developer individually managing LLMs could generate another 10x in gains, even as LLMs improve. I believe we will come up against human limits in spite of improved tooling.
+
+But with a factory line that can become increasingly autonomous, optimized over time, and highly parallelized—the efficiency gains should be much, much greater. It seems fairly clear we could expect between 10x and 100x gains in efficiency and throughput. We don't know the bounds yet—there are always physical limits—but I can't even guess what those boundaries will be.
+
+### The end of a way of life
+
+As these software lines become increasingly autonomous, we should expect they'll require fewer developers to build the same amount of software. Jevons' Paradox suggests we'll probably just build more software for a time, until supply meets demand—at which point prices will plummet and we'll have a real change on our hands.
+
+In the short term, we shouldn't expect software development jobs to go away, but merely to change. But the change is so radical that some software engineers will opt out.
+
+What will opting out even mean? If you've already opted out from using LLMs, you're already massively behind your peers in productivity—and that gap will continue to grow. Tools like Cursor and Conductor allow a single developer to coordinate multiple LLMs across stages of the process.
+
+How would you compare the effectiveness of a single developer handwriting code to a factory line with tens or hundreds of parallel LLMs cranking through significant code, with occasional human intervention and consistent optimization?
+
+There is no comparison. Perhaps we might imagine a man in a field with a scythe competing against a factory farm with 100 autonomously driven tractors.
+
+These efficiency gains are going to destroy a way of life. I've grown up in this industry, working at different small software shops and on small teams as we handwrite software together. That world is going away. It will necessarily change to one of software line management.
+
+The job of building software is going to change so radically as to be almost unrecognizable to someone who wrote code professionally back in the 2010s.
+
+### Economics: pay to play
+
+In the old world of software engineering, the power needed for an individual computer is minuscule, and all the tools needed to write code are basically free. An individual developer can, by the sweat of their brow until their mind and fingers can handle it no more, write code without paying anyone for the pleasure of doing so.
+
+In the new world, LLMs demand their token price—whether paid to the labs in cost per token, or to the electric company as you run a local LLM on your expensive GPU. The LLMs do not run on human calories. Software development will become a pay-to-play industry.
+
+These software factories will at first be incredibly inefficient and expensive, just as manufacturing lines were when first invented. They will rapidly improve, but the expenditure will remain high as the pressure to fully utilize them means companies spend as much money as they can producing software in order to move as fast as possible.
+
+If you've been a software engineer in the old world, you know the mind has natural limits—how much programming it can do in a day. It must rest when night falls.
+
+Factories have no such limitation.
+
+### Organizations in turmoil
+
+Google employs some 50,000 software engineers. What will they do in this new world?
+
+Set aside for a moment the difficulty of transitioning 50,000 people from their present job using a now-outdated method of software production. Assume we arrive in this new world in the blink of an eye—how will 50,000 people productively labor on software development factory lines?
+
+This transformation and reorganization of large companies will be a slow, imperfect, and brutal process. It's easy to see how factory-native teams may arise with the inherent advantages of a fresh organizational chart adapted to this new method of development.
+
+### What will we build?
+
+With capabilities to build software so massively extended, and the cost of production dropping dramatically—what software will we choose to build? What shape will software take in the future?
+
+With an increasingly optimized and autonomous factory line generating 100x gains in productivity, the nature of software itself will adapt to accommodate this new world.
+
+Think of Conway's Law: you ship your org chart. Think of that not as a critique, but as an expression of reality. With an organization that now looks like a factory line—highly parallel, largely autonomous—the nature of the software we ship will change.
+
+SaaS has been the dominant software business model for decades, predicated on the economics of software companies and software production. In this new world, SaaS applications can be replicated in a week. But replication doesn't fully replace a functioning software product—software is more than code. It's also the system that supports and operates that software at scale.
+
+Will SaaS continue to exist? Will it get more competitive? Cheaper? Will people write more bespoke software for individual use cases?
+
+To this I can merely speculate that change will come, and that it will be no less massive than the changes to the nature of the work itself. I hope this has you thinking differently about your software job, and pondering what role you might want to play in this brave new world.
+
+</article>
+
+</NotebookLayout>
