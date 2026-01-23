@@ -1,0 +1,262 @@
+---
+id: WS008
+title: "The Context Library of Alexandria (Part 1)"
+description: "Why agents make poor micro-decisions, and a five-dimension framework for delivering the context they're missing."
+publishedDate: 2026-01-23
+author: Danvers Fleury
+---
+
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
+
+<NotebookLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+
+<NotebookArticleHeader
+  id={frontmatter.id}
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+  prevNote={{
+    id: "WS007",
+    title: "From WorkSquared to LifeBuild",
+    url: "/notebook/worksquared-to-lifebuild",
+  }}
+/>
+
+<article class="prose prose-blockquote:font-normal">
+
+## Part 1: The Problem & The Framework
+
+### 1.1 The Missing Context Problem
+
+There's a growing body of literature rightfully stating that when separate AI agents are given related but separate tasks within a software ecosystem, they struggle to make aligned micro-decisions—that they miss nuance, break adjacent systems, repeat past mistakes, and can build against strategic intent. This then leads to two common strategies:
+
+- Have one agent do a lot of work in sequence until they context-overload.
+- Spam your tokens and throw away lots of bad work.
+
+There is an implicit argument in the diagnosis of this issue and the recommendation for solutions, which is that the root cause here is a flaw in the agents / their underlying models.
+
+We think the underlying issue is the humans involved being bad managers, or more specifically inadequate stewards of holistic project context.
+
+We've been starving agents of the context that humans absorb implicitly. A developer who's been at a company for six months has soaked up an enormous amount of unwritten knowledge just by existing in the environment:
+
+- Hallway conversations about why the last approach didn't work
+- Overheard debates about product strategy
+- The senior engineer who says "oh, we tried that in 2019"
+- Ambient awareness of what's adjacent, what's fragile, what's planned
+- The institutional memory that shapes many micro-decisions
+
+None of this gets written down. And almost none of it reaches the agent. And in reality *humans* often make misaligned choices as well, it just takes longer for us to see. So what might an alternative strategy look like?
+
+**What agents typically receive:**
+
+- **WHAT:** Feature specs, requirements, acceptance criteria—the specification of what to build
+- **HOW:** Access to the codebase itself, plus whatever process/sequence instructions come through prompts—the context and instructions for building
+
+**What agents who make poor micro-alignment calls don't get:**
+
+- **WHERE:** Ecosystem context—what's adjacent, what this connects to, what breaks if you touch it wrong
+- **WHEN:** Evolutionary context—what we tried before, why it failed, what we're building toward
+- **WHY:** Objectives context—the chain from business goal to strategic bet to feature rationale
+
+WHERE, WHEN, and WHY are the missing bundle.
+
+Give an agent this context and suddenly they're not guessing about ecosystem impacts. They're not reintroducing a failure mode from eighteen months ago. They're not building something that conflicts with the roadmap or violates platform philosophy.
+
+The micro-decisions improve because the context improved.
+
+### 1.2 What Is a Context Library?
+
+A Context Library is a documentation system designed to capture holistic and token efficient context for agents assigned to build and fix software.
+
+It operates at two levels:
+
+- **The Library:** A complete knowledge base covering your product's past, present, and future—organized so that the implicit knowledge humans absorb by osmosis becomes explicit and queryable.
+- **The Slug:** A curated context delivery assembled for a specific task. We call this a "context constellation"—the relevant cluster of information an agent needs for this bug fix, this feature build, this refactor.
+
+The goal isn't comprehensive documentation for its own sake. It's giving agents the same contextual foundation that makes experienced human developers effective.
+
+Modern library science abandoned rigid hierarchical classification decades ago. The Dewey Decimal System—where every item lives in exactly one place—gave way to faceted classification: multiple independent dimensions that can be queried in combination. A resource isn't locked into a single category; it has coordinates across several axes that intersect to locate it precisely.
+
+A Context Library applies this insight. Documentation isn't filed into one bucket. Every piece of knowledge has coordinates across multiple dimensions, linked to related knowledge, queryable from multiple angles.
+
+### 1.3 The Five Dimensions of Context
+
+A Context Library organizes information across five dimensions. Each delivers a distinct type of instructive context that shapes agent decision-making.
+
+There's no rigid hierarchy here. Different teams will emphasize different dimensions based on their needs. Different tasks will draw more heavily from some dimensions than others. The value is in having all five available and linked together.
+
+#### WHERE: Ecosystem Context
+
+**Core question:** What's the map around this work?
+
+WHERE delivers relational context—what's adjacent, what's dependent, what's affected. Think of the feature being built as a star in a constellation. WHERE shows the neighboring stars.
+
+**What it includes:**
+
+- Structural position in the product
+- Adjacencies: what's nearby
+- Dependencies: what this relies on, what relies on this
+- Boundaries: where this ends and another thing begins
+
+**What it prevents:**
+
+- Building something that duplicates existing functionality
+- Breaking a neighboring feature
+- Missing integration points
+- Misunderstanding scope
+
+*The key delivery:* Minimum viable map. Not the entire architecture—just the relevant constellation for this task.
+
+#### WHEN: Evolutionary Context
+
+**Core question:** What's the timeline around this work?
+
+WHEN delivers temporal context—what came before, what exists now, what's coming next. This is institutional memory made explicit.
+
+**What it includes:**
+
+- **Past:** What we tried before, what failed, what we learned, why we changed course
+- **Present:** What exists now, current state, active experiments
+- **Future:** Where we're headed, planned evolution, roadmap items this connects to
+
+**What it prevents:**
+
+- Repeating a past failure
+- Building something that conflicts with planned evolution
+- Breaking stride toward future solutions
+- Losing hard-won learnings
+
+*The key delivery:* An agent that understands WHEN knows they're not working in a vacuum. They're continuing a story that has chapters before and after this moment.
+
+#### WHY: Objectives Context
+
+**Core question:** Why does this exist? Why these choices?
+
+WHY delivers decisional context—the chain of reasoning from high-level objectives down to specific decisions. This is the dimension most absent from typical agent context.
+
+**What it includes:**
+
+- **External pressures:** Market demands, customer requirements, competitive pressure, revenue targets
+- **Internal signals:** User behavior patterns, performance issues, adoption barriers, technical debt
+- **Strategic principles:** How your platform philosophy responds to those pressures and signals
+- **Decision rationale:** Why specific choices were made, alternatives that were rejected
+
+**What it prevents:**
+
+- Solving the wrong problem
+- Making choices that conflict with strategy
+- Optimizing for the wrong metric
+- Missing the actual user need
+
+WHY has depth. For tactical work, you might only need immediate WHY (this user need, this bug). For strategic work, you trace higher:
+
+- **Immediate WHY:** This user need, this metric, this bug
+- **Platform WHY:** This strategic principle, this product philosophy
+- **Enterprise WHY:** This business objective, this revenue target
+- **Industry WHY:** This market shift, this regulatory change (rare, mostly relevant for large organizations)
+
+Most tactical work needs one or two levels. But the capability to trace higher exists when needed—and for large enterprises, that enterprise-level WHY often explains decisions that otherwise seem arbitrary. The engineer pulled off a project suddenly isn't being jerked around randomly; there's a business reason, it's just not visible at their altitude.
+
+*The key delivery:* An agent that understands WHY can reason about tradeoffs the way an aligned human would. They're not just executing specs—they're serving objectives.
+
+#### WHAT: Functional Specification
+
+**Core question:** What are you building?
+
+WHAT delivers specification context—the description of the thing, its expected behavior, and how to know it's done. If you're building an IKEA shelf, WHAT is the picture on the box and the parts list.
+
+**What it includes:**
+
+- Feature description: what the thing is
+- Expected behavior: what it does, how it responds
+- Acceptance criteria: how you know it's correct
+- Tests: specifications of correct behavior in executable form
+- Edge cases: what happens in unusual scenarios
+
+**What it prevents:**
+
+- Building the wrong thing
+- Missing expected behavior
+- Unclear definition of done
+- Gaps between intent and implementation
+
+*The key delivery:* The specification. A clear articulation of what you're building and how to verify you've built it.
+
+#### HOW: Build Instructions
+
+**Core question:** What's the process for building this?
+
+HOW delivers instructional context—the steps, verification methods, conventions, and guardrails for constructing the thing. If WHAT is the IKEA shelf picture and parts list, HOW is the assembly manual.
+
+**What it includes:**
+
+- Process steps: sequence for building ("first create component, then wire state, then add UI")
+- Verification process: how to prove it works (run these tests, check these items)
+- Conventions: patterns to follow (naming, style, structure)
+- Guardrails: tips and gotchas ("watch out for X," "don't do Y")
+
+**What it prevents:**
+
+- Fumbling through unfamiliar process
+- Missing verification steps
+- Violating conventions
+- Hitting known landmines
+
+*The key delivery:* The instruction manual. Given the WHAT and the codebase, HOW tells the agent the process for getting from here to done.
+
+### 1.4 Atomic Linkage
+
+The five dimensions aren't silos. They're facets of the same underlying knowledge, connected through explicit links.
+
+A note about a past approach lives in WHEN (it's temporal—about the past) but links to:
+
+- The WHAT (what existed, what replaced it)
+- The WHY (what we learned, why we changed)
+- The WHERE (what part of the system it affected)
+
+A note about a feature lives in WHAT (it's functional—about behavior) but links to:
+
+- The WHERE (its position in the architecture)
+- The WHEN (past approaches, future evolution)
+- The WHY (the pressures and strategy that created it)
+- The HOW (implementation details)
+
+This atomic linkage means you can enter the library from any dimension and traverse to the others. A slug can be assembled by starting from the task at hand and following links to gather the relevant context constellation.
+
+*The key insight:* notes live in one primary home but link across all dimensions. Dimensions stay clean. Richness emerges from connections.
+
+### 1.5 The Context Librarians
+
+A Context Library doesn't maintain itself. Raw context streams in continuously—code changes, strategy shifts, user feedback, lessons learned. Someone has to capture it, decompose it, link it, and keep it healthy. Someone has to assemble the right context for the right task at the right moment.
+
+This is the work of librarians. Not passive archivists, but active stewards who ensure the library serves its purpose: giving agents the context they need to make aligned decisions.
+
+We split this work between two roles.
+
+#### Conan the Librarian
+
+Conan is the AI librarian—an agent specialized in library operations rather than building software.
+
+Where building agents receive slugs and make implementation decisions, Conan works upstream: monitoring sources for new context, executing decomposition into atomic notes, establishing bidirectional links, running gap analysis, assembling slugs on demand, and maintaining system health.
+
+Conan handles volume and consistency. A human can't reasonably review every commit message, every Slack thread, every support ticket for documentation-worthy context. Conan can watch these streams, surface candidates, and execute the mechanical work of maintaining a living knowledge base.
+
+But Conan doesn't make judgment calls. Ambiguous categorizations, structural reorganizations, priority decisions about what matters—these require human oversight.
+
+#### The Human Librarian
+
+The human librarian is Conan's counterpart—the person who provides direction, makes judgment calls, and ensures quality.
+
+This isn't a full-time role for most teams. It's a responsibility hat: someone who reviews Conan's work, resolves ambiguity when Conan flags it, sets documentation priorities, and conducts periodic deep reviews.
+
+The human librarian decides what to capture and why it matters, if not proactively than as a tie-breaker on conflicting sources of truth. Conan decides how to structure it and where to link it—then the human validates.
+
+Think of it as the same division you'd want between a knowledgeable assistant and an accountable owner. The assistant can draft, organize, check, and flag. The owner makes decisions and takes responsibility for outcomes.
+
+</article>
+
+</NotebookLayout>
