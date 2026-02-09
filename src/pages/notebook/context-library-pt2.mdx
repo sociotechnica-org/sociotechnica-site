@@ -1,0 +1,147 @@
+---
+id: WS011
+title: "The Context Library of Alexandria (Part 2)"
+description: "Marvel's 266,000-page wiki reveals the architecture for a context library—and the critical dimension it's missing."
+publishedDate: 2026-02-09
+author: Danvers Fleury
+---
+
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
+
+<NotebookLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+
+<NotebookArticleHeader
+  id={frontmatter.id}
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+  prevNote={{
+    id: "WS010",
+    title: "What Happens to Your Product Org When Code Compiles Itself?",
+    url: "/notebook/code-compiles-itself",
+  }}
+/>
+
+<article class="prose prose-blockquote:font-normal">
+
+## Conceptualizing Your Context Library
+
+William Kent's 1978 masterwork *Data and Reality* opens with a warning to mapmakers: highways are not painted red, rivers don't have county lines running down the middle, and you can't see contour lines on a mountain. His point: maps aren't reality. They're tools for navigating reality—and different purposes demand different maps.
+
+This matters for a Context Library. The five dimensions we use (WHAT/WHERE/WHEN/WHY/HOW) are not the true structure of your product's knowledge. They're a useful structure for a particular purpose: giving AI agents the context they need to make aligned decisions. Another team might choose different dimensions. Both would be valid.
+
+Even in a company of two, there will be times where "the truth" of a plan or the state of something is not agreed upon. Our guess is that this system will surface hard conversations fast and productively. We imagine enshrining what is mutually agreed upon and crafting tests to clear up disagreement. Even then, it's just aligned perception.
+
+Kent's insight frees us from false precision. We're not trying to capture objective truth; we're trying to capture enough shared perspective that multiple contributors—human and AI—can work coherently in the same universe.
+
+Luckily, we're not the first people to tackle this.
+
+Marvel Comics faces this challenge at absurd scale: 800,000+ published issues, thousands of characters, dozens of simultaneous writers, eighty years of continuity. How do you document a shared universe when that universe is explicitly fictional—when coherence depends entirely on aligned perception?
+
+---
+
+### 2.1 Marvel's Public Context Libraries
+
+Their answer began as a series of comics I was obsessed with as a kid: The Official Handbook of the Marvel Universe. In modern times it evolved into the Marvel Wiki—a community-maintained database with 266,000+ pages that's become the authoritative reference for the entire fictional universe. The structure they converged on is remarkably sophisticated.
+
+Look at a character entry like Wonder Man: 144 outlinks. Every team he's belonged to, every relative, every enemy, every storyline he's appeared in, every location he's operated from. Each link is bidirectional: Wonder Man's page links to the Avengers; the Avengers page links back to Wonder Man as a member. The page isn't describing Wonder Man; it's positioning him in a web of relationships.
+
+Those 144 links fall into standardized categories:
+
+| Section | What It Contains |
+|---|---|
+| Identity | Name, aliases, standalone summary paragraph |
+| Affiliations | Teams (Avengers, West Coast Avengers, Force Works), with temporal markers for when |
+| Relationships | Relatives, allies, enemies—each linked |
+| Origin | How this character came to exist, the inciting events |
+| History | Full narrative timeline, dense with citations to specific issues |
+| Powers & Abilities | Technical specifications, limitations, how the character works |
+| Appearances | Every issue, categorized by role (featured, cameo, flashback) |
+
+The entry is also tagged with faceted categories: "Avengers Members," "Male Characters," "Ionic Characters," "Formerly Deceased," "Energy Manipulation." These enable queries across the wiki: show me all characters with regeneration powers or who has been resurrected?
+
+This structure solves navigation in a highly interconnected world.
+
+A reader landing on Wonder Man can traverse outward in any direction: follow the Avengers link to understand his team context, follow the Vision link to understand why they're called "mind-twins," follow the Grim Reaper link to understand his brother's villainy. Each destination has the same structure, enabling further traversal.
+
+The dense linking means there's no single "correct" path through the wiki. You can enter anywhere and navigate to anywhere else. The structure supports multiple access patterns: browse by character, browse by team, browse by event, browse by publication date, query by category.
+
+This is a preview of what a Context Library looks like.
+
+Features with dozens of outlinks to related features, systems, decisions, and learnings. Standardized templates ensuring every entry covers the same ground. Faceted metadata enabling queries. Bidirectional linking so you can traverse in any direction. The structure itself—not coordination meetings, not central authority—keeps it coherent.
+
+But the wiki solves only half the problem that comic producers face when writing a new issue.
+
+---
+
+### 2.2 What the Wiki Doesn't Contain
+
+The Marvel Wiki documents what happened. It doesn't guide what should happen next.
+
+When a writer sits down to script a new Spider-Man issue, they face hundreds of micro-decisions: Can Spider-Man lift this much weight? Would he make this joke? Does this contradict what's happening in the Avengers book? Can I give him a new power, or does that step on a planned crossover?
+
+They don't consult the wiki for these questions. The wiki can tell them Spider-Man's documented strength level, but not whether the editors want to push that limit this year. It can list his team affiliations, but not whether using him in a scene conflicts with another writer's storyline shipping the same month. It can show his history, but not the lessons learned from the debacle of writers not being on the same page while shipping the Clone Saga.
+
+For aligned decision-making, Marvel relies on mechanisms that only work for humans: semi-annual summits where writers plan the universe together, editorial hierarchy that decides who can use which characters when, long-tenured editors who remember what failed in 1993, and hallway conversations that never get documented.
+
+All of this works because humans absorb context through osmosis. A writer who's attended three summits, worked with an editor for five years, and read comics since childhood carries enormous implicit knowledge about what fits the universe, what's been tried, what the current direction is. They don't need it documented—they've internalized it.
+
+AI agents can't do any of this. An agent only knows what's in its context window.
+
+The Context Library is therefore two things:
+
+First: The wiki structure. Standardized entries with dense bidirectional linking, faceted metadata, multiple navigation paths. This is what Marvel built. It solves the documentation architecture problem.
+
+Second: The externalized implicit knowledge. The stuff Marvel's humans carry in their heads—strategy, rationale, learnings, what we're building toward, what we tried before, why we made these choices. This is what Marvel didn't build, because they didn't need to. Their consumers are humans who absorb context through osmosis.
+
+Our consumers are agents who don't.
+
+This externalization is primarily the WHY dimension:
+
+| What Marvel Humans Carry | What We Externalize |
+|---|---|
+| "We're pushing toward AI-assisted prioritization this year" | Strategy notes: explicit articulation of current direction |
+| "We tried that in 2019 and it confused users" | Learning notes: past attempts and their lessons |
+| "That decision was made because Customer X threatened to leave" | Decision notes: rationale with business context |
+| "The three-slot limit exists because of the overwhelm research" | Feature → Learning links: connections from present to past |
+| "Don't touch the queue system, Platform is refactoring it" | Dependency + Future Vision notes: what's adjacent and planned |
+
+---
+
+### 2.3 The Five-Dimension Requirement
+
+The Marvel Wiki gives intuition. The five dimensions give rigor.
+
+Section 2.1 showed what the wiki captures beautifully: identity, affiliations, relationships, history, powers. Section 2.2 showed what it doesn't: the editorial direction, strategic choices, and institutional memory that guide aligned decisions.
+
+Our five dimensions span both. Four of them have clear wiki parallels. One doesn't—and that's the point.
+
+The rule: every atomic note must address all five dimensions—or explicitly mark which don't apply.
+
+| Dimension | Question It Answers | Marvel Wiki Equivalent |
+|---|---|---|
+| WHAT | What is this thing? | Character bio |
+| WHERE | What's around it? | Teams, allies, enemies |
+| WHEN | What's the story? | Publication history, key arcs |
+| WHY | Why does it exist? | None—this is what humans carry |
+| HOW | How does it work? | Powers, limitations |
+
+A note missing a dimension without explanation is incomplete. A note that says "N/A—new feature, no past yet" is complete. The distinction matters.
+
+Why this matters for both audiences:
+
+**For humans:** The five dimensions ensure you've thought through context completely. Missing a dimension means missing knowledge that will matter later—when onboarding someone, when revisiting a decision, when trying to understand why something is the way it is.
+
+**For AI agents:** Conan assembles slugs by pulling dimensional context. Missing dimensions mean gaps in the context constellation. An agent working on a feature without WHY context will make decisions that conflict with strategy. An agent without WHEN context will repeat past failures. An agent without WHERE context will break adjacent systems.
+
+The five-dimension requirement isn't documentation formalism. It's ensuring both humans and agents have what they need to make aligned decisions—including the dimension that wikis don't capture and humans usually carry in their heads.
+
+*Next: the architecture that makes it work.*
+
+</article>
+
+</NotebookLayout>
