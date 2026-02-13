@@ -10,14 +10,14 @@
     "check": "astro check && tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
-    "@astrojs/react": "^4.3.0",
-    "@tailwindcss/typography": "^0.5.16",
-    "@types/react": "^19.1.5",
-    "@types/react-dom": "^19.1.5",
-    "astro": "^5.8.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/react": "^4.4.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.17.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",

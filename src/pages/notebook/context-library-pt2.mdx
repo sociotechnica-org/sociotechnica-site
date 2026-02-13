@@ -30,9 +30,9 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
 
 ## Conceptualizing Your Context Library
 
-William Kent's 1978 masterwork *Data and Reality* opens with a warning to mapmakers: highways are not painted red, rivers don't have county lines running down the middle, and you can't see contour lines on a mountain. His point: maps aren't reality. They're tools for navigating reality—and different purposes demand different maps.
+William Kent's 1978 masterwork _[Data and Reality](https://www.bkent.net/Doc/darip.htm)_ opens with a warning to mapmakers: highways are not painted red, rivers don't have county lines running down the middle, and you can't see contour lines on a mountain. His point: maps aren't reality. They're tools for navigating reality—and different purposes demand different maps.
 
-This matters for a Context Library. The five dimensions we use (WHAT/WHERE/WHEN/WHY/HOW) are not the true structure of your product's knowledge. They're a useful structure for a particular purpose: giving AI agents the context they need to make aligned decisions. Another team might choose different dimensions. Both would be valid.
+This matters for a Context Library. As we noted in [Part 1](/notebook/context-library), the five dimensions we use (What, Where, When, Why, How) are not the true structure of your product's knowledge. They're a useful structure for a particular purpose: _giving AI agents the context they need to make aligned decisions_. Another team might choose different dimensions. Both would be valid.
 
 Even in a company of two, there will be times where "the truth" of a plan or the state of something is not agreed upon. Our guess is that this system will surface hard conversations fast and productively. We imagine enshrining what is mutually agreed upon and crafting tests to clear up disagreement. Even then, it's just aligned perception.
 
@@ -42,31 +42,33 @@ Luckily, we're not the first people to tackle this.
 
 Marvel Comics faces this challenge at absurd scale: 800,000+ published issues, thousands of characters, dozens of simultaneous writers, eighty years of continuity. How do you document a shared universe when that universe is explicitly fictional—when coherence depends entirely on aligned perception?
 
----
+## Marvel's Public Context Libraries
 
-### 2.1 Marvel's Public Context Libraries
+Their answer began as a series of comics I was obsessed with as a kid: [The Official Handbook of the Marvel Universe](https://en.wikipedia.org/wiki/Official_Handbook_of_the_Marvel_Universe). In modern times it evolved into the [Marvel Wiki](https://marvel.fandom.com/wiki/Marvel_Database)—a community-maintained database with 266,000+ pages that's become the authoritative reference for the entire fictional universe. The structure they converged on is remarkably sophisticated.
 
-Their answer began as a series of comics I was obsessed with as a kid: The Official Handbook of the Marvel Universe. In modern times it evolved into the Marvel Wiki—a community-maintained database with 266,000+ pages that's become the authoritative reference for the entire fictional universe. The structure they converged on is remarkably sophisticated.
+![The Official Handbook of the Marvel Universe — Marvel's first attempt at documenting their shared universe](/images/articles/context-library-pt2/handbook-cover.jpg)
 
-Look at a character entry like Wonder Man: 144 outlinks. Every team he's belonged to, every relative, every enemy, every storyline he's appeared in, every location he's operated from. Each link is bidirectional: Wonder Man's page links to the Avengers; the Avengers page links back to Wonder Man as a member. The page isn't describing Wonder Man; it's positioning him in a web of relationships.
+Look at a character entry like [Wonder Man](<https://marvel.fandom.com/wiki/Simon_Williams_(Earth-616)>): 144 outlinks. Every team he's belonged to, every relative, every enemy, every storyline he's appeared in, every location he's operated from. Each link is bidirectional: Wonder Man's page links to the [Avengers](<https://marvel.fandom.com/wiki/Avengers_(Earth-616)>); the Avengers page links back to Wonder Man as a member. The page isn't describing Wonder Man; it's positioning him in a web of relationships.
 
 Those 144 links fall into standardized categories:
 
-| Section | What It Contains |
-|---|---|
-| Identity | Name, aliases, standalone summary paragraph |
-| Affiliations | Teams (Avengers, West Coast Avengers, Force Works), with temporal markers for when |
-| Relationships | Relatives, allies, enemies—each linked |
-| Origin | How this character came to exist, the inciting events |
-| History | Full narrative timeline, dense with citations to specific issues |
-| Powers & Abilities | Technical specifications, limitations, how the character works |
-| Appearances | Every issue, categorized by role (featured, cameo, flashback) |
+| Section            | What It Contains                                                                   |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| Identity           | Name, aliases, standalone summary paragraph                                        |
+| Affiliations       | Teams (Avengers, West Coast Avengers, Force Works), with temporal markers for when |
+| Relationships      | Relatives, allies, enemies—each linked                                             |
+| Origin             | How this character came to exist, the inciting events                              |
+| History            | Full narrative timeline, dense with citations to specific issues                   |
+| Powers & Abilities | Technical specifications, limitations, how the character works                     |
+| Appearances        | Every issue, categorized by role (featured, cameo, flashback)                      |
+
+![The Wonder Man wiki entry — 144 outlinks positioning a single character in a web of relationships](/images/articles/context-library-pt2/wonder-man-wiki.jpg)
 
 The entry is also tagged with faceted categories: "Avengers Members," "Male Characters," "Ionic Characters," "Formerly Deceased," "Energy Manipulation." These enable queries across the wiki: show me all characters with regeneration powers or who has been resurrected?
 
 This structure solves navigation in a highly interconnected world.
 
-A reader landing on Wonder Man can traverse outward in any direction: follow the Avengers link to understand his team context, follow the Vision link to understand why they're called "mind-twins," follow the Grim Reaper link to understand his brother's villainy. Each destination has the same structure, enabling further traversal.
+A reader landing on Wonder Man can traverse outward in any direction: follow the Avengers link to understand his team context, follow the [Vision](<https://marvel.fandom.com/wiki/Vision_(Earth-616)>) link to understand why they're called "mind-twins," follow the [Grim Reaper](<https://marvel.fandom.com/wiki/Eric_Williams_(Earth-616)>) link to understand his brother's villainy. Each destination has the same structure, enabling further traversal.
 
 The dense linking means there's no single "correct" path through the wiki. You can enter anywhere and navigate to anywhere else. The structure supports multiple access patterns: browse by character, browse by team, browse by event, browse by publication date, query by category.
 
@@ -76,15 +78,13 @@ Features with dozens of outlinks to related features, systems, decisions, and le
 
 But the wiki solves only half the problem that comic producers face when writing a new issue.
 
----
-
-### 2.2 What the Wiki Doesn't Contain
+## What the Wiki Doesn't Contain
 
 The Marvel Wiki documents what happened. It doesn't guide what should happen next.
 
-When a writer sits down to script a new Spider-Man issue, they face hundreds of micro-decisions: Can Spider-Man lift this much weight? Would he make this joke? Does this contradict what's happening in the Avengers book? Can I give him a new power, or does that step on a planned crossover?
+When a writer sits down to script a new [Spider-Man](<https://marvel.fandom.com/wiki/Peter_Parker_(Earth-616)>) issue, they face hundreds of micro-decisions: Can Spider-Man lift this much weight? Would he make this joke? Does this contradict what's happening in the Avengers book? Can I give him a new power, or does that step on a planned crossover?
 
-They don't consult the wiki for these questions. The wiki can tell them Spider-Man's documented strength level, but not whether the editors want to push that limit this year. It can list his team affiliations, but not whether using him in a scene conflicts with another writer's storyline shipping the same month. It can show his history, but not the lessons learned from the debacle of writers not being on the same page while shipping the Clone Saga.
+They don't consult the wiki for these questions. The wiki can tell them Spider-Man's documented strength level, but not whether the editors want to push that limit this year. It can list his team affiliations, but not whether using him in a scene conflicts with another writer's storyline shipping the same month. It can show his history, but not the lessons learned from the debacle of writers not being on the same page while shipping the [Clone Saga](https://en.wikipedia.org/wiki/Clone_Saga).
 
 For aligned decision-making, Marvel relies on mechanisms that only work for humans: semi-annual summits where writers plan the universe together, editorial hierarchy that decides who can use which characters when, long-tenured editors who remember what failed in 1993, and hallway conversations that never get documented.
 
@@ -94,53 +94,48 @@ AI agents can't do any of this. An agent only knows what's in its context window
 
 The Context Library is therefore two things:
 
-First: The wiki structure. Standardized entries with dense bidirectional linking, faceted metadata, multiple navigation paths. This is what Marvel built. It solves the documentation architecture problem.
+- **First: The wiki structure.** Standardized entries with dense bidirectional linking, faceted metadata, multiple navigation paths. This is what Marvel built. It solves the documentation architecture problem.
 
-Second: The externalized implicit knowledge. The stuff Marvel's humans carry in their heads—strategy, rationale, learnings, what we're building toward, what we tried before, why we made these choices. This is what Marvel didn't build, because they didn't need to. Their consumers are humans who absorb context through osmosis.
-
-Our consumers are agents who don't.
+- **Second: The externalized implicit knowledge.** The stuff Marvel's humans carry in their heads—strategy, rationale, learnings, what we're building toward, what we tried before, why we made these choices. This is what Marvel didn't build, because they didn't need to. Their consumers are humans who absorb context through osmosis. The context library is consumed by agents who don't absorb through osmosis.
 
 This externalization is primarily the WHY dimension:
 
-| What Marvel Humans Carry | What We Externalize |
-|---|---|
-| "We're pushing toward AI-assisted prioritization this year" | Strategy notes: explicit articulation of current direction |
-| "We tried that in 2019 and it confused users" | Learning notes: past attempts and their lessons |
-| "That decision was made because Customer X threatened to leave" | Decision notes: rationale with business context |
-| "The three-slot limit exists because of the overwhelm research" | Feature → Learning links: connections from present to past |
-| "Don't touch the queue system, Platform is refactoring it" | Dependency + Future Vision notes: what's adjacent and planned |
+| What Marvel Humans Carry                                        | What We Externalize                                           |
+| --------------------------------------------------------------- | ------------------------------------------------------------- |
+| "We're pushing toward AI-assisted prioritization this year"     | Strategy notes: explicit articulation of current direction    |
+| "We tried that in 2019 and it confused users"                   | Learning notes: past attempts and their lessons               |
+| "That decision was made because Customer X threatened to leave" | Decision notes: rationale with business context               |
+| "The three-slot limit exists because of the overwhelm research" | Feature → Learning links: connections from present to past    |
+| "Don't touch the queue system, Platform is refactoring it"      | Dependency + Future Vision notes: what's adjacent and planned |
 
----
-
-### 2.3 The Five-Dimension Requirement
+## The Five-Dimension Requirement
 
 The Marvel Wiki gives intuition. The five dimensions give rigor.
 
-Section 2.1 showed what the wiki captures beautifully: identity, affiliations, relationships, history, powers. Section 2.2 showed what it doesn't: the editorial direction, strategic choices, and institutional memory that guide aligned decisions.
+[Marvel's Public Context Libraries](#marvels-public-context-libraries) showed what the wiki captures beautifully: identity, affiliations, relationships, history, powers. [What the Wiki Doesn't Contain](#what-the-wiki-doesnt-contain) showed what it doesn't: the editorial direction, strategic choices, and institutional memory that guide aligned decisions.
 
 Our five dimensions span both. Four of them have clear wiki parallels. One doesn't—and that's the point.
 
 The rule: every atomic note must address all five dimensions—or explicitly mark which don't apply.
 
-| Dimension | Question It Answers | Marvel Wiki Equivalent |
-|---|---|---|
-| WHAT | What is this thing? | Character bio |
-| WHERE | What's around it? | Teams, allies, enemies |
-| WHEN | What's the story? | Publication history, key arcs |
-| WHY | Why does it exist? | None—this is what humans carry |
-| HOW | How does it work? | Powers, limitations |
+| Dimension | Question It Answers | Marvel Wiki Equivalent         |
+| --------- | ------------------- | ------------------------------ |
+| WHAT      | What is this thing? | Character bio                  |
+| WHERE     | What's around it?   | Teams, allies, enemies         |
+| WHEN      | What's the story?   | Publication history, key arcs  |
+| WHY       | Why does it exist?  | None—this is what humans carry |
+| HOW       | How does it work?   | Powers, limitations            |
 
 A note missing a dimension without explanation is incomplete. A note that says "N/A—new feature, no past yet" is complete. The distinction matters.
 
 Why this matters for both audiences:
 
-**For humans:** The five dimensions ensure you've thought through context completely. Missing a dimension means missing knowledge that will matter later—when onboarding someone, when revisiting a decision, when trying to understand why something is the way it is.
-
-**For AI agents:** Conan assembles slugs by pulling dimensional context. Missing dimensions mean gaps in the context constellation. An agent working on a feature without WHY context will make decisions that conflict with strategy. An agent without WHEN context will repeat past failures. An agent without WHERE context will break adjacent systems.
+- **For humans:** The five dimensions ensure you've thought through context completely. Missing a dimension means missing knowledge that will matter later—when onboarding someone, when revisiting a decision, when trying to understand why something is the way it is.
+- **For AI agents:** Conan assembles slugs by pulling dimensional context. Missing dimensions mean gaps in the context constellation. An agent working on a feature without WHY context will make decisions that conflict with strategy. An agent without WHEN context will repeat past failures. An agent without WHERE context will break adjacent systems.
 
 The five-dimension requirement isn't documentation formalism. It's ensuring both humans and agents have what they need to make aligned decisions—including the dimension that wikis don't capture and humans usually carry in their heads.
 
-*Next: the architecture that makes it work.*
+_Next: the architecture that makes it work._
 
 </article>
 
