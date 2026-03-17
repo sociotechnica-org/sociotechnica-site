@@ -1,0 +1,145 @@
+---
+id: WS012
+title: "How Not to Slop: Build an Antagonistic Writing System"
+description: "The problem with AI-assisted writing isn't that AI writes badly. It's that we architect badly. Here's how to separate the jobs."
+publishedDate: 2026-03-17
+author: Danvers Fleury
+---
+
+import NotebookLayout from "../../layouts/NotebookLayout.astro";
+import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro";
+
+<NotebookLayout
+  title={frontmatter.title}
+  description={frontmatter.description}
+>
+
+<NotebookArticleHeader
+  id={frontmatter.id}
+  title={frontmatter.title}
+  author={frontmatter.author}
+  publishedDate={frontmatter.publishedDate}
+  prevNote={{
+    id: "WS011",
+    title: "The Context Library of Alexandria (Part 2)",
+    url: "/notebook/context-library-pt2",
+  }}
+/>
+
+<article class="prose prose-blockquote:font-normal">
+
+## Aggressively Median
+
+You have tried this. You gave an AI three samples of your writing, a word count, a topic, and the instruction "match my tone." What came back was smooth, confident, grammatically flawless, and completely soulless. It nailed your sentence length. It missed your soul.
+
+That output has a name now. Slop. And the instinct when you get it is to optimize the prompt -- more examples, tighter instructions, a paragraph about your voice that reads like a therapist's intake form. This produces shinier slop. The problem was never the prompt.
+
+The problem is role confusion. You asked one agent to be your editor, your writer, your strategist, and your cheerleader simultaneously. It tried. It was good at none. It produced text that reads like someone fed your blog posts into a blender and poured out something aggressively median.
+
+This is the equivalent of handing a contractor a plot of land and saying "build me a house." No blueprints. No site survey. No distinction between structural engineering and interior design. The contractor will cheerfully do all of those jobs at once, and what you get is a building that stands up and has no personality. It works, technically. Nobody wants to live in it.
+
+I know this because I tried it. Multiple times. I'm writing a book, and the AI-assisted drafts were so consistently, politely lifeless that I started calling them "competent" -- which is the worst thing a piece of writing can be. Competent gets published and becomes invisible.
+
+You don't need a better prompt. You need a better architecture.
+
+---
+
+## A Yes-Man with a Thesaurus
+
+Most people start by building a writer. This is backwards. Start with an editor.
+
+Specifically, start with an editor designed to make you uncomfortable. If your AI collaborator is agreeing with you, congratulating your outline, and calling your draft "compelling" -- it's broken. You haven't built a tool. You've built a yes-man with a thesaurus.
+
+Three design decisions matter here, and they're transferable to any writing project:
+
+**Personality calibration.** This is the knob most people skip. A too-nice editor lets you keep your darlings. A too-harsh editor makes you defensive, and defensive writers don't hear feedback -- they rebut it. The calibration IS the tool. I chose warm but exacting, dry wit, no cheerleading. You might choose something different. The point is to choose deliberately, because the personality determines whether you'll actually listen to the output or spend your evenings arguing with a system prompt.
+
+**Methodology, not vibes.** Load the editor with named editorial frameworks -- Story Grid, Pressfield's five non-negotiables, Zinsser's compression principles, whatever your discipline's equivalent is. "Be a good editor" produces opinions. Named methodologies produce standards. The difference: an opinion says "this section feels slow." A standard says "this section fails the argument-per-beat test because beats 3 and 4 make the same claim with different examples." One you can ignore. The other you can't.
+
+**Deep context over generic expertise.** Not "a book about productivity" but this specific project, with these specific frameworks, for this specific reader, against these specific competitors. I loaded my editor with 460 lines of project context. That number is not aspirational -- it's what was required before the feedback stopped being generic. The specificity is the difference between "an AI editor" and "my editor." What would your 460 lines contain? Your thesis. Your target reader's existing bookshelf. The three things your project argues that nobody else does. The decisions you've already made and why.
+
+Here's what a properly built antagonist catches that a generic editor misses:
+
+I was working on a structural decision -- choosing between two possible framings for my book. I chose the bolder one without hesitation. Then, in the very next exercise, every answer I wrote retreated to the safe framing. Every one. My editor quoted my own words back to me: "You chose Framing B without hesitation. Then every single answer retreated to Framing A." That's a move every writer makes -- the brave decision followed by the safe execution -- and a generic editor can't catch it because a generic editor doesn't know what you chose.
+
+Second: I stated a claim but skipped the mechanism -- the "because" that explains why the claim is true. My editor showed me that three different "because" clauses would produce three entirely different projects from the same claim. A meditation teacher's project. A business strategist's project. A life coach's project. The "because" is where your specific work lives. I'd been avoiding mine. Most writers are.
+
+I built something smarter than me, which is frankly not that high a bar when it comes to editorial self-awareness. But the important thing is that it was specialized -- loaded with my project's context, trained on my specific weaknesses, and constitutionally unable to tell me what I wanted to hear.
+
+---
+
+## A Person Doing an Impression of an Author
+
+The editor does not write. The writer does not edit.
+
+Software people will recognize this as separation of concerns. Everyone else will recognize the disaster that happens when one agent tries to do both -- it hedges, it self-corrects mid-sentence, it produces prose that reads like a committee wrote it and nobody on the committee was willing to be interesting.
+
+So you build a second agent. The writer. And here's where most people's voice training goes wrong: they show the AI examples of their good writing and say "do this." That's half the job. You also need to show it what NOT to do -- and specifically, what your bad writing looks like.
+
+Everyone's bad writing is bad in a different way. Mine has two distinct modes, and only one of them is any good.
+
+The manuscript voice -- the one I used for early drafts -- was competent. Warm, measured, professional. It said things like:
+
+> "Most people drown in bronze. They spend their weeks in maintenance mode, telling themselves they'll get to the important stuff once they catch up. They rarely catch up."
+
+Third-person generalization. Professional distance. Could have been written by anyone with a LinkedIn premium account.
+
+The labnotes voice -- the one you're reading right now -- is the one that produced a comparison between my professional infrastructure (system-level contracts, sprint kickoffs, Trello boards) and my home infrastructure:
+
+> - My wife writes things on a whiteboard
+> - We ignore them for months
+> - Eventually they won't erase, even with spray
+
+The structure is the joke. No commentary needed.
+
+Same person. Same keyboard. One sounds like a person. The other sounds like a person doing an impression of an author.
+
+So the voice training contains annotated examples of both -- targets and anti-patterns. The anti-patterns are specific. "Most people drown in bronze" is flagged: third-person generalization when "I drown in bronze" would be more honest and more persuasive. "That's a taste of what depletion feels like" is flagged: emotional interpretation where "I sagged, demoralized and dreading my next to-do" does the same work without narrating the reader's feelings for them.
+
+Then you codify named moves. Not a vague description of tone -- specific, repeatable patterns with examples of each. I have six. Three of the most transferable:
+
+1. **Confess before teaching.** First person earns the right to second person. "Here's what I got wrong, with receipts" before "here's what you should try."
+2. **Structural comedy.** The humor lives in the format -- escalating lists that break on the final item, side-eye parentheticals (???), layouts where the structure carries the punchline. Never explain the joke.
+3. **Specific numbers over generalizations.** 19 emails. 4 phone calls. 3-4 DocuSign attempts (depending on how you count). Not "dozens of interactions."
+
+Your moves will be different. The method is the same: name the patterns, annotate examples, include the anti-patterns. The writer gets the voice rules, the annotated samples, and the structural blueprint from the editor. It produces prose. It never decides what the piece argues or whether it should exist. That's not its job.
+
+---
+
+## The History Is the Product
+
+The workflow, stated clean:
+
+1. **Editor analyzes** -- structure, argument, blueprint
+2. **Author approves** -- I sit at every decision point. The AI never decides what the work argues.
+3. **Writer drafts** -- prose within the approved constraints
+4. **Author refines** -- because there are always details only the human can provide. Real stories. Real numbers. The specific moment something went wrong. I currently have 19 items flagged "author input needed" in my manuscript. That's not a bug in the system. That's the system working.
+5. **Editor scores** -- if the draft needs structural evaluation
+
+The author sits at steps 2 and 4. The AI handles the analytical grunt work and the first-draft prose. Judgment stays with the human -- not because the AI can't be trusted, but because judgment is the one thing that can't be delegated. The AI doesn't know which story is the right story to tell. You do.
+
+A third agent runs QA sweeps across the whole corpus -- catching stale references, thread orphans, places where documents disagree about what's true. It exists. It's useful. It's not the interesting part.
+
+The interesting part is where this all lives: version-controlled pull requests. Not chat logs that evaporate when you close the tab.
+
+This matters more than it sounds. The single biggest problem with AI-assisted creative work is context loss. You have a brilliant conversation, close the window, and three days later you're reconstructing the reasoning from memory -- badly, with the confidence of someone who remembers the conclusion but not the argument. Version control solves this the same way it solves it in software: every decision is recorded, retrievable, and annotated with the reasoning that produced it. When I want to know why I made a structural choice six weeks ago, I don't search my memory. I read the PR description.
+
+The history is the product.
+
+---
+
+## Six Jobs Wearing One Prompt
+
+This piece was written using the system it describes. An editor built the blueprint. A writer drafted the prose. The author sat at every decision point. That's not a gimmick -- it's a proof case.
+
+And it's a proof case of something specific: the problem with AI-assisted writing is not that AI writes badly. It's that we architect badly. We hand one tool every job and then blame the output when it comes back sounding like everyone else's output. We optimize prompts when we should be building systems. We ask for a better typewriter when we need a better workflow.
+
+Most people use AI the way they manage everything -- reactively, one prompt at a time, hoping the next interaction will be the one that finally produces something that sounds like them. It won't. Not because the AI can't do it, but because "sound like me" is not one job. It's six jobs wearing one prompt.
+
+Separate the jobs. Build the antagonist first. Train the writer on your failures as much as your successes. Keep the human at every decision point. Put it in version control so the reasoning survives longer than your browser session.
+
+The architecture is the part nobody wants to build. It's also the only thing that works.
+
+</article>
+
+</NotebookLayout>
