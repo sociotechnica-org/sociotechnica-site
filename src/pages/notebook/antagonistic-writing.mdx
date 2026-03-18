@@ -1,6 +1,6 @@
 ---
 id: WS012
-title: "How Not to Slop: The Super Weird Way I Write Better With AI Than Without"
+title: "How Not to Slop: Build an Antagonistic Writing System"
 description: "The problem with AI-assisted writing isn't that AI writes badly. It's that we architect badly. Here's how to separate the jobs."
 publishedDate: 2026-03-17
 author: Danvers Fleury
@@ -28,160 +28,117 @@ import NotebookArticleHeader from "../../components/NotebookArticleHeader.astro"
 
 <article class="prose prose-blockquote:font-normal">
 
-## The Confession
-
-I had a manuscript called _The Sovereignty Gap_. Five written chapters, six placeholders, a composite character named Marcus who embodied generic overwhelm, and frameworks I genuinely believed in -- bronze/silver/gold for time, red/gray/blue for capacity, the thorn, four micro-skills. Real tools that worked on real people.
-
-The book also had four structural concepts called "gaps" -- Balance, Restoration, Engagement, Support -- that existed because I needed a gap for each section to justify a title with the word "gap" in it. I had reverse-engineered my own scaffolding to match a word that sounded smart in my head. That is a special kind of self-deception available only to people who are good enough at writing to sound competent.
-
-Competent is worse than bad. Bad gets rejected. Competent gets published, sits on a shelf, and becomes invisible among nine hundred other competent books about getting your life together.
-
-The chapters I had were vibe-written. I got my ideas out of me the way you write a long email to a friend at 1 AM -- the energy was real, the structure was accidental. No tested controlling idea held any of it together. I had an audience ("senior leaders who are drowning"), a villain ("the old playbook"), and a thesis that changed shape depending on which chapter you read. The manuscript was five different arguments wearing one jacket.
-
-So I did the thing I always do when I can't execute my way out of a problem. I stopped executing and started architecting.
-
----
-
 ## Aggressively Median
 
-I tried the obvious thing first. I gave Claude my best writing samples and said "write a 2,000-word article in my voice about productivity in the AI era. Match my tone."
+You have tried this. You gave an AI three samples of your writing, a word count, a topic, and the instruction "match my tone." What came back was smooth, confident, grammatically flawless, and completely soulless. It nailed your sentence length. It missed your soul.
 
-What came back was smooth, confident, grammatically flawless, and completely dead. It nailed my sentence length. It missed my soul. It sounded like a person who had read my work but had never had a bad day, forgotten to pay a bill, or stared at a to-do list and wanted to turn off the computer.
+That output has a name now. Slop. And the instinct when you get it is to optimize the prompt -- more examples, tighter instructions, a paragraph about your voice that reads like a therapist's intake form. This produces shinier slop. The problem was never the prompt.
 
-I tried it multiple times. The results were so consistently, politely lifeless that I started calling them "competent" -- which, as I mentioned, is the worst thing a piece of writing can be.
+The problem is role confusion. You asked one agent to be your editor, your writer, your strategist, and your cheerleader simultaneously. It tried. It was good at none. It produced text that reads like someone fed your blog posts into a blender and poured out something aggressively median.
 
-The problem was role confusion. I was asking the AI to be my editor, my writer, my strategist, and my cheerleader in a single prompt. It tried to be all four. It was good at none. It produced text that read like someone fed my blog posts into a blender and poured out something aggressively median.
+This is the equivalent of handing a contractor a plot of land and saying "build me a house." No blueprints. No site survey. No distinction between structural engineering and interior design. The contractor will cheerfully do all of those jobs at once, and what you get is a building that stands up and has no personality. It works, technically. Nobody wants to live in it.
 
-This is the contractor problem. I handed it a plot of land and said "build me a house." No blueprints, no site survey. No one had drawn a line between structural engineering and interior design. The contractor cheerfully did all of those jobs simultaneously. What I got was a building that stood up and had no personality. It worked, technically. Nobody would want to live in it.
+I know this because I tried it. Multiple times. I'm writing a book, and the AI-assisted drafts were so consistently, politely lifeless that I started calling them "competent" -- which is the worst thing a piece of writing can be. Competent gets published and becomes invisible.
 
-My instinct was to optimize the prompt. Add more examples. Tweak the instructions. Specify the tone more carefully. This is the same mistake the book I was trying to write is about: when the system is broken, optimizing the execution makes the execution shinier while the system stays broken.
-
-I didn't need a better prompt. I needed a better architecture.
+You don't need a better prompt. You need a better architecture.
 
 ---
 
-## Build the Editor First
+## A Yes-Man with a Thesaurus
 
-I started with a system prompt for an editor.
+Most people start by building a writer. This is backwards. Start with an editor.
 
-The first version was generic. I called it the "Throughline Editor" -- a methodology document built on Story Grid (Shawn Coyne's structural approach), Steven Pressfield's craft questions, and William Zinsser's compression principles. It was a decent editorial framework that could have worked for any nonfiction book. Which meant it wasn't good enough for mine.
+Specifically, start with an editor designed to make you uncomfortable. If your AI collaborator is agreeing with you, congratulating your outline, and calling your draft "compelling" -- it's broken. You haven't built a tool. You've built a yes-man with a thesaurus.
 
-So I specialized it. I gave the editor a name -- Zelda Felfenlagger -- and a personality: warm but exacting, dry wit, no cheerleading. I loaded her with 460 lines of context about my specific book: the frameworks, the target reader, the competition, every editorial decision we'd made together. Not "a book about productivity." _This_ book, with _these_ frameworks, for _this_ reader, against _these_ competitors.
+Three design decisions matter here, and they're transferable to any writing project:
 
-Then I sat down with Zelda and ran myself through six editorial phases. The results were humbling in ways I did not anticipate.
+**Personality calibration.** This is the knob most people skip. A too-nice editor lets you keep your darlings. A too-harsh editor makes you defensive, and defensive writers don't hear feedback -- they rebut it. The calibration IS the tool. I chose warm but exacting, dry wit, no cheerleading. You might choose something different. The point is to choose deliberately, because the personality determines whether you'll actually listen to the output or spend your evenings arguing with a system prompt.
 
-Phase 1 asked me to write battling sentences -- "They say X, but my experience tells me Y" -- against every major productivity framework on the shelf. I wrote seven. Zelda's verdict: "That's one argument wearing seven outfits." She was right. I had written version 1 seven times. Worse, not a single sentence mentioned AI, despite my entire pitch being about AI-era work. She pointed this out with the kind of clinical precision that makes you want to close the laptop and go for a walk.
+**Methodology, not vibes.** Load the editor with named editorial frameworks -- Story Grid, Pressfield's five non-negotiables, Zinsser's compression principles, whatever your discipline's equivalent is. "Be a good editor" produces opinions. Named methodologies produce standards. The difference: an opinion says "this section feels slow." A standard says "this section fails the argument-per-beat test because beats 3 and 4 make the same claim with different examples." One you can ignore. The other you can't.
 
-She forced versions 8 through 10. Version 9 -- about a coming productivity bust that would get blamed on AI but was actually caused by not giving humans an evolutionary path to adapt -- she flagged as "the most important thing you've written in this entire exercise."
+**Deep context over generic expertise.** Not "a book about productivity" but this specific project, with these specific frameworks, for this specific reader, against these specific competitors. I loaded my editor with 460 lines of project context. That number is not aspirational -- it's what was required before the feedback stopped being generic. The specificity is the difference between "an AI editor" and "my editor." What would your 460 lines contain? Your thesis. Your target reader's existing bookshelf. The three things your project argues that nobody else does. The decisions you've already made and why.
 
-Then she asked me to choose between two framings: Capacity First (a sequencing argument -- do this before that) or an architect/director transformation argument (the AI economy requires you to operate differently, and nobody has built the transition path). I chose B without hesitation.
+Here's what a properly built antagonist catches that a generic editor misses:
 
-And then, in the very next exercise, I retreated to generic self-help language. Every answer. Zelda caught it: "You chose Framing B without hesitation. Then every single answer retreated to Framing A -- or worse, to generic self-help language that could've been written in any decade."
+I was working on a structural decision -- choosing between two possible framings for my book. I chose the bolder one without hesitation. Then, in the very next exercise, every answer I wrote retreated to the safe framing. Every one. My editor quoted my own words back to me: "You chose Framing B without hesitation. Then every single answer retreated to Framing A." That's a move every writer makes -- the brave decision followed by the safe execution -- and a generic editor can't catch it because a generic editor doesn't know what you chose.
 
-She caught me skipping the "because" in my controlling idea -- the mechanism that explains _why_ the claim is true. She showed me three different "because" clauses that would produce three entirely different books from the same claim: a meditation teacher's book, a business strategist's book, a life coach's book. The "because" is where _your_ book lives. I had been avoiding it.
+Second: I stated a claim but skipped the mechanism -- the "because" that explains why the claim is true. My editor showed me that three different "because" clauses would produce three entirely different projects from the same claim. A meditation teacher's project. A business strategist's project. A life coach's project. The "because" is where your specific work lives. I'd been avoiding mine. Most writers are.
 
-The title went through three generations. _The Sovereignty Gap_ became _Promote Yourself_ -- which market-tested as LinkedIn advice. Nobody picked it up thinking "this will help me stop coming home like a dishrag." It pattern-matched to _Brand Yourself_ and _Market Yourself_ and every other imperative-verb self-help title on the shelf. So the subtitle's gap statement got promoted to the title where it belonged: _Boss at Work | Intern at Home: Port Yourself_.
-
-Marcus, the composite character, got eliminated. I became the protagonist. Eleven chapters compressed to nine. The four gaps -- scaffolding for a dead title -- were removed entirely.
-
-I built something smarter than me, which is frankly not that high a bar when it comes to editorial craft. The important thing is I built _my_ editor -- loaded with _my_ book's context, trained on _my_ specific weaknesses -- for a specific job that no generic AI editor could do.
+I built something smarter than me, which is frankly not that high a bar when it comes to editorial self-awareness. But the important thing is that it was specialized -- loaded with my project's context, trained on my specific weaknesses, and constitutionally unable to tell me what I wanted to hear.
 
 ---
 
-## Then Build the Writer
+## A Person Doing an Impression of an Author
 
-The separation of concerns is what makes the whole thing work: the editor does not write. The writer does not edit.
+The editor does not write. The writer does not edit.
 
-Zelda makes editorial decisions -- structure, scoring, blueprints, what the book argues and how the chapters earn their place. The Ghostwriter takes those decisions and produces prose. It never decides what the book is about. It decides how a sentence should sound.
+Software people will recognize this as separation of concerns. Everyone else will recognize the disaster that happens when one agent tries to do both -- it hedges, it self-corrects mid-sentence, it produces prose that reads like a committee wrote it and nobody on the committee was willing to be interesting.
 
-Building the Ghostwriter required solving a problem I hadn't anticipated: I write in two different voices, and only one of them is any good.
+So you build a second agent. The writer. And here's where most people's voice training goes wrong: they show the AI examples of their good writing and say "do this." That's half the job. You also need to show it what NOT to do -- and specifically, what your bad writing looks like.
 
-The manuscript voice -- the one in those five vibe-drafted chapters -- was competent. Warm, measured, research-backed. It said things like "Most people drown in bronze. They spend their weeks in maintenance mode." Third-person generalization. Professional distance. Invisible on a shelf.
+Everyone's bad writing is bad in a different way. Mine has two distinct modes, and only one of them is any good.
 
-The labnotes voice -- the one I use on SocioTechnica, the one you're reading right now -- is the one that produced "I have the executive function of a garden hose" and a comparison between my professional infrastructure (system-level contracts, sprint kickoffs, Trello boards) and my home infrastructure:
+The manuscript voice -- the one I used for early drafts -- was competent. Warm, measured, professional. It said things like:
 
-- My wife writes things on a whiteboard
-- We ignore them for months
-- Eventually they won't erase, even with spray
+> "Most people drown in bronze. They spend their weeks in maintenance mode, telling themselves they'll get to the important stuff once they catch up. They rarely catch up."
+
+Third-person generalization. Professional distance. Could have been written by anyone with a LinkedIn premium account.
+
+The labnotes voice -- the one you're reading right now -- is the one that produced a comparison between my professional infrastructure (system-level contracts, sprint kickoffs, Trello boards) and my home infrastructure:
+
+> - My wife writes things on a whiteboard
+> - We ignore them for months
+> - Eventually they won't erase, even with spray
 
 The structure is the joke. No commentary needed.
 
-So the Ghostwriter's voice training document contains annotated excerpts of both voices -- the good ones labeled as targets, the bad ones labeled as anti-patterns. The key insight, and the one I'd give to anyone building a writing system: **showing the AI what NOT to do is as important as showing it what TO do.**
+Same person. Same keyboard. One sounds like a person. The other sounds like a person doing an impression of an author.
 
-The anti-patterns are specific. "Most people drown in bronze" is flagged as a third-person generalization when "I drown in bronze" would be more honest and more persuasive. "That's a taste of what sovereignty feels like" is flagged as emotional interpretation instead of physical description -- "I sagged, demoralized and dreading my next to-do" does the same work without narrating the reader's feelings for them. Academic citation style in prose ("Psychologist Mihaly Csikszentmihalyi identified this distinction in his landmark book _Flow_") is flagged as introducing the researcher instead of using the finding.
+So the voice training contains annotated examples of both -- targets and anti-patterns. The anti-patterns are specific. "Most people drown in bronze" is flagged: third-person generalization when "I drown in bronze" would be more honest and more persuasive. "That's a taste of what depletion feels like" is flagged: emotional interpretation where "I sagged, demoralized and dreading my next to-do" does the same work without narrating the reader's feelings for them.
 
-Then the system codifies six signature moves:
+Then you codify named moves. Not a vague description of tone -- specific, repeatable patterns with examples of each. I have six. Three of the most transferable:
 
-1. Confess before teaching. First person earns the right to second person. "Here's what I got wrong" before "here's what you should do."
-2. Structural comedy. Escalating lists that break on the final item. Side-eye parentheticals. Format-as-punchline where the layout carries the humor.
-3. Specific numbers over generalizations. 19 emails. 30 document uploads. 4 phone calls. 3-4 DocuSign attempts (depending on how you count).
-4. Physical emotion without interpretation. "I sagged." Full stop. No explaining what it means.
-5. Gaming/tech references as native vocabulary. Just the reference, deployed as the natural frame. The reader either gets it or they're not the reader.
-6. Executive function limitations as structural, not moral. I built every framework in the book because I could not function without it. That's the credibility claim.
+1. **Confess before teaching.** First person earns the right to second person. "Here's what I got wrong, with receipts" before "here's what you should try."
+2. **Structural comedy.** The humor lives in the format -- escalating lists that break on the final item, side-eye parentheticals (???), layouts where the structure carries the punchline. Never explain the joke.
+3. **Specific numbers over generalizations.** 19 emails. 4 phone calls. 3-4 DocuSign attempts (depending on how you count). Not "dozens of interactions."
 
-And a moves-to-avoid list: no third-person hypotheticals, no sustained professorial register, no explaining the humor, no round numbers when real counts exist, no generic self-help language, no exclamation points in prose.
-
-The Ghostwriter gets the voice rules, the annotated samples, and the chapter blueprint from Zelda. It produces prose. It never decides whether a chapter should exist or what it should argue. That's not its job.
+Your moves will be different. The method is the same: name the patterns, annotate examples, include the anti-patterns. The writer gets the voice rules, the annotated samples, and the structural blueprint from the editor. It produces prose. It never decides what the piece argues or whether it should exist. That's not its job.
 
 ---
 
-## The Handoff
+## The History Is the Product
 
-The workflow runs like this:
+The workflow, stated clean:
 
-1. **Zelda analyzes** -- editorial decisions, structural architecture, chapter blueprints
-2. **Author approves** -- I sit at every decision point. The AI never decides what the book argues.
-3. **Ghostwriter drafts** -- prose execution within the approved constraints
-4. **Author refines** -- because 19 items in the current manuscript are flagged [AUTHOR INPUT NEEDED], meaning real stories, real numbers, real details that only I can provide
-5. **Zelda scores** -- if the draft needs structural evaluation
+1. **Editor analyzes** -- structure, argument, blueprint
+2. **Author approves** -- I sit at every decision point. The AI never decides what the work argues.
+3. **Writer drafts** -- prose within the approved constraints
+4. **Author refines** -- because there are always details only the human can provide. Real stories. Real numbers. The specific moment something went wrong. I currently have 19 items flagged "author input needed" in my manuscript. That's not a bug in the system. That's the system working.
+5. **Editor scores** -- if the draft needs structural evaluation
 
-Then a third agent -- Grepzilla2, which is exactly what it sounds like -- runs logic sweeps across the entire editorial corpus. It catches stale references to eliminated concepts (the four gaps still lurking in a methodology document), thread orphans (a callback in Chapter 8 to something Chapter 3 no longer sets up), inconsistent terminology, and places where documents disagree about what's true.
+The author sits at steps 2 and 4. The AI handles the analytical grunt work and the first-draft prose. Judgment stays with the human -- not because the AI can't be trusted, but because judgment is the one thing that can't be delegated. The AI doesn't know which story is the right story to tell. You do.
 
-The whole process lives in version-controlled PRs. Not chat logs that evaporate when you close the tab. PRs #100 through #106, each one a specific phase of editorial work, reviewed, merged, and retrievable. When I want to know why the title changed, I don't search my memory. I read the PR description.
+A third agent runs QA sweeps across the whole corpus -- catching stale references, thread orphans, places where documents disagree about what's true. It exists. It's useful. It's not the interesting part.
 
-This matters more than it sounds. The single biggest problem with using AI for creative work is context loss. You have a brilliant conversation, close the window, and three days later you're reconstructing the reasoning from memory. Version control solves this the same way it solves the problem in software: the history is the product.
+The interesting part is where this all lives: version-controlled pull requests. Not chat logs that evaporate when you close the tab.
 
-What does the system catch that working alone wouldn't? The retreat to generic language, for one. I chose Framing B and immediately wrote Framing A answers. A human editor might have caught that. I might not have listened. Zelda caught it with a specificity that left no room for me to rationalize my way out: she quoted my own words back to me and showed me, line by line, where I'd flinched. That's what 460 lines of book-specific context buys you -- an editor who can't be charmed, can't be exhausted, and never forgets what you said three hours ago.
+This matters more than it sounds. The single biggest problem with AI-assisted creative work is context loss. You have a brilliant conversation, close the window, and three days later you're reconstructing the reasoning from memory -- badly, with the confidence of someone who remembers the conclusion but not the argument. Version control solves this the same way it solves it in software: every decision is recorded, retrievable, and annotated with the reasoning that produced it. When I want to know why I made a structural choice six weeks ago, I don't search my memory. I read the PR description.
 
----
-
-## The Results
-
-Specifically, what changed:
-
-**Title:** _The Sovereignty Gap_ became _Boss at Work | Intern at Home: Port Yourself_. The title is now a diagnostic -- the reader sees it and either thinks "that's me" or "that's not me" in under two seconds.
-
-**Structure:** 11 chapters became 9. Four structural concepts eliminated. The scaffolding built for a dead title was removed.
-
-**Protagonist:** Marcus, the composite character, was replaced by me. The book opens with my lived experience in an AI-native software factory, not a fictional amalgam designed to be relatable and therefore relatable to no one.
-
-**Revision scope across the nine chapters:**
-
-- 2 chapters: 100% new (never existed before)
-- 4 chapters: 100% new (replacing eliminated or placeholder material)
-- 1 chapter: 50-60% new (distilled from three old chapters into one)
-- 1 chapter: 30-40% revision
-- 1 chapter: 15-20% revision
-
-**Controlling idea:** Went from untested and shape-shifting to stress-tested across four lenses. Survived the back-cover test, the antagonist interrogation, the transformation map, and the dinner party pitch.
-
-What the system did not do: write the book for me. There are 19 items flagged as "author input needed" -- real stories, real numbers, real details that no system can manufacture. My first thorn story. My actual Whoops scores. The specific week I came home from the AI-native factory and realized something had to change.
-
-The system doesn't replace judgment. It creates the conditions under which judgment can operate. Which, if you've been paying attention, is the book's thesis applied to the process of writing the book.
+The history is the product.
 
 ---
 
-## The Meta-Move
+## Six Jobs Wearing One Prompt
 
-The entire system I built to write this book -- specialized agents with clear roles, me at every decision point, architecture before execution -- is the book's argument made operational. I didn't optimize my AI prompts. I architected a system of collaborators. One of those approaches produces a shinier version of the same mediocre output. The other one produces a book.
+This piece was written using the system it describes. An editor built the blueprint. A writer drafted the prose. The author sat at every decision point. That's not a gimmick -- it's a proof case.
 
-I used to use AI the way I managed my personal life: reactively, without structure, one prompt at a time. Each task handled as it arrived. All the context carried personally. The output was mediocre and the effort was enormous and I couldn't figure out why those two things coexisted.
+And it's a proof case of something specific: the problem with AI-assisted writing is not that AI writes badly. It's that we architect badly. We hand one tool every job and then blame the output when it comes back sounding like everyone else's output. We optimize prompts when we should be building systems. We ask for a better typewriter when we need a better workflow.
 
-I was the intern. I became the architect.
+Most people use AI the way they manage everything -- reactively, one prompt at a time, hoping the next interaction will be the one that finally produces something that sounds like them. It won't. Not because the AI can't do it, but because "sound like me" is not one job. It's six jobs wearing one prompt.
 
-The human stays in the loop because judgment is the one thing that can't be delegated. The AI can be trusted with plenty. Judgment isn't one of those things. Not yet, anyway.
+Separate the jobs. Build the antagonist first. Train the writer on your failures as much as your successes. Keep the human at every decision point. Put it in version control so the reasoning survives longer than your browser session.
 
-Stop optimizing. Start architecting. That's the whole essay, compressed into a comma between two verbs. It's also the whole book.
+The architecture is the part nobody wants to build. It's also the only thing that works.
 
 </article>
 
