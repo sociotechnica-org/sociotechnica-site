@@ -83,15 +83,6 @@ const currentPath = Astro.url.pathname;
                 >About</a
               >
             </li>
-            <li class="inline ml-5">
-              <a
-                class:list={[
-                  "hover:border-b-2 hover:border-yellow-700 hover:text-yellow-700",
-                  { 'font-bold': currentPath === '/work-with-us' }
-                ]}
-                href="/work-with-us">Work With Us</a
-              >
-            </li>
           </ul>
         </nav>
         {currentPath === '/notebook' && (
