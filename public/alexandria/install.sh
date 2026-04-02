@@ -1,21 +1,22 @@
 #!/usr/bin/env bash
-# Context Library — Remote Installer
+# Alexandria — Remote Installer
 #
-# Downloads and installs the Context Library plugin from Alexandria.
+# Downloads and installs Alexandria plugin from Alexandria.
 #
 # Usage:
 #   curl -fsSL https://sociotechnica.org/alexandria/install.sh | bash
 #   curl -fsSL https://sociotechnica.org/alexandria/install.sh | bash -s -- --yes
 #
 # Environment:
-#   CONTEXT_LIBRARY_VERSION          Pin a specific version (default: latest)
-#   CONTEXT_LIBRARY_ALEXANDRIA_URL   Override base URL (for testing)
-#   CONTEXT_LIBRARY_BUN_BIN          Override bun binary path
+#   ALEXANDRIA_VERSION               Pin a specific version (default: latest)
+#   ALEXANDRIA_BASE_URL              Override base URL (for testing)
+#   ALEXANDRIA_BUN_BIN               Override bun binary path
+#   Legacy aliases supported: CONTEXT_LIBRARY_VERSION, CONTEXT_LIBRARY_ALEXANDRIA_URL, CONTEXT_LIBRARY_BUN_BIN
 
 set -euo pipefail
 
-ALEXANDRIA_BASE_URL="${CONTEXT_LIBRARY_ALEXANDRIA_URL:-https://sociotechnica.org/alexandria}"
-BUN_CMD="${CONTEXT_LIBRARY_BUN_BIN:-bun}"
+ALEXANDRIA_BASE_URL="${ALEXANDRIA_BASE_URL:-${CONTEXT_LIBRARY_ALEXANDRIA_URL:-https://sociotechnica.org/alexandria}}"
+BUN_CMD="${ALEXANDRIA_BUN_BIN:-${CONTEXT_LIBRARY_BUN_BIN:-bun}}"
 
 # ─────────────────────────────────────────────
 # Output helpers
@@ -23,6 +24,7 @@ BUN_CMD="${CONTEXT_LIBRARY_BUN_BIN:-bun}"
 
 info() { echo "  → $1"; }
 success() { echo "  ✓ $1"; }
+warn() { echo "  ⚠ $1"; }
 error() { echo "  ✗ $1" >&2; }
 
 # ─────────────────────────────────────────────
@@ -38,13 +40,15 @@ while [[ $# -gt 0 ]]; do
 		shift
 		;;
 	--help | -h)
-		echo "Context Library Installer"
+		echo "Alexandria Installer"
 		echo ""
 		echo "Usage: curl -fsSL https://sociotechnica.org/alexandria/install.sh | bash"
 		echo "       curl -fsSL https://sociotechnica.org/alexandria/install.sh | bash -s -- --yes"
 		echo ""
 		echo "Environment:"
-		echo "  CONTEXT_LIBRARY_VERSION   Pin a specific version (default: latest)"
+		echo "  ALEXANDRIA_VERSION        Pin a specific version (default: latest)"
+		echo "  ALEXANDRIA_BASE_URL       Override Alexandria download base URL"
+		echo "  ALEXANDRIA_BUN_BIN        Override the bun binary used during setup"
 		echo ""
 		echo "Flags:"
 		echo "  --yes, -y    Skip confirmation prompt"
@@ -64,6 +68,11 @@ done
 # ─────────────────────────────────────────────
 
 resolve_version() {
+	if [ -n "${ALEXANDRIA_VERSION:-}" ]; then
+		printf '%s' "$ALEXANDRIA_VERSION"
+		return
+	fi
+
 	if [ -n "${CONTEXT_LIBRARY_VERSION:-}" ]; then
 		printf '%s' "$CONTEXT_LIBRARY_VERSION"
 		return
@@ -85,9 +94,9 @@ detect_target() {
 	if git rev-parse --is-inside-work-tree &>/dev/null 2>&1; then
 		local repo_root
 		repo_root="$(git rev-parse --show-toplevel)"
-		printf '%s' "$repo_root/.claude/plugins/context-library"
+		printf '%s' "$repo_root/.claude/plugins/alexandria"
 	else
-		printf '%s' "$HOME/.claude/plugins/context-library"
+		printf '%s' "$HOME/.claude/plugins/alexandria"
 	fi
 }
 
@@ -146,18 +155,27 @@ trap cleanup EXIT
 download_and_install() {
 	local version="$1"
 	local target="$2"
-	local archive_name="context-library-v${version}.tar.gz"
+	local archive_name="alexandria-v${version}.tar.gz"
 	local archive_url="$ALEXANDRIA_BASE_URL/$archive_name"
+	local legacy_archive_name="context-library-v${version}.tar.gz"
+	local legacy_archive_url="$ALEXANDRIA_BASE_URL/$legacy_archive_name"
 
-	STAGING_DIR="$(mktemp -d "${TMPDIR:-/tmp}/context-library-install.XXXXXX")"
+	STAGING_DIR="$(mktemp -d "${TMPDIR:-/tmp}/alexandria-install.XXXXXX")"
 
 	info "Downloading $archive_name..."
-	curl -fsSL "$archive_url" -o "$STAGING_DIR/$archive_name"
+	if ! curl -fsSL "$archive_url" -o "$STAGING_DIR/$archive_name"; then
+		info "Primary Alexandria archive unavailable — trying legacy $legacy_archive_name"
+		curl -fsSL "$legacy_archive_url" -o "$STAGING_DIR/$legacy_archive_name"
+		archive_name="$legacy_archive_name"
+	fi
 
 	info "Extracting..."
 	tar -xzf "$STAGING_DIR/$archive_name" -C "$STAGING_DIR"
 
-	local extracted_dir="$STAGING_DIR/context-library-v${version}"
+	local extracted_dir="$STAGING_DIR/alexandria-v${version}"
+	if [ ! -d "$extracted_dir" ]; then
+		extracted_dir="$STAGING_DIR/context-library-v${version}"
+	fi
 	if [ ! -d "$extracted_dir" ]; then
 		error "Extraction failed — expected directory not found: $extracted_dir"
 		exit 1
@@ -176,12 +194,12 @@ download_and_install() {
 # Main
 # ─────────────────────────────────────────────
 
-echo "Context Library — Installer"
+echo "Alexandria — Installer"
 echo ""
 
 VERSION="$(resolve_version)"
 if [ -z "$VERSION" ]; then
-	error "Could not resolve version. Set CONTEXT_LIBRARY_VERSION or check your network."
+	error "Could not resolve version. Set ALEXANDRIA_VERSION or check your network."
 	exit 1
 fi
 
@@ -218,9 +236,9 @@ download_and_install "$VERSION" "$TARGET"
 
 info "Running setup..."
 if [ "$CONTEXT_LABEL" = "project-local" ]; then
-	CONTEXT_LIBRARY_BUN_BIN="$BUN_CMD" "$TARGET/setup" --no-symlinks
+	ALEXANDRIA_BUN_BIN="$BUN_CMD" CONTEXT_LIBRARY_BUN_BIN="$BUN_CMD" "$TARGET/setup" --no-symlinks
 else
-	CONTEXT_LIBRARY_BUN_BIN="$BUN_CMD" "$TARGET/setup"
+	ALEXANDRIA_BUN_BIN="$BUN_CMD" CONTEXT_LIBRARY_BUN_BIN="$BUN_CMD" "$TARGET/setup"
 fi
 
 # Register the plugin with Claude Code so it auto-loads without --plugin-dir.
@@ -230,7 +248,7 @@ register_plugin() {
 		warn "Claude Code CLI not found — skipping plugin registration."
 		warn "Register manually later with:"
 		warn "  claude plugin marketplace add $TARGET --scope project"
-		warn "  claude plugin install context-library@sociotechnica --scope project"
+		warn "  claude plugin install alexandria@sociotechnica --scope project"
 		return 0
 	fi
 
@@ -246,14 +264,17 @@ register_plugin() {
 	if ! claude plugin marketplace add "$TARGET" --scope "$scope" 2>/dev/null; then
 		warn "Marketplace registration failed — register manually:"
 		warn "  claude plugin marketplace add $TARGET --scope $scope"
-		warn "  claude plugin install context-library@sociotechnica --scope $scope"
+		warn "  claude plugin install alexandria@sociotechnica --scope $scope"
 		return 0
 	fi
 
-	if ! claude plugin install "context-library@sociotechnica" --scope "$scope" 2>/dev/null; then
-		warn "Plugin install failed — install manually:"
-		warn "  claude plugin install context-library@sociotechnica --scope $scope"
-		return 0
+	if ! claude plugin install "alexandria@sociotechnica" --scope "$scope" 2>/dev/null; then
+		warn "Alexandria plugin install failed — trying legacy marketplace id."
+		if ! claude plugin install "context-library@sociotechnica" --scope "$scope" 2>/dev/null; then
+			warn "Plugin install failed — install manually:"
+			warn "  claude plugin install alexandria@sociotechnica --scope $scope"
+			return 0
+		fi
 	fi
 
 	success "Plugin registered with Claude Code ($scope scope)"
@@ -269,9 +290,9 @@ echo ""
 if [ "$CONTEXT_LABEL" = "project-local" ]; then
 	echo "The plugin is installed and registered for this project."
 	echo ""
-	echo "Tip: add .claude/plugins/context-library/ to your .gitignore:"
+	echo "Tip: add .claude/plugins/alexandria/ to your .gitignore:"
 	echo ""
-	echo "  echo '.claude/plugins/context-library/' >> .gitignore"
+	echo "  echo '.claude/plugins/alexandria/' >> .gitignore"
 	echo ""
 else
 	echo "The plugin is globally installed — just run:"
@@ -281,4 +302,4 @@ else
 fi
 
 echo "Then configure your library:"
-echo "  Use the wizard to configure a context library for this project"
+echo "  Use the wizard to configure Alexandria for this project"
