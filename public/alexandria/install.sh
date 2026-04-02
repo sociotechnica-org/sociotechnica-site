@@ -223,17 +223,53 @@ else
 	CONTEXT_LIBRARY_BUN_BIN="$BUN_CMD" "$TARGET/setup"
 fi
 
+# Register the plugin with Claude Code so it auto-loads without --plugin-dir.
+# This is best-effort — installation succeeds even if registration fails.
+register_plugin() {
+	if ! command -v claude &>/dev/null; then
+		warn "Claude Code CLI not found — skipping plugin registration."
+		warn "Register manually later with:"
+		warn "  claude plugin marketplace add $TARGET --scope project"
+		warn "  claude plugin install context-library@sociotechnica --scope project"
+		return 0
+	fi
+
+	local scope
+	if [ "$CONTEXT_LABEL" = "project-local" ]; then
+		scope="project"
+	else
+		scope="user"
+	fi
+
+	info "Registering plugin with Claude Code ($scope scope)..."
+
+	if ! claude plugin marketplace add "$TARGET" --scope "$scope" 2>/dev/null; then
+		warn "Marketplace registration failed — register manually:"
+		warn "  claude plugin marketplace add $TARGET --scope $scope"
+		warn "  claude plugin install context-library@sociotechnica --scope $scope"
+		return 0
+	fi
+
+	if ! claude plugin install "context-library@sociotechnica" --scope "$scope" 2>/dev/null; then
+		warn "Plugin install failed — install manually:"
+		warn "  claude plugin install context-library@sociotechnica --scope $scope"
+		return 0
+	fi
+
+	success "Plugin registered with Claude Code ($scope scope)"
+}
+
+# Best-effort registration — don't let it fail the install
+register_plugin || true
+
 echo ""
 echo "Installation complete! (v$VERSION)"
 echo ""
 
 if [ "$CONTEXT_LABEL" = "project-local" ]; then
-	echo "Launch Claude Code with:"
+	echo "The plugin is installed and registered for this project."
 	echo ""
-	echo "  claude --plugin-dir .claude/plugins/context-library"
-	echo ""
-	echo "Tip: add .claude/plugins/context-library/ to your .gitignore to keep"
-	echo "     the plugin out of version control:"
+	echo "Tip: add .claude/plugins/context-library/ to your .gitignore:"
 	echo ""
 	echo "  echo '.claude/plugins/context-library/' >> .gitignore"
 	echo ""
