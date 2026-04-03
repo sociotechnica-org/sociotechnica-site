@@ -2,7 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import fs from 'node:fs';
 
-const latestVersionUrl = '/alexandria/latest-version.txt';
 const currentVersion = fs.readFileSync('public/alexandria/latest-version.txt', 'utf-8').trim();
 ---
 
