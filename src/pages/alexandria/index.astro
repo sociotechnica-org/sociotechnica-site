@@ -1,59 +1,81 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import fs from 'node:fs';
 
-const currentVersion = '0.6.0';
-const latestVersionPath = '/alexandria/latest-version.txt';
-const installScriptPath = '/alexandria/install.sh';
-const tarballPath = `/alexandria/context-library-v${currentVersion}.tar.gz`;
+const latestVersionUrl = '/alexandria/latest-version.txt';
+const currentVersion = fs.readFileSync('public/alexandria/latest-version.txt', 'utf-8').trim();
 ---
 
 <Layout
-  title="Alexandria Downloads"
-  description="Public download surface for Alexandria and the Context Library plugin."
+  title="Alexandria"
+  description="A knowledge layer for your product. Install Alexandria and start building your context library."
   url="https://sociotechnica.org/alexandria/"
   image="https://sociotechnica.org/sociotechnica-social.png"
 >
-  <h1 class="font-serif text-4xl mb-4">Alexandria Downloads</h1>
+  <div class="flex items-baseline justify-between mb-4">
+    <h1 class="font-serif text-4xl">Alexandria</h1>
+    <span class="font-mono text-gray-500" style="font-size: 1.6rem;">v{currentVersion}</span>
+  </div>
 
-  <p class="mb-5 text-lg leading-relaxed">
-    Alexandria is the public distribution surface for the Context Library plugin. This page hosts the
-    version marker now and will host the install script and release tarballs as the release pipeline
-    comes online.
+  <p class="mb-8 text-lg leading-relaxed">
+    Alexandria is a knowledge layer for your product. It gives Claude deep context about your
+    domain, your architecture, and your team's decisions — so every conversation starts informed.
   </p>
 
-  <div class="mb-8 rounded border border-gray-300 bg-gray-50 p-5">
-    <p class="text-sm uppercase tracking-[0.2em] text-gray-600 mb-2">Current published version</p>
-    <p class="font-mono text-3xl text-gray-900">{currentVersion}</p>
-    <p class="mt-3 text-sm text-gray-700">
-      Machine-readable version file:{' '}
-      <a class="underline decoration-2 underline-offset-2 hover:text-yellow-700" href={latestVersionPath}>
-        {latestVersionPath}
-      </a>
+  <!-- Install -->
+  <section class="mb-8 rounded border border-gray-300 bg-gray-50 p-5">
+    <h2 class="font-serif text-2xl mb-3">Install</h2>
+    <p class="mb-3 leading-relaxed">
+      Run this from your project root to install Alexandria as a Claude Code plugin:
     </p>
-  </div>
+    <div class="copyable group relative cursor-pointer" data-copy="curl -fsSL https://sociotechnica.org/alexandria/install.sh | bash">
+      <code class="block rounded bg-gray-900 px-4 py-3 pr-12 text-sm text-gray-100">curl -fsSL https://sociotechnica.org/alexandria/install.sh | bash</code>
+      <span class="copy-icon absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-gray-100 transition-colors text-xs">Copy</span>
+    </div>
+    <p class="mt-4 leading-relaxed">
+      Then launch Claude with Raven, the library guide:
+    </p>
+    <div class="copyable group relative cursor-pointer" data-copy='claude --agent alexandria:raven "/library"'>
+      <code class="block rounded bg-gray-900 px-4 py-3 pr-12 text-sm text-gray-100">claude --agent alexandria:raven "/library"</code>
+      <span class="copy-icon absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 group-hover:text-gray-100 transition-colors text-xs">Copy</span>
+    </div>
+  </section>
 
-  <div class="grid gap-6 md:grid-cols-2">
-    <section class="rounded border border-gray-300 p-5">
-      <h2 class="font-serif text-2xl mb-3">Install</h2>
-      <p class="mb-3 leading-relaxed">
-        The hosted installer will live at the URL below once release automation is wired up:
-      </p>
-      <code class="block rounded bg-gray-900 px-4 py-3 text-sm text-gray-100">{installScriptPath}</code>
-      <p class="mt-3 text-sm text-gray-600">
-        Until then, installation is handled from the source repository while the distribution pipeline
-        is being completed.
-      </p>
-    </section>
+  <!-- Quick Start -->
+  <section class="mb-8 rounded border border-gray-300 p-5">
+    <h2 class="font-serif text-2xl mb-3">Quick Start</h2>
+    <ol class="list-decimal list-inside space-y-4 leading-relaxed">
+      <li>
+        <strong>Initialize your library</strong> — Use the <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">/library</code> command.
+        Raven will walk you through configuring Alexandria for your project: your product, your team, and how you use AI.
+      </li>
+      <li>
+        <strong>Plan work</strong> — Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">/plan</code> to break a goal into
+        dependency-ordered tickets with context from your library.
+      </li>
+      <li>
+        <strong>Sync to GitHub</strong> — Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">/sync-tickets</code> to push
+        your plan tickets to GitHub Issues.
+      </li>
+    </ol>
+    <p class="mt-4 text-gray-700 leading-relaxed">
+      If you're not sure what to do next, just ask — Raven will advise you.
+    </p>
+  </section>
 
-    <section class="rounded border border-gray-300 p-5">
-      <h2 class="font-serif text-2xl mb-3">Tarball</h2>
-      <p class="mb-3 leading-relaxed">
-        Release tarballs will be published at stable versioned URLs:
-      </p>
-      <code class="block rounded bg-gray-900 px-4 py-3 text-sm text-gray-100 break-all">{tarballPath}</code>
-      <p class="mt-3 text-sm text-gray-600">
-        The first tarball will appear here when the release deployment workflow is live.
-      </p>
-    </section>
-  </div>
 </Layout>
+
+<script>
+  document.querySelectorAll('.copyable').forEach((el) => {
+    el.addEventListener('click', async () => {
+      const text = (el as HTMLElement).dataset.copy ?? '';
+      await navigator.clipboard.writeText(text);
+      const icon = el.querySelector('.copy-icon');
+      if (icon) {
+        const prev = icon.textContent;
+        icon.textContent = 'Copied!';
+        setTimeout(() => (icon.textContent = prev), 1500);
+      }
+    });
+  });
+</script>
