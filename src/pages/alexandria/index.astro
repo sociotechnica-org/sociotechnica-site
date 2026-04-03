@@ -71,9 +71,12 @@ const currentVersion = fs.readFileSync('public/alexandria/latest-version.txt', '
       await navigator.clipboard.writeText(text);
       const icon = el.querySelector('.copy-icon');
       if (icon) {
-        const prev = icon.textContent;
+        const orig = icon.getAttribute('data-orig') || icon.textContent;
+        icon.setAttribute('data-orig', orig!);
         icon.textContent = 'Copied!';
-        setTimeout(() => (icon.textContent = prev), 1500);
+        clearTimeout(Number(icon.getAttribute('data-timer') || 0));
+        const timer = setTimeout(() => (icon.textContent = orig), 1500);
+        icon.setAttribute('data-timer', String(timer));
       }
     });
   });
